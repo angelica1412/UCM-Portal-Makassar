@@ -6,7 +6,7 @@
     outline: none;
     box-sizing: border-box;
     transition: .2s;
-    text-transform: capitalize;
+    /* text-transform: capitalize; */
     transition: all .2s linear;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
@@ -18,12 +18,22 @@
     width: 670.9px;
     z-index: 1;
 }
-
+/* 
 .gambarbg2 {
     width: 670.9px;
     position: absolute;
     z-index: 2;
     left: 0px;
+} */
+
+.rectangle{
+    width: 670.9px;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    background-color: #FF9800;
+    opacity: 60%;
+    height: 745px;
 }
 
 .logoUc {
