@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.gambarbg {
+    position: absolute;
+    width: 670.9px;
+    z-index: 1;
+}
+
+.gambarbg2 {
+    width: 670.9px;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+}
+
+.logoUc {
+    position: absolute;
+    width: 255px;
+    z-index: 3;
+    top: 118px;
+    left: 213px;
+}
+
+.judulLogin{
+    position: absolute;
+    z-index: 4;
+    font-size: 30px;
+    color: white;
+    top: 175px;
+    left: 193.5px;
+    font-weight: 600;
+}
+
+.descLogin{
+    position: absolute;
+    z-index: 5;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    top: 225px;
+    left: 25px;
+}
