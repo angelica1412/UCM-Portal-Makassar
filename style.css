@@ -13,6 +13,23 @@
     box-sizing: border-box;
 }
 
+.home{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+}
+
+.home2{
+    width: 50%;
+    height: 100%;
+    background-color: aqua;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+}
+
 .gambarbg {
     position: absolute;
     width: 670.9px;
@@ -62,4 +79,16 @@
     font-size: 16px;
     top: 225px;
     left: 25px;
+}
+
+.bagianKanan{
+    width: 50%;
+    height: 100%;
+}
+
+.judulWelcome{
+    font-size: 30px;
+    color: #FF9800;
+    top: 200px;
+    float: right;
 }
