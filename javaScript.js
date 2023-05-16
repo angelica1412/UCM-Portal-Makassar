@@ -12,5 +12,7 @@ inputPassword.onchange = function (f) {
 inputUsername.onchange = function (g) {
     if (inputUsername.value != '') {
         g.target.style.border = "2px solid #FF9800";
+    } else if (inputUsername.value == ''){
+        g.target.style.border = "1.5px solid #00000058";
     }
 };

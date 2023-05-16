@@ -151,6 +151,7 @@
 .masuk:hover{
     background-color: #FF9800;
     color: white;
+    font-weight: bold;
 }
 
 .bagianDaftar {
