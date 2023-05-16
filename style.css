@@ -13,18 +13,17 @@
     box-sizing: border-box;
 }
 
-.home{
-    width: 50%;
+.home {
+    width: 65%;
     height: 100%;
     position: absolute;
     left: 0;
     z-index: 5;
 }
 
-.home2{
-    width: 50%;
+.home2 {
+    width: 35%;
     height: 100%;
-    background-color: aqua;
     position: absolute;
     right: 0;
     z-index: 5;
@@ -32,9 +31,10 @@
 
 .gambarbg {
     position: absolute;
-    width: 670.9px;
+    height: 745px;
     z-index: 1;
 }
+
 /* 
 .gambarbg2 {
     width: 670.9px;
@@ -43,52 +43,130 @@
     left: 0px;
 } */
 
-.rectangle{
-    width: 670.9px;
+.rectangle {
+    width: 100%;
     position: absolute;
     z-index: 2;
     left: 0px;
     background-color: #FF9800;
     opacity: 60%;
-    height: 745px;
+    height: 100%;
 }
 
 .logoUc {
     position: absolute;
-    width: 255px;
+    width: 285px;
     z-index: 3;
     top: 118px;
-    left: 213px;
+    left: 355px;
 }
 
-.judulLogin{
+.judulLogin {
     position: absolute;
     z-index: 4;
     font-size: 30px;
     color: white;
     top: 175px;
-    left: 193.5px;
+    left: 357px;
     font-weight: 600;
 }
 
-.descLogin{
+.descLogin {
     position: absolute;
     z-index: 5;
     color: white;
     text-align: center;
     font-size: 16px;
     top: 225px;
-    left: 25px;
+    left: 188px;
 }
 
-.bagianKanan{
+.bagianKanan {
     width: 50%;
     height: 100%;
 }
 
-.judulWelcome{
+.judulWelcome {
     font-size: 30px;
     color: #FF9800;
-    top: 200px;
-    float: right;
+    margin-top: 10%;
+    margin-left: 29%;
+}
+
+.petunjuk {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 13%;
+}
+
+.username {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 5%;
+}
+
+.inputUsername input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.password {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputPassword input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.masuk {
+    width: 375px;
+    height: 50px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    border: 1.5px solid #FF9800;
+    background-color: white;
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.masuk:hover{
+    background-color: #FF9800;
+    color: white;
+}
+
+.bagianDaftar {
+    width: 100%;
+}
+
+.bagianDaftar .daftar {
+    font-size: 14px;
+    margin-top: 10%;
+    margin-left: 23%;
+}
+
+.bagianDaftar .loginDaftar {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF9800;
+    margin-left: 57%;
+    margin-top: -4.3%;
 }
