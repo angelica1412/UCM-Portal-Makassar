@@ -43,7 +43,7 @@
     left: 0px;
 } */
 
-.rectangle {
+.rectangle{
     width: 100%;
     position: absolute;
     z-index: 2;
@@ -138,6 +138,7 @@
 input:focus{
     border: 2px solid #FF9800;
 }
+
 .masuk {
     width: 375px;
     height: 50px;
@@ -176,6 +177,21 @@ input:focus{
 }
 
 /* CSS UNTUK CREAT ACC */
+.gambarbgCreate {
+    position: absolute;
+    z-index: 1;
+}
+
+.rectangle2{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    background-color: #FF9800;
+    opacity: 60%;
+    height: 118%;
+}
+
 .nama {
     font-weight: bold;
     font-size: 15px;
@@ -282,4 +298,8 @@ input:focus{
     border-radius: 10px;
     padding-left: 2%;
     border: 1.5px solid #00000058;
+}
+
+input:focus{
+    border: 2px solid #FF9800;
 }
