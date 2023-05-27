@@ -1,78 +1,86 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+  --orange: #ff9800;
+}
 
 * {
-    margin: 0;
-    padding: 0;
-    outline: none;
-    box-sizing: border-box;
-    transition: .2s;
-    /* text-transform: capitalize; */
-    transition: all .2s linear;
-    text-decoration: none;
-    font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.2s;
+  /* text-transform: capitalize; */
+  transition: all 0.2s linear;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
 }
 
 .navbartop {
-    overflow: hidden;
-    background-color: white;
+  overflow: hidden;
+  background-color: white;
 }
 
 .logoDiatas {
-    display: flex;
-    margin-left: 2%;
-    margin-top: 1.5%;
-    width: 23%;
+  display: flex;
+  margin-left: 2%;
+  margin-top: 1.5%;
+  width: 23%;
 }
 
 nav {
-    display: flex;
-    padding: 0.5% 2%;
-    justify-content: space-between;
-    margin-top: 3%;
-    background-color: #FF9800;
-    align-items: center;
+  display: flex;
+  padding: 0.5% 2%;
+  justify-content: space-between;
+  margin-top: 3%;
+  background-color: #ff9800;
+  align-items: center;
 }
 
 .logo {
-    width: 60px;
-    margin-top: 10%;
+  width: 60px;
+  margin-top: 10%;
 }
 
-nav .search-box {
-    width: 100%;
-    position: relative;
-    display: flex;
-    margin-left: 1%;
+.search-box {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
 }
 
 .input {
-    width: 100%;
-    border:  1.5px solid #00000058;
-    padding: 20px;
-    height: 20px;
-    border-radius: 5px 0 0 5px;
-    outline: none;
-    color: #000000;
-    margin-right: 10;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: #000000;
+  padding: 12px;
+  padding-right: 28px;
 }
 
 .input:focus {
-    border:  1.5px solid #00000058; 
+  border: 2px solid var(--orange);
+}
+
+.input::placeholder {
+  color: var(--orange);
+  opacity: 60%;
 }
 
 .search {
-    text-align: center;
-    color: #FF9800;
-    cursor: pointer;
-    border: none;
-    
-    background-color: white;
-    margin-left: -5%;
-    height: 42px;
-    width: 10%;
-    
-    border: 1px solid #00000058; 
-    border-radius: 0 5px 5px 0  ;
-
+  text-align: center;
+  color: #ff9800;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  margin-left: -24px;
 }
-
