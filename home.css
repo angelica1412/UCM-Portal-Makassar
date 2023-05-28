@@ -214,3 +214,66 @@ nav #humbuger {
   height: 100%;
 }
 
+.hometext a{
+  color: white !important;
+}
+
+@media (max-width: 700px) {
+  .nav-links ul li {
+      display: block;
+  }
+
+  .nav-links {
+      position: absolute;
+      background-color: #F6F9FE;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      left: -200px;
+      text-align: left;
+      z-index: 2;
+      transition: 1s;
+  }
+
+  .logoNav {
+      align-items: center;
+      position: relative;
+      width: 50%;
+  }
+
+  .nav-links .hometext {
+      text-align: center;
+  }
+
+  .nav-links .addtext {
+      text-align: center;
+  }
+
+  .nav-links .myactivitytext {
+      text-align: center;
+  }
+
+  .nav-links .profiletext {
+      text-align: center;
+  }
+
+  .nav-links #close {
+      display: block;
+      color: #FF9800;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  }
+
+  nav #humbuger {
+      display: block;
+      color: black;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+  }
+
+  .nav-links ul {
+      padding: 30px;
+  }
+}
