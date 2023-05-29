@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    transition: .2s;
+    /* text-transform: capitalize; */
+    transition: all .2s linear;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.home {
+    width: 65%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    z-index: 5;
+}
+
+.home2 {
+    width: 35%;
+    height: 100%;
+    position: absolute;
+    right: 0;
+    z-index: 5;
+}
+
+.gambarbgCreate {
+    position: absolute;
+    z-index: 1;
+}
+
+.logoUc {
+    position: absolute;
+    width: 285px;
+    z-index: 3;
+    top: 118px;
+    left: 355px;
+}
+
+.judulWelcome {
+    font-size: 30px;
+    color: #FF9800;
+    margin-top: 10%;
+    margin-left: 29%;
+}
+
+.rectangle2{
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    left: 0px;
+    background-color: #FF9800;
+    opacity: 60%;
+    height: 118%;
+}
+
+.judulLogin {
+    position: absolute;
+    z-index: 4;
+    font-size: 30px;
+    color: white;
+    top: 175px;
+    left: 357px;
+    font-weight: 600;
+}
+
+.descLogin {
+    position: absolute;
+    z-index: 5;
+    color: white;
+    text-align: center;
+    font-size: 16px;
+    top: 225px;
+    left: 188px;
+}
+
+.nama {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputNama input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.NIM {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputNIM input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.Jurusan {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputJurusan input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.Spesialisasi {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputSpesialisasi input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.Email {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputEmail input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+.PassCreateAcc {
+    font-weight: bold;
+    font-size: 15px;
+    margin-left: 10%;
+    margin-top: 3%;
+}
+
+.inputPassCreateAcc input {
+    margin-left: 10%;
+    margin-top: 1%;
+    width: 375px;
+    height: 50px;
+    font-size: 15px;
+    border-radius: 10px;
+    padding-left: 2%;
+    border: 1.5px solid #00000058;
+}
+
+input:focus{
+    border: 2px solid #FF9800;
+}
+
+.petunjuk2{
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 40%;
+}
+
+.petunjukCreate {
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 13%;
+    margin-top: 2%;
+}
+
+.bagianMasuk .masukCreate {
+    font-size: 14px;
+    margin-top: 5%;
+    margin-left: 26%;
+}
+
+.bagianMasuk .masukAkun {
+    font-size: 16px;
+    font-weight: bold;
+    color: #FF9800;
+    margin-left: 53%;
+    margin-top: -4.3%;
+}
+
+.masuk {
+    width: 375px;
+    height: 50px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 20px;
+    color: black;
+    border: 1.5px solid #FF9800;
+    background-color: white;
+    margin-top: 4%;
+    margin-left: 10%;
+}
+
+.masuk:hover{
+    background-color: #FF9800;
+    color: white;
+    font-weight: bold;
+}
