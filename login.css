@@ -13,97 +13,70 @@
     box-sizing: border-box;
 }
 
+.gabunghome {
+    display: flex;
+}
+
 .home {
+    background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("aset/bg\ login.png");
     width: 65%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 5;
+    height: 745px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
 }
 
 .home2 {
     width: 35%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    z-index: 5;
-}
-
-.gambarbg {
-    position: absolute;
     height: 745px;
-    z-index: 1;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
 
-/* 
-.gambarbg2 {
-    width: 670.9px;
-    position: absolute;
-    z-index: 2;
-    left: 0px;
-} */
-
-.rectangle{
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    left: 0px;
-    background-color: #FF9800;
-    opacity: 60%;
-    height: 100%;
+.atas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-.logoUc {
-    position: absolute;
-    width: 285px;
-    z-index: 3;
-    top: 118px;
-    left: 355px;
+.home img {
+    width: 37%;
+    margin-top: 150px;
 }
 
-.judulLogin {
-    position: absolute;
-    z-index: 4;
-    font-size: 30px;
+.home p {
+    font-size: 45px;
+    font-weight: bold;
     color: white;
-    top: 175px;
-    left: 357px;
-    font-weight: 600;
 }
 
-.descLogin {
-    position: absolute;
-    z-index: 5;
+.home pre{
+    font-size: 18px;
     color: white;
-    text-align: center;
-    font-size: 16px;
-    top: 225px;
-    left: 188px;
-}
-
-.bagianKanan {
-    width: 50%;
-    height: 100%;
 }
 
 .judulWelcome {
     font-size: 30px;
     color: #FF9800;
     margin-top: 10%;
-    margin-left: 29%;
 }
 
 .petunjuk {
     font-size: 16px;
     font-weight: 400;
-    margin-left: 13%;
 }
 
 .username {
     font-weight: bold;
     font-size: 15px;
+    /* left: 0; */
     margin-left: 10%;
     margin-top: 5%;
+    /* float: left; */
 }
 
 .inputUsername input {
@@ -135,7 +108,7 @@
     border: 1.5px solid #00000058;
 }
 
-input:focus{
+input:focus {
     border: 2px solid #FF9800;
 }
 
@@ -148,11 +121,11 @@ input:focus{
     color: black;
     border: 1.5px solid #FF9800;
     background-color: white;
-    margin-top: 4%;
+    margin-top: 6%;
     margin-left: 10%;
 }
 
-.masuk:hover{
+.masuk:hover {
     background-color: #FF9800;
     color: white;
     font-weight: bold;
@@ -175,5 +148,3 @@ input:focus{
     margin-left: 57%;
     margin-top: -4.3%;
 }
-
-
