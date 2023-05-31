@@ -13,70 +13,66 @@
     box-sizing: border-box;
 }
 
+.gabunghome {
+    display: flex;
+}
+
 .home {
+    background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("aset/bg\ login.png");
     width: 65%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    z-index: 5;
+    height: 950px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.home img {
+    width: 37%;
+    margin-top: 150px;
+}
+
+.home p {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+}
+
+.home pre{
+    font-size: 18px;
+    color: white;
 }
 
 .home2 {
     width: 35%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    z-index: 5;
+    height: 745px;
+    /* background-size: cover; */
+    /* background-repeat: no-repeat; */
 }
 
-.gambarbgCreate {
-    position: absolute;
-    z-index: 1;
-}
-
-.logoUc {
-    position: absolute;
-    width: 285px;
-    z-index: 3;
-    top: 118px;
-    left: 355px;
+.atas{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .judulWelcome {
     font-size: 30px;
     color: #FF9800;
     margin-top: 10%;
-    margin-left: 29%;
 }
 
-.rectangle2{
-    width: 100%;
-    position: absolute;
-    z-index: 2;
-    left: 0px;
-    background-color: #FF9800;
-    opacity: 60%;
-    height: 118%;
-}
-
-.judulLogin {
-    position: absolute;
-    z-index: 4;
-    font-size: 30px;
-    color: white;
-    top: 175px;
-    left: 357px;
-    font-weight: 600;
-}
-
-.descLogin {
-    position: absolute;
-    z-index: 5;
-    color: white;
-    text-align: center;
+.petunjukCreate {
     font-size: 16px;
-    top: 225px;
-    left: 188px;
+    font-weight: 400;
+}
+
+.petunjuk2 {
+    font-size: 16px;
+    font-weight: 400;
 }
 
 .nama {
@@ -189,19 +185,6 @@
 
 input:focus{
     border: 2px solid #FF9800;
-}
-
-.petunjuk2{
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 40%;
-}
-
-.petunjukCreate {
-    font-size: 16px;
-    font-weight: 400;
-    margin-left: 13%;
-    margin-top: 2%;
 }
 
 .bagianMasuk .masukCreate {
