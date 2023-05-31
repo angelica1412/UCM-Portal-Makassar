@@ -36,11 +36,11 @@ input[type=text], select, textarea {
   }
   
   .containerSemua {
-    border-radius: 15px;
-    border: 2px solid #001c4c;
+    border-radius: 20px;
+    border: 4px solid #01246a;
     padding: 50px;
-    margin-left: 30px;
-    margin-right: 30px;
+    margin-left: 70px;
+    margin-right: 70px;
     margin-top: 30px;
   }
 
@@ -53,19 +53,21 @@ input[type=text], select, textarea {
     text-align: center;
     color: #10346B;
     font-weight: bolder;
+    margin-top: -10px;
   }
 
   .UnggahGambar {
   font-size: 14px;
   text-align: center;
   padding: 5px;
-  background-color: #c4cddf;
+  background-color: #ffc353;
   border-radius: 10px;
+  color: white;
 }
 
   .googleform {
-    padding-top: 28px;
-    margin-bottom: 30px;
+    padding-top: 15px;
+    margin-bottom: 1px;
   }
 
   button {
@@ -94,7 +96,7 @@ input[type=text], select, textarea {
     margin: 0;
     width: 3rem;
     height: 3rem;
-    background: #282936;
+    background: #ffa008;
     border-radius: 1.625rem;
    }
    
@@ -136,7 +138,7 @@ input[type=text], select, textarea {
     bottom: 0;
     padding: 0.75rem 0;
     margin: 0 0 0 1.85rem;
-    color: #282936;
+    color: #ffa008;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -159,69 +161,14 @@ input[type=text], select, textarea {
    .submitform {
     float: right;
     margin-top: 20px;
-    margin-right: 30px;
+    margin-right: 70px;
     margin-bottom: 30px;
    }
-
-
-   /* .container form {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  
-  .container label {
-    display: flex;
-    cursor: pointer;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 0.375em;
-  }
-  
-  .container  label input {
-    position: absolute;
-    left: -9999px;
-  }
-  
-  .container label input:checked + span {
-    background-color: #414181;
-    color: white;
-  }
-  
-  .container label input:checked + span:before {
-    box-shadow: inset 0 0 0 0.4375em #00005c;
-  }
-  
-  .container label span {
-    display: flex;
-    align-items: center;
-    padding: 0.375em 0.75em 0.375em 0.375em;
-    border-radius: 99em;
-    transition: 0.25s ease;
-    color: #414181;
-  }
-  
-  .container label span:hover {
-    background-color: #d6d6e5;
-  }
-  
-  .container label span:before {
-    display: flex;
-    flex-shrink: 0;
-    content: "";
-    background-color: #fff;
-    width: 1.5em;
-    height: 1.5em;
-    border-radius: 50%;
-    margin-right: 0.375em;
-    transition: 0.25s ease;
-    box-shadow: inset 0 0 0 0.125em #00005c;
-  } */
 
   .pilihankegiatan {
     margin-top: 5px;
     margin-left: 10px;
+    margin-bottom: 10px;
   }
 
   .radio-buttons {
@@ -300,3 +247,14 @@ input[type=text], select, textarea {
   .TanggalMulai {
     margin-left: 10px;
   }
+
+  .error {
+    background-color: red;
+  }
+
+  .unggahLogo {
+    margin-top: 13px;
+  }
+
+  
+  

@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="addActivityStyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <title>UCM Portal Makassar</title>
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
 </head>
 <body>
     <div class="containerSemua">
@@ -38,40 +40,19 @@
             </div>
           </div>
 
-          <!-- <label for="fname" class="fontjudul">Tanggal</label>
-          <div class="pengaturantanggal">
-            <div class="TanggalMulai">
-              <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                  <td>
-                    <input type="date">
-                    <input type="time" name="" id="">
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="TanggalAkhir">
-              <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                  <td>
-                    <input type="date">
-                    <input type="time" name="" id="">
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div> -->
-
-          
-
           <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-          <label for="fname" class="fontjudul">Unggah Logo</label>
-          <div>
+          <!-- <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+         
+	        <textarea name="content" rows="5" cols="80"></textarea>
+          <script>
+          CKEDITOR.replace('content');
+          </script>
+
+          <div class="unggahLogo">
+            <label for="fname" class="fontjudul">Unggah Logo</label>
             <div>
-              <img src="choose.png" height="100px" id="img">
+              <img src="aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
             </div>
   
             <input type="file" id="input" class="UnggahGambar">
