@@ -8,43 +8,94 @@
     <title>UCM Portal Makassar</title>
 </head>
 <body>
-    <div class="container">
+    <div class="containerSemua">
         <form action="action_page.php">
 
             <p class="Judul" >REQUEST FORM</p>
       
-          <label for="fname">Judul</label>
+          <label for="fname" class="fontjudul">Judul</label>
           <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda..">
       
-          <label for="country">Jenis Kegiatan</label>
-          <!-- <select id="Jenis" name="Jenis Kegiatan">
-            <option value="australia">Organisasi</option>
-            <option value="canada">Unit Kegiatan Mahasiswa (UKM)</option>
-            <option value="usa">Acara/Kepanitiaan</option>
-          </select> -->
+          <label for="country" class="fontjudul">Jenis Kegiatan</label>
 
-        </label><br>    
-        <input type="radio" name="gender"/> Organisasi <br>    
-        <input type="radio" name="gender"/> Unit Kegiatan Mahasiswa (UKM) <br>    
-        <input type="radio" name="gender"/> Acara/Kepanitiaan    
-        <br>    
-        <br>    
-        <label>  
-      
-          <label for="subject">Deskripsi Kegiatan</label>
+          <div class="pilihankegiatan">
+            <div class="radio-buttons">
+              <label class="radio-button">
+                <input value="option1" name="option" type="radio">
+                <div class="radio-circle"></div>
+                <span class="radio-label">Organisasi</span>
+              </label>
+              <label class="radio-button">
+                <input value="option2" name="option" type="radio">
+                <div class="radio-circle"></div>
+                <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
+              </label>
+              <label class="radio-button">
+                <input value="option3" name="option" type="radio">
+                <div class="radio-circle"></div>
+                <span class="radio-label">Acara/Kepanitiaan</span>
+              </label>
+            </div>
+          </div>
+
+          <!-- <label for="fname" class="fontjudul">Tanggal</label>
+          <div class="pengaturantanggal">
+            <div class="TanggalMulai">
+              <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                  <td>
+                    <input type="date">
+                    <input type="time" name="" id="">
+                  </td>
+                </tr>
+              </table>
+            </div>
+
+            <div class="TanggalAkhir">
+              <table border="1" cellspacing="0" cellpadding="5">
+                <tr>
+                  <td>
+                    <input type="date">
+                    <input type="time" name="" id="">
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div> -->
+
+          
+
+          <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
           <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
 
-          <label for="fname">Link Google Form</label>
-          <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda..">
-
-
+          <label for="fname" class="fontjudul">Unggah Logo</label>
           <div>
-            <img src="choose.png" height="500" id="">
+            <div>
+              <img src="choose.png" height="100px" id="img">
+            </div>
+  
+            <input type="file" id="input" class="UnggahGambar">
+          </div>
+
+          <div class="googleform">
+            <label for="fname" class="fontjudul">Link Google Form</label>
+            <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda..">
           </div>
       
         </form>
       </div>
 
-      <input class="tombolReq" type="submit" value="Submit" style="margin-top: 20px; margin-left: 300px;">
+      <div class="submitform">
+        <button class="learn-more">
+          <span class="circle" aria-hidden="true">
+          <span class="icon arrow"></span>
+          </span>
+          <span class="button-text">Submit</span>
+        </button>
+      </div>
+
 </body>
+
+<script src="JSaddactivity.js"></script>
+
 </html>
