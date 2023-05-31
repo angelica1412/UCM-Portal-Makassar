@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="addActivityStyle.css">
+    <title>UCM Portal Makassar</title>
+</head>
+<body>
+    <div class="container">
+        <form action="action_page.php">
+
+            <p class="Judul" >REQUEST FORM</p>
+      
+          <label for="fname">Judul</label>
+          <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda..">
+      
+          <label for="country">Jenis Kegiatan</label>
+          <!-- <select id="Jenis" name="Jenis Kegiatan">
+            <option value="australia">Organisasi</option>
+            <option value="canada">Unit Kegiatan Mahasiswa (UKM)</option>
+            <option value="usa">Acara/Kepanitiaan</option>
+          </select> -->
+
+        </label><br>    
+        <input type="radio" name="gender"/> Organisasi <br>    
+        <input type="radio" name="gender"/> Unit Kegiatan Mahasiswa (UKM) <br>    
+        <input type="radio" name="gender"/> Acara/Kepanitiaan    
+        <br>    
+        <br>    
+        <label>  
+      
+          <label for="subject">Deskripsi Kegiatan</label>
+          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+          <label for="fname">Link Google Form</label>
+          <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda..">
+
+
+          <div>
+            <img src="choose.png" height="500" id="">
+          </div>
+      
+        </form>
+      </div>
+
+      <input class="tombolReq" type="submit" value="Submit" style="margin-top: 20px; margin-left: 300px;">
+</body>
+</html>

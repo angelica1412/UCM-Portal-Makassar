@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+input[type=text], select, textarea {
+    width: 100%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px;
+    margin-bottom: 16px; 
+    resize: vertical
+  }
+  
+  input[type=submit] {
+    background-color: #d7d7d7;
+    color: #10346B;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #10346B;
+    color: white;
+    border: 2px #10346B;
+  }
+  
+  .container {
+    border-radius: 8px;
+    border: 2px solid #C9C9C9;
+    padding: 20px;
+  }
+
+  .tombolReq {
+    padding-top: 20px;
+  }
+
+  .Judul{
+    font-size: 30px;
+    text-align: center;
+    color: #10346B;
+    font-weight: bolder;
+  }
