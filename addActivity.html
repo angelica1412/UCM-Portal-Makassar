@@ -1,101 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="addActivityStyle.css">
-    <title>UCM Portal Makassar</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="addActivityStyle.css">
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <title>UCM Portal Makassar</title>
 </head>
+
 <body>
-    <div class="containerSemua">
-        <form action="action_page.php">
+  <div class="containerSemua">
+    <form action="action_page.php">
+      <!--Judul-->
+      <p class="Judul">REQUEST FORM</p>
 
-            <p class="Judul" >REQUEST FORM</p>
-      
-          <label for="fname" class="fontjudul">Judul</label>
-          <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda..">
-      
-          <label for="country" class="fontjudul">Jenis Kegiatan</label>
+      <label for="fname" class="fontjudul">Judul</label>
+      <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda.." required>
 
-          <div class="pilihankegiatan">
-            <div class="radio-buttons">
-              <label class="radio-button">
-                <input value="option1" name="option" type="radio">
-                <div class="radio-circle"></div>
-                <span class="radio-label">Organisasi</span>
-              </label>
-              <label class="radio-button">
-                <input value="option2" name="option" type="radio">
-                <div class="radio-circle"></div>
-                <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
-              </label>
-              <label class="radio-button">
-                <input value="option3" name="option" type="radio">
-                <div class="radio-circle"></div>
-                <span class="radio-label">Acara/Kepanitiaan</span>
-              </label>
-            </div>
+      <!-- Jenis Kegiatan -->
+      <label for="country" class="fontjudul">Jenis Kegiatan</label>
+      <div class="pilihankegiatan">
+        <!-- Organisasi -->
+        <div class="radio-buttons">
+          <label class="radio-button">
+            <input value="option1" name="option" type="radio">
+            <div class="radio-circle"></div>
+            <span class="radio-label">Organisasi</span>
+          </label>
+          <!-- UKM -->
+          <label class="radio-button">
+            <input value="option2" name="option" type="radio">
+            <div class="radio-circle"></div>
+            <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
+          </label>
+          <!-- Event -->
+          <label class="radio-button">
+            <input value="option3" name="option" type="radio">
+            <div class="radio-circle"></div>
+            <span class="radio-label">Acara/Kepanitiaan</span>
+          </label>
+        </div>
+
+        <!-- Date -->
+        <div class="pengaturantanggal">
+          <div class="Date-Start">
+            <form>
+              <label for="tanggal_mulai">Tanggal Mulai:</label><br>
+              <input type="text" id="tanggal_mulai" name="tanggal_mulai" required><br>
+            </form>
           </div>
+          <div class="Date-End">
+            <form>
+              <label for="tanggal_selesai">Tanggal Selesai:</label><br>
+              <input type="text" id="tanggal_selesai" name="tanggal_selesai" required><br>
+            </form>
+          </div>
+        </div>
+        <!-- Deskripsi -->
+        <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px" required></textarea>
 
-          <!-- <label for="fname" class="fontjudul">Tanggal</label>
-          <div class="pengaturantanggal">
-            <div class="TanggalMulai">
-              <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                  <td>
-                    <input type="date">
-                    <input type="time" name="" id="">
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="TanggalAkhir">
-              <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                  <td>
-                    <input type="date">
-                    <input type="time" name="" id="">
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div> -->
-
-          
-
-          <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
-          <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
-
-          <label for="fname" class="fontjudul">Unggah Logo</label>
+        <!-- Logo Uploud -->
+        <label for="fname" class="fontjudul">Unggah Logo</label>
+        <div>
           <div>
-            <div>
-              <img src="choose.png" height="100px" id="img">
-            </div>
-  
-            <input type="file" id="input" class="UnggahGambar">
+            <img src="choose.png" height="100px" id="img">
           </div>
 
-          <div class="googleform">
-            <label for="fname" class="fontjudul">Link Google Form</label>
-            <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda..">
-          </div>
-      
-        </form>
-      </div>
+          <input type="file" id="input" class="UnggahGambar" required>
+        </div>
+        <!-- Link Google Form -->
+        <div class="googleform">
+          <label for="fname" class="fontjudul">Link Google Form</label>
+          <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda.." required>
+        </div>
 
-      <div class="submitform">
-        <button class="learn-more">
-          <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Submit</span>
-        </button>
-      </div>
+    </form>
+  </div>
+<!-- Tombol Form -->
+  <div class="submitform">
+    <button class="learn-more">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Submit</span>
+    </button>
+  </div>
 
 </body>
-
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(function () {
+    $("#tanggal_mulai").datepicker();
+    $("#tanggal_selesai").datepicker();
+  });
+</script>
+<script src="FormSubmit.js"></script>
 <script src="JSaddactivity.js"></script>
 
 </html>
