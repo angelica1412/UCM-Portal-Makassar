@@ -1,0 +1,188 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+:root {
+  --orange: #ff9800;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.2s;
+  /* text-transform: capitalize; */
+  transition: all 0.2s linear;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+}
+
+.navbartop {
+  overflow: hidden;
+  background-color: white;
+}
+
+.logoDiatas {
+  display: flex;
+  margin-left: 2%;
+  margin-top: 1.5%;
+  width: 23%;
+}
+
+.fixnav {
+  position: sticky;
+  top: 0;
+}
+
+nav {
+  display: flex;
+  padding: 0.5% 2%;
+  justify-content: space-between;
+  margin-top: 2%;
+  background-color: #ff9800;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  width: 60px;
+  margin-top: 10%;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  width: 300px;
+  margin-left: 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  color: #000000;
+  padding: 12px;
+  padding-right: 28px;
+  font-size: 14px;
+}
+
+.input:focus {
+  border: 2px solid var(--orange);
+}
+
+.input::placeholder {
+  color: var(--orange);
+  opacity: 60%;
+}
+
+.search {
+  text-align: center;
+  color: #ff9800;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  margin-left: -24px;
+  transform: scale(1.5);
+}
+
+.homeicon {
+  text-align: center;
+}
+
+.addicon {
+  text-align: center;
+}
+
+.myactivityicon {
+  text-align: center;
+}
+
+.profileicon {
+  text-align: center;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #FF9800;
+  align-items: center;
+  display: flex;
+  height: 100px;
+}
+
+nav img {
+  width: 58px;
+}
+
+.nav-links {
+  flex: 1;
+  text-align: right;
+}
+
+.nav-links ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 8px 20px;
+  position: relative;
+}
+
+.nav-links ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+.nav-links ul li::after {
+  content: '';
+  width: 0%;
+  height: 2px;
+  background-color: #609CF6;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+
+.nav-links ul li:hover::after {
+  width: 100%;
+}
+
+.myactivityicon i {
+  width: 100%;
+  transform: scale(1.8);
+  color: white;
+}
+
+.addicon i {
+  width: 100%;
+  transform: scale(1.8);
+}
+
+.profileicon i {
+  width: 100%;
+  transform: scale(1.8);
+}
+
+.homeicon i {
+  width: 100%;
+  transform: scale(1.8);
+}
+
+.nav-links #close {
+  display: none;
+}
+
+nav #humbuger {
+  display: none;
+}
+
+.myactivitytext a {
+    color: white !important;
+  }
