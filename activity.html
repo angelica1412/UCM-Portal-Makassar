@@ -1,72 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="activity.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
-    <title>UCM Portal</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="activity.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
+  <title>UCM Portal</title>
 </head>
+
 <body>
-    <div class="navbartop">
-        <img src="aset/logo UC.png" class="logoDiatas" />
+  <div class="navbartop">
+    <img src="aset/logo UC.png" class="logoDiatas" />
+  </div>
+  <div class="fixnav">
+    <nav>
+      <div class="nav-left">
+        <a href="index.html"><img src="aset/logoNav.png" class="logo" /></a>
+        <form action="" method="get" class="search-box">
+          <input type="text" class="input" name="search" placeholder="Search Here" required />
+          <button type="submit" class="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
       </div>
-      <div class="fixnav">
-        <nav>
-          <div class="nav-left">
-            <a href="index.html"><img src="aset/logoNav.png" class="logo" /></a>
-            <form action="" method="get" class="search-box">
-              <input type="text" class="input" name="search" placeholder="Search Here" required />
-              <button type="submit" class="search">
-                <i class="fa fa-search"></i>
-              </button>
-            </form>
-          </div>
-    
-          <div class="nav-links" id="navLinks">
-            <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
-            <ul>
-              <li>
-                <div class="homeicon">
-                  <a href="home.html"><i class="fa-solid fa-house"></i></a>
-                </div>
-                <div class="hometext">
-                  <a href="home.html">Home</a>
-                </div>
-              </li>
-              <li>
-                <div class="addicon">
-                  <a href="#"><i class="fa fa-circle-plus"></i></a>
-                </div>
-                <div class="addtext">
-                  <a href="#">Add Activity</a>
-                </div>
-              </li>
-              <li>
-                <div class="myactivityicon">
-                  <a href="myActivity.html"><i class="fa fa-clipboard-list"></i></a>
-                </div>
-                <div class="myactivitytext">
-                  <a href="myActivity.html">My Activity</a>
-                </div>
-              </li>
-              <li>
-                <div class="profileicon">
-                  <a href="profile.html"><i class="fa fa-user"></i></a>
-                </div>
-                <div class="profiletext">
-                  <a href="fasilitas.html">Profile</a>
-                </div>
-              </li>
-            </ul>
-          </div>
-          <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
-        </nav>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
+        <ul>
+          <li>
+            <div class="homeicon">
+              <a href="home.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="hometext">
+              <a href="home.html">Home</a>
+            </div>
+          </li>
+          <li>
+            <div class="addicon">
+              <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
+            </div>
+            <div class="addtext">
+              <a href="addActivity.html">Add Activity</a>
+            </div>
+          </li>
+          <li>
+            <div class="myactivityicon">
+              <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
+            </div>
+            <div class="myactivitytext">
+              <a href="activity.html">My Activity</a>
+            </div>
+          </li>
+          <li>
+            <div class="profileicon">
+              <a href="profile.html"><i class="fa fa-user"></i></a>
+            </div>
+            <div class="profiletext">
+              <a href="fasilitas.html">Profile<i class="fa-solid fa-chevron-down"></i></a>
+            </div>
+          </li>
+        </ul>
       </div>
+      <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
+    </nav>
+  </div>
+
+  <div class="containerSemua">
+    <div class="container2">
+      <div class="bagianatas">
+        <table cellspacing = "0">
+          <thead>
+            <tr>
+              <th>Judul</th>
+              <th>Jenis Kegiatan</th>
+              <th>Status</th>
+              <th>Tanggal Pendaftaran</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Open Recruitment Infinity</td>
+              <td>Organisasi</td>
+              <td class="status"> <span class="dot"></span> Diterima</td>
+              <td>16 - 03 - 2023</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
 </body>
+
 </html>
