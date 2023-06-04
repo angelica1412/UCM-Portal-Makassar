@@ -18,7 +18,7 @@
 }
 
 .home {
-    background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("aset/bg\ login.png");
+    background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("/aset/bg\ login.png");
     width: 65%;
     height: 950px;
     background-size: cover;
