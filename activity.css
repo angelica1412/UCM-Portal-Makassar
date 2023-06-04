@@ -213,7 +213,7 @@ nav #humbuger {
     /* margin-right: 70px; */
 }
 
-th{
+th {
     font-size: 18px;
     border-bottom: 2px solid #001c4c;
     padding-bottom: 10px;
@@ -221,23 +221,40 @@ th{
     padding-left: 50px;
 }
 
-td{
+td {
     padding-top: 10px;
     padding-left: 50px;
     font-size: 16px;
 }
 
-.status{
+.status {
     display: flex;
     align-items: center;
 }
 
-.dot {
+.dotterima {
     height: 20px;
     width: 20px;
     background-color: #7CE5A0;
     border-radius: 50%;
     display: inline-block;
     margin-right: 5px;
-  }
+}
 
+.dottolak {
+    height: 20px;
+    width: 20px;
+    background-color: #FA7575;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.dotperiksa {
+    height: 20px;
+    width: 20px;
+    background-color: #797979;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 5px;
+}
