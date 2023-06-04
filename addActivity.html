@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="addActivityStyle.css">
-    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <link rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
     <title>UCM Portal</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
 </head>
 <body>
   <div class="navbartop">
@@ -99,49 +100,21 @@
             </div>
           </div>
 
-          <!-- <label for="fname" class="fontjudul">Tanggal</label>
-          <div class="pengaturantanggal">
-            <div class="TanggalMulai">
-              <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                  <td>
-                    <input type="date">
-                    <input type="time" name="" id="">
-                  </td>
-                </tr>
-              </table>
-            </div>
-
-            <div class="TanggalAkhir">
-              <table border="1" cellspacing="0" cellpadding="5">
-                <tr>
-                  <td>
-                    <input type="date">
-                    <input type="time" name="" id="">
-                  </td>
-                </tr>
-              </table>
-            </div>
-          </div> -->
-
-          
-
           <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
-          
-          <!-- <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
 
-
-          <br> 
+           <!-- <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+         
 	        <textarea name="content" rows="5" cols="80"></textarea>
           <script>
           CKEDITOR.replace('content');
           </script>
 
         <div class="fontjudul">
-          <label>Unggah Logo</label>
-          
+          <div class="unggahLogo">
+            <label for="fname" class="fontjudul">Unggah Logo</label>
             <div>
-              <!-- <img src="" height="100px" id="img"> -->
+
+              <img src="aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
             </div>
   
             <input type="file" id="input" class="UnggahGambar">
