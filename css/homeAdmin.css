@@ -46,6 +46,7 @@ nav {
     align-items: center;
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 .logo {
@@ -69,7 +70,7 @@ nav {
 
 .hometext a {
     color: white !important;
-  }
+}
 
 .input {
     width: 100%;
@@ -182,4 +183,195 @@ nav img {
 
 nav #humbuger {
     display: none;
+}
+
+.profiletext button {
+    background: transparent;
+    border: none;
+    transform: scale(1.2);
+    margin-left: 5px;
+}
+
+.homeadmin {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+
+.pengirim {
+    margin-top: 3%;
+    /* margin-left: 10%; */
+    border: 2px solid #001c4c;
+    width: 25%;
+    height: 320px;
+    border-radius: 10px;
+}
+
+.judulpengirim {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px;
+    border-bottom: 2px solid #001c4c;
+}
+
+.listpengirim {
+    display: flex;
+    justify-content: center;
+    /* flex-direction: column; */
+    align-items: center;
+    flex-flow: column nowrap;
+}
+
+.infopengirim {
+    display: flex;
+    background-color: rgb(255, 152, 0, 0.6);
+    border-radius: 10px;
+    width: 95%;
+    height: 70px;
+    align-items: center;
+    margin-top: 5%;
+    /* margin-right: 3%; */
+    justify-content: space-between;
+    flex-flow: row nowrap;
+}
+
+.profile{
+    display: flex;
+    width: 23%;
+    align-items: center;
+    justify-content: center;
+}
+
+.dotprofile i{
+    z-index: 1;
+    transform: scale(1.5);
+    justify-content: center;
+}
+
+.dotprofile {
+    height: 50px;
+    width: 50px;
+    background-color: #a8a5a5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.namepengirim{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.jurusan{
+    color: white;
+    font-weight: 400;
+}
+
+.iconbeside{
+    width: 5%;
+}
+
+.iconbeside i{
+    color: #000000;
+    transform: scale(1.5);
+}
+
+.tampilaninfo {
+    margin-top: 3%;
+    margin-left: 3%;
+    /* margin-right: 10%; */
+    border: 2px solid #001c4c;
+    width: 50%;
+    height: 870px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.judulkegiatan{
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.infokegiatan{
+    margin-left: 4%;
+    margin-top: 3%;
+}
+
+/* .atasjenis{
+    font-weight: bold;
+    font-size: 16px;
+} */
+
+.jawabanjenis{
+    font-size: 14px;
+}
+
+.tanggal, .deskripsi, .logo1, .jeniskegiatan, .form{
+    margin-top: 4%;
+}
+
+.atastanggal, .atasdeskripsi, .ataslogo, .atasjenis, .atasform{
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.tanggalmulai, .tanggalakhir, .jawabanjenis{
+    font-size: 14px;
+}
+
+.deskripsi input{
+    border: 2px solid #E4E4E4;
+    width: 80%;
+    height: 180px;
+    margin-top: 1%;
+}
+
+.logo1 img{
+    width: 35%;
+    margin-top: 2%;
+}
+
+.rectangle{
+    border: 2px solid #E4E4E4;
+    width: 80%;
+    margin-top: 2%;
+    height: 60px;
+}
+
+.tombol{
+    margin-top: 5%;
+    height: 50px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.tolak{
+    width: 15%;
+    height: 35px;
+    font-size: 16px;
+    background-color: #E04747;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-right: 1%;
+}
+
+.acc{
+    width: 15%;
+    height: 35px;
+    font-size: 16px;
+    background-color: #1AD95B;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    margin-right: 3%;
 }
