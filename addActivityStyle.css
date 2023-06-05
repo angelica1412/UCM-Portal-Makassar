@@ -82,6 +82,10 @@ nav {
   border: 2px solid var(--orange);
 }
 
+input:invalid {
+  border-color: red;
+}
+
 .input::placeholder {
   color: var(--orange);
   opacity: 60%;
@@ -194,10 +198,6 @@ nav #humbuger {
 
 .fontjudul {
   margin-top: 2%;
-}
-
-.fontjudul label {
-
   font-weight: bolder;
 }
 
@@ -724,7 +724,7 @@ button:hover .button-text {
   background-color: #faa721;
 }
 
-.pengaturantanggal {
+/* .pengaturantanggal {
   display: flex;
   padding-top: 6px;
   padding-bottom: 6px;
@@ -732,6 +732,28 @@ button:hover .button-text {
 
 .TanggalMulai {
   margin-left: 10px;
+} */
+
+.pengaturantanggal {
+  display: flex;
+  padding-top: 6px;
+  padding-bottom: 6px;
+}
+.Date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Date input {
+  width: 50px;
+}
+
+.Date-Start, .Date-End {
+  flex: 7;
+}
+
+.Date-End {
+  margin-left: 50px;
 }
 
 
