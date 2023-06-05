@@ -147,14 +147,14 @@
     border: 1.5px solid #00000058;
 }
 
-.Email {
+.fakultas {
     font-weight: bold;
     font-size: 15px;
     margin-left: 10%;
     margin-top: 3%;
 }
 
-.inputEmail input {
+.inputFakultas input {
     margin-left: 10%;
     margin-top: 1%;
     width: 375px;

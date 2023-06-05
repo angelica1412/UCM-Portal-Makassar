@@ -661,3 +661,85 @@ input[type="date"] {
   font-weight: bolder;
   font-size: 14px;
 }
+
+.card {
+  width: 190px;
+  height: 254px;
+  background: #ed9a09;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px #88580a6b;
+}
+
+.card .card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #f3c864;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.card span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.card .job {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 12px;
+}
+
+.card .img {
+  width: 70px;
+  height: 80px;
+  background: #f3c864;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.card button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #f3c864;
+  color: white;
+  font-weight: 600;
+}
+
+.card button:hover {
+  background: #f5b82b;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: -130px;
+  margin-top: 14px;
+  min-width: 160px;
+  z-index: 1;
+  padding: 12px 16px;
+}
+
+.show {
+  display: block;
+}
+
+.dropdown img{
+  width: 40px;
+}

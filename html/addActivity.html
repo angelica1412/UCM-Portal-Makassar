@@ -62,11 +62,28 @@
             </div>
           </li>
           <li>
-            <div class="profileicon">
+            <!-- <div class="profileicon">
               <a href="profile.html"><i class="fa fa-user"></i></a>
             </div>
             <div class="profiletext">
               <a href="profile.html">Profile<i class="fa-solid fa-chevron-down"></i></a>
+            </div> -->
+            <div class="dropdown">
+              <!-- Tampilan profile -->
+              <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
+              <div id="dropdown-content" class="dropdown-content">
+                <!-- Konten dropdown -->
+                <div class="card">
+                  <div class="card-border-top">
+                  </div>
+                  <div class="img">
+                  </div>
+                  <span> Person</span>
+                  <p class="job"> Job Title</p>
+                  <button> Log Out
+                  </button>
+                </div>
+              </div>
             </div>
           </li>
         </ul>
