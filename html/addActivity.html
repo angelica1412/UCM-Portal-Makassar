@@ -13,37 +13,112 @@
     <title>UCM Portal</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
+
 <body>
+  <div class="navbartop">
+    <img src="aset/logo UC.png" class="logoDiatas" />
+  </div>
+  <div class="fixnav">
+    <nav>
+      <div class="nav-left">
+        <a href="index.html"><img src="aset/logoNav.png" class="logo" /></a>
+        <form action="" method="get" class="search-box">
+          <input type="text" class="input" name="search" placeholder="Search Here" required />
+          <button type="submit" class="search">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+      </div>
+
+      <div class="nav-links" id="navLinks">
+        <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
+        <ul>
+          <li>
+            <div class="homeicon">
+              <a href="home.html"><i class="fa-solid fa-house"></i></a>
+            </div>
+            <div class="hometext">
+              <a href="home.html">Home</a>
+            </div>
+          </li>
+          <li>
+            <div class="addicon">
+              <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
+            </div>
+            <div class="addtext">
+              <a href="addActivity.html">Add Activity</a>
+            </div>
+          </li>
+          <li>
+            <div class="myactivityicon">
+              <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
+            </div>
+            <div class="myactivitytext">
+              <a href="activity.html">My Activity</a>
+            </div>
+          </li>
+          <li>
+            <div class="profileicon">
+              <a href="profile.html"><i class="fa fa-user"></i></a>
+            </div>
+            <div class="profiletext">
+              <a href="profile.html">Profile</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
+    </nav>
+
+  </div>
     <div class="containerSemua">
         <form action="action_page.php">
 
             <p class="Judul" >REQUEST FORM</p>
       
           <label for="fname" class="fontjudul">Judul</label>
-          <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda..">
+          <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda.." required>
       
           <label for="country" class="fontjudul">Jenis Kegiatan</label>
-
           <div class="pilihankegiatan">
             <div class="radio-buttons">
               <label class="radio-button">
-                <input value="option1" name="option" type="radio">
+                <input value="option1" name="option" type="radio" required>
                 <div class="radio-circle"></div>
                 <span class="radio-label">Organisasi</span>
               </label>
               <label class="radio-button">
-                <input value="option2" name="option" type="radio">
+                <input value="option2" name="option" type="radio" required>
                 <div class="radio-circle"></div>
                 <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
               </label>
               <label class="radio-button">
-                <input value="option3" name="option" type="radio">
+                <input value="option3" name="option" type="radio" required>
                 <div class="radio-circle"></div>
                 <span class="radio-label">Acara/Kepanitiaan</span>
               </label>
             </div>
           </div>
+
+
+          <label class="fontjudul">Tanggal</label>
+          <!-- Date -->
+        <div class="pengaturantanggal">
+          <div class="Date-Start">
+            <form>
+              <label for="tanggal_mulai">Tanggal Mulai:</label><br>
+              <input type="text" id="tanggal_mulai" name="tanggal_mulai" required><br>
+            </form>
+          </div>
+          <div class="Date-End">
+            <form>
+              <label for="tanggal_selesai">Tanggal Selesai:</label><br>
+              <input type="text" id="tanggal_selesai" name="tanggal_selesai" required><br>
+            </form>
+          </div>
+        </div>
 
           <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
 
@@ -62,12 +137,12 @@
               <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
             </div>
   
-            <input type="file" id="input" class="UnggahGambar">
+            <input type="file" id="input" class="UnggahGambar" required>
         </div>
 
           <div class="googleform">
             <label for="fname" class="fontjudul">Link Google Form</label>
-            <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda..">
+            <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda.." required>
           </div>
       
         </form>
@@ -83,7 +158,16 @@
       </div>
 
 </body>
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+  $(function () {
+    $("#tanggal_mulai").datepicker();
+    $("#tanggal_selesai").datepicker();
+  });
+</script>
 
 <script src="/js/JSaddactivity.js"></script>
+<script src="/js/FormSubmit.js"></script> 
 
 </html>
