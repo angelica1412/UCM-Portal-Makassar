@@ -14,12 +14,12 @@
 </head>
 <body>
     <div class="navbartop">
-        <img src="aset/logo UC.png" class="logoDiatas" />
+        <img src="/aset/logo UC.png" class="logoDiatas" />
       </div>
       <div class="fixnav">
         <nav>
           <div class="nav-left">
-            <a href="index.html"><img src="aset/logoNav.png" class="logo" /></a>
+            <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
             <form action="" method="get" class="search-box">
               <input type="text" class="input" name="search" placeholder="Search Here" required />
               <button type="submit" class="search">
@@ -55,6 +55,8 @@
                   <a href="activity.html">My Activity</a>
                 </div>
               </li>
+
+              <!-- khusus profile -->
               <li>
                 <div class="profileicon">
                   <a href="profile.html"><i class="fa fa-user"></i></a>
@@ -63,12 +65,30 @@
                   <a href="profile.html">Profile</a>
                 </div>
               </li>
+
             </ul>
           </div>
           <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
         </nav>
       </div>
 
-      
+      <div class="card" id="SubMenu">
+        <div class="card-border-top">
+        </div>
+        <div class="img">
+        </div>
+        <span> Person</span>
+        <p class="job"> Job Title</p>
+        <button> Log Out
+        </button>
+      </div>
+
 </body>
+<script>
+  let SubMenu = document.getElementById("SubMenu");
+
+  function toggleMenu() {
+    SubMenu.classList.toggle("open-menu")
+  }
+</script>
 </html>
