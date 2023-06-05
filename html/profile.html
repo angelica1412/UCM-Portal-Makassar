@@ -58,7 +58,7 @@
 
               <!-- khusus profile -->
               <li>
-                <div class="dropdown">
+                <!-- <div class="dropdown">
 
                   <div onclick="toggleDropdown()">
                     <div class="profileicon">
@@ -82,6 +82,23 @@
                     </div>
                   </div>
 
+                </div> -->
+                <div class="dropdown">
+                  <!-- Tampilan profile -->
+                  <img src="/aset/userProfile.png" style="size: 5px;" alt="Profile Image" onclick="toggleDropdown()">
+                  <div id="dropdown-content" class="dropdown-content">
+                    <!-- Konten dropdown -->
+                    <div class="card">
+                      <div class="card-border-top">
+                      </div>
+                      <div class="img">
+                      </div>
+                      <span> Person</span>
+                      <p class="job"> Job Title</p>
+                      <button> Log Out
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </li>
 
@@ -92,24 +109,5 @@
       </div>
 
 </body>
-<script>
-  // JavaScript untuk menangani klik pada tampilan profile
-  function toggleDropdown() {
-    var dropdownContent = document.getElementById("dropdown-content");
-    dropdownContent.classList.toggle("show");
-  }
-
-  // Menutup dropdown saat pengguna mengklik di luar dropdown
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropdown img')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      for (var i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  };
-</script>
+<script src="/js/profileJS.js"></script>
 </html>
