@@ -58,11 +58,30 @@
 
               <!-- khusus profile -->
               <li>
-                <div class="profileicon">
-                  <a href="profile.html"><i class="fa fa-user"></i></a>
-                </div>
-                <div class="profiletext">
-                  <a href="profile.html">Profile</a>
+                <div class="dropdown">
+
+                  <div onclick="toggleDropdown()">
+                    <div class="profileicon">
+                      <a href="profile.html"><i class="fa fa-user"></i></a>
+                    </div>
+                    <div class="profiletext">
+                      <a href="profile.html">Profile</a>
+                    </div>
+                  </div>
+
+                  <div class="dropdown-content" id="dropdown-content">
+                    <div class="card">
+                      <div class="card-border-top">
+                      </div>
+                      <div class="img">
+                      </div>
+                      <span> Person</span>
+                      <p class="job"> Job Title</p>
+                      <button> Log Out
+                      </button>
+                    </div>
+                  </div>
+
                 </div>
               </li>
 
@@ -72,23 +91,25 @@
         </nav>
       </div>
 
-      <div class="card" id="SubMenu">
-        <div class="card-border-top">
-        </div>
-        <div class="img">
-        </div>
-        <span> Person</span>
-        <p class="job"> Job Title</p>
-        <button> Log Out
-        </button>
-      </div>
-
 </body>
 <script>
-  let SubMenu = document.getElementById("SubMenu");
-
-  function toggleMenu() {
-    SubMenu.classList.toggle("open-menu")
+  // JavaScript untuk menangani klik pada tampilan profile
+  function toggleDropdown() {
+    var dropdownContent = document.getElementById("dropdown-content");
+    dropdownContent.classList.toggle("show");
   }
+
+  // Menutup dropdown saat pengguna mengklik di luar dropdown
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropdown img')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      for (var i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  };
 </script>
 </html>
