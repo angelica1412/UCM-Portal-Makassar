@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/addActivityStyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    <link rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-    <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
-    <title>UCM Portal</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
-    <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
-    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/addActivityStyle.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+  <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
+  <title>UCM Portal</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 </head>
 
 <body>
+
   <div class="navbartop">
     <img src="/aset/logo UC.png" class="logoDiatas" />
   </div>
@@ -25,7 +27,7 @@
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
         <form action="" method="get" class="search-box">
-          <input type="text" class="input" name="search" placeholder="Search Here" required />
+          <input type="text" class="inputcari" name="search" placeholder="Search Here" />
           <button type="submit" class="search">
             <i class="fa fa-search"></i>
           </button>
@@ -64,108 +66,117 @@
               <a href="profile.html"><i class="fa fa-user"></i></a>
             </div>
             <div class="profiletext">
-              <a href="profile.html">Profile</a>
+              <a href="profile.html">Profile<i class="fa-solid fa-chevron-down"></i></a>
             </div>
           </li>
         </ul>
       </div>
       <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
     </nav>
-
   </div>
-    <div class="containerSemua">
-        <form action="action_page.php">
 
-            <p class="Judul" >REQUEST FORM</p>
-      
-          <label for="fname" class="fontjudul">Judul</label>
-          <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda.." required>
-      
-          <label for="country" class="fontjudul">Jenis Kegiatan</label>
-          <div class="pilihankegiatan">
-            <div class="radio-buttons">
-              <label class="radio-button">
-                <input value="option1" name="option" type="radio" required>
-                <div class="radio-circle"></div>
-                <span class="radio-label">Organisasi</span>
-              </label>
-              <label class="radio-button">
-                <input value="option2" name="option" type="radio" required>
-                <div class="radio-circle"></div>
-                <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
-              </label>
-              <label class="radio-button">
-                <input value="option3" name="option" type="radio" required>
-                <div class="radio-circle"></div>
-                <span class="radio-label">Acara/Kepanitiaan</span>
-              </label>
-            </div>
-          </div>
+  <div class="containerSemua">
+    <form action="action_page.php">
 
+      <p class="Judul">REQUEST FORM</p>
 
-          <label class="fontjudul">Tanggal</label>
-          <!-- Date -->
-        <div class="pengaturantanggal">
-          <div class="Date-Start">
-            <form>
-              <label for="tanggal_mulai">Tanggal Mulai:</label><br>
-              <input type="text" id="tanggal_mulai" name="tanggal_mulai" required><br>
-            </form>
-          </div>
-          <div class="Date-End">
-            <form>
-              <label for="tanggal_selesai">Tanggal Selesai:</label><br>
-              <input type="text" id="tanggal_selesai" name="tanggal_selesai" required><br>
-            </form>
-          </div>
+      <label for="fname" class="fontjudul">Judul</label>
+      <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda.." required>
+
+      <label for="country" class="fontjudul">Jenis Kegiatan</label>
+      <div class="pilihankegiatan">
+        <div class="radio-buttons">
+          <label class="radio-button">
+            <input value="option1" name="option" type="radio" required>
+            <div class="radio-circle"></div>
+            <span class="radio-label">Organisasi</span>
+          </label>
+          <label class="radio-button">
+            <input value="option2" name="option" type="radio" required>
+            <div class="radio-circle"></div>
+            <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
+          </label>
+          <label class="radio-button">
+            <input value="option3" name="option" type="radio" required>
+            <div class="radio-circle"></div>
+            <span class="radio-label">Acara/Kepanitiaan</span>
+          </label>
         </div>
-
-          <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
-         
-	        <textarea name="content" rows="5" cols="80"></textarea>
-          <script>
-          CKEDITOR.replace('content');
-          </script>
-
-        <div class="fontjudul">
-          <div class="unggahLogo">
-            <label for="fname" class="fontjudul">Unggah Logo</label>
-            <div>
-
-              <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
-            </div>
-  
-            <input type="file" id="input" class="UnggahGambar" required>
-        </div>
-
-          <div class="googleform">
-            <label for="fname" class="fontjudul">Link Google Form</label>
-            <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda.." required>
-          </div>
-      
-        </form>
       </div>
 
-      <div class="submitform">
-        <button class="learn-more">
-          <span class="circle" aria-hidden="true">
-          <span class="icon arrow"></span>
-          </span>
-          <span class="button-text">Submit</span>
-        </button>
+
+      <label class="fontjudul">Tanggal</label>
+      <!-- Date -->
+      <div class="pengaturantanggal">
+        <div class="Date-Start">
+          <form>
+            <label for="tanggal_mulai">Tanggal Mulai:</label><br>
+            <input type="date" id="tanggal_mulai" name="tanggal_mulai" required><br>
+          </form>
+        </div>
+        <div class="Date-End">
+          <form>
+            <label for="tanggal_selesai">Tanggal Selesai:</label><br>
+            <input type="date" id="tanggal_selesai" name="tanggal_selesai" required><br>
+          </form>
+        </div>
       </div>
+
+      <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
+
+      <!-- <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+
+      <textarea name="content" rows="5" cols="80"></textarea>
+      <script>
+        CKEDITOR.replace('content');
+      </script>
+
+      <div class="fontjudul">
+        <div class="unggahLogo">
+          <label for="fname" class="fontjudul">Unggah Logo</label>
+          <div>
+
+            <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
+          </div>
+
+          <input type="file" id="input" class="UnggahGambar" required>
+        </div>
+
+        <div class="googleform">
+          <label for="fname" class="fontjudul">Link Google Form</label>
+          <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda.." required>
+        </div>
+
+    </form>
+  </div>
+
+  <div class="submitform">
+    <button class="learn-more" href="#" onclick="show('popup')">
+      <span class="circle" aria-hidden="true">
+        <span class="icon arrow"></span>
+      </span>
+      <span class="button-text">Submit</span>
+    </button>
+
+    <div class="popup" id="popup">
+      <img src="/aset/benar.png">
+      <p class="statuspengajuan">Status Pengajuan</p>
+      <p>Telah Dikirim</p>
+      <!-- <a href="#" onclick="hide('popup')"></a> -->
+    </div>
 
 </body>
+
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 <script>
   $(function () {
     $("#tanggal_mulai").datepicker();
     $("#tanggal_selesai").datepicker();
-  });
+  });
 </script>
 
 <script src="/js/JSaddactivity.js"></script>
-<script src="/js/FormSubmit.js"></script> 
+<!-- <script src="/js/FormSubmit.js"></script> -->
 
 </html>

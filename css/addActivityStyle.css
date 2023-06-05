@@ -21,20 +21,19 @@
 .navbartop {
   overflow: hidden;
   background-color: white;
-
 }
 
 .logoDiatas {
   display: flex;
   margin-left: 2%;
   margin-top: 1.5%;
-  width: 23%;
+  width: 300px;
 }
 
 .fixnav {
   position: sticky;
   top: 0;
-  z-index: 10;
+  z-index: 999;
 }
 
 nav {
@@ -66,7 +65,7 @@ nav {
   align-items: center;
 }
 
-.input {
+.inputcari {
   width: 100%;
   border: none;
   border-radius: 8px;
@@ -77,15 +76,11 @@ nav {
   font-size: 14px;
 }
 
-.input:focus {
+.inputcari:focus {
   border: 2px solid var(--orange);
 }
 
-input:invalid {
-  border-color: red;
-}
-
-.input::placeholder {
+.inputcari::placeholder {
   color: var(--orange);
   opacity: 60%;
 }
@@ -162,18 +157,18 @@ nav img {
   width: 100%;
 }
 
-.addicon i {
+.myactivityicon i {
   width: 100%;
   transform: scale(1.8);
   color: white;
 }
 
-.profileicon i {
+.addicon i {
   width: 100%;
   transform: scale(1.8);
 }
 
-.myactivityicon i {
+.profileicon i {
   width: 100%;
   transform: scale(1.8);
 }
@@ -191,14 +186,8 @@ nav #humbuger {
   display: none;
 }
 
-.addtext a {
+.myactivitytext a {
   color: white !important;
-}
-
-.fontjudul {
-  margin-top: 2%;
-  font-weight: bolder;
-  font-size: 15px;
 }
 
 input[type=text],
@@ -248,7 +237,7 @@ input[type=submit]:hover {
   font-size: 30px;
   text-align: center;
   color: #10346B;
-  font-weight: bolder;
+  font-weight: bold;
 }
 
 .UnggahGambar {
@@ -322,101 +311,6 @@ input[type=submit]:hover {
   margin-bottom: 30px;
 }
 
-button {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-  outline: none;
-  border: 0;
-  vertical-align: middle;
-  text-decoration: none;
-  background: transparent;
-  padding: 0;
-  font-size: inherit;
-  font-family: inherit;
-}
-
-button.learn-more {
-  width: 10rem;
-  height: auto;
-}
-
-button.learn-more .circle {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: relative;
-  display: block;
-  margin: 0;
-  width: 3rem;
-  height: 3rem;
-  background: #282936;
-  border-radius: 1.625rem;
-}
-
-button.learn-more .circle .icon {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-  background: #fff;
-}
-
-button.learn-more .circle .icon.arrow {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  left: 0.625rem;
-  width: 1.125rem;
-  height: 0.125rem;
-  background: none;
-}
-
-button.learn-more .circle .icon.arrow::before {
-  position: absolute;
-  content: "";
-  top: -0.29rem;
-  right: 0.0625rem;
-  width: 0.625rem;
-  height: 0.625rem;
-  border-top: 0.125rem solid #fff;
-  border-right: 0.125rem solid #fff;
-  transform: rotate(45deg);
-}
-
-button.learn-more .button-text {
-  transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
-  color: #282936;
-  font-weight: 700;
-  line-height: 1.6;
-  text-align: center;
-  text-transform: uppercase;
-}
-
-button:hover .circle {
-  width: 100%;
-}
-
-button:hover .circle .icon.arrow {
-  background: #fff;
-  transform: translate(1rem, 0);
-}
-
-button:hover .button-text {
-  color: #fff;
-}
-
-.submitform {
-  float: right;
-  margin-top: 20px;
-  margin-right: 30px;
-  margin-bottom: 30px;
-}
-
 
 /* .container form {
     display: flex;
@@ -472,6 +366,11 @@ button:hover .button-text {
     transition: 0.25s ease;
     box-shadow: inset 0 0 0 0.125em #00005c;
   } */
+
+.pilihankegiatan {
+  margin-top: 5px;
+  margin-left: 10px;
+}
 
 .pengaturantanggal {
   display: flex;
@@ -575,8 +474,8 @@ button:hover .button-text {
 
 .submitform {
   float: right;
-  margin-top: 20px;
-  margin-right: 70px;
+  margin-top: 7%;
+  /* margin-right: 70px; */
   margin-bottom: 30px;
 }
 
@@ -677,10 +576,6 @@ button:hover .button-text {
   width: 50px;
 }
 
-.Date-Start, .Date-End {
-  flex: 7;
-}
-
 .Date-End {
   margin-left: 50px;
 }
@@ -692,4 +587,77 @@ button:hover .button-text {
 
 .unggahLogo {
   margin-top: 13px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 27%;
+  left: 50%;
+  margin-left: -150px;
+  height: 200px;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  z-index: 20;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column nowrap;
+  font-weight: bold;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.popup img{
+  display: flex;
+  width: 30%;
+  justify-content: center;
+  align-items: center;
+}
+
+.statuspengajuan{
+  margin-top: 5%
+}
+
+.popup p{
+  font-weight: bold;
+  font-size: 16px;
+}
+
+input[type="date"] {
+  width: 200px; 
+  height: 30px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.fontjudul{
+  font-weight: bolder;
+  font-size: 14px;
 }
