@@ -40,7 +40,6 @@ nav {
   margin-top: 2%;
   background-color: #ff9800;
   align-items: center;
-  position: sticky;
   top: 0;
 }
 
@@ -60,6 +59,11 @@ nav {
 .nav-left {
   display: flex;
   align-items: center;
+  margin-left: 3%;
+}
+
+.nav-links{
+  margin-right: 3%;
 }
 
 .input {
@@ -180,7 +184,7 @@ nav #humbuger {
 }
 
 .home1 {
-  background-image: linear-gradient(rgba(255, 152, 0, 0.5), rgba(255, 152, 0, 0.5)), url("aset/gambarHome1.png");
+  background-image: linear-gradient(rgba(255, 152, 0, 0.5), rgba(255, 152, 0, 0.5)), url("/aset/gambarHome1.png");
   width: 50%;
   height: 650px;
   background-size: cover;
@@ -232,7 +236,7 @@ nav #humbuger {
 }
 
 .home2 {
-  background-image: linear-gradient(rgba(28, 49, 94, 0.6), rgba(28, 49, 94, 0.6)), url("aset/gambarHome2.png");
+  background-image: linear-gradient(rgba(28, 49, 94, 0.6), rgba(28, 49, 94, 0.6)), url("/aset/gambarHome2.png");
   width: 50%;
   height: 650px;
   background-size: cover;
