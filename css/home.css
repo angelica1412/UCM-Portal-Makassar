@@ -40,7 +40,6 @@ nav {
   margin-top: 2%;
   background-color: #ff9800;
   align-items: center;
-  top: 0;
 }
 
 .logo {
@@ -110,7 +109,7 @@ nav {
   text-align: center;
 }
 
-.profileicon {
+.dropdown img {
   text-align: center;
 }
 
@@ -230,8 +229,8 @@ nav #humbuger {
   color: white;
   font-size: 18px;
   background: transparent;
-  width: 23%;
-  height: 7%;
+  width: 160px;
+  height: 100%;
   margin-top: 15px;
 }
 
@@ -260,8 +259,8 @@ nav #humbuger {
   color: white;
   font-size: 18px;
   background: transparent;
-  width: 23%;
-  height: 7%;
+  width: 160px;
+  height: 100%;
   margin-top: 15px;
   transition: all 0.3s;
   cursor: pointer;
@@ -310,12 +309,14 @@ nav #humbuger {
 }
 
 .row {
-  margin: 0 -5px;
+  /* margin: 0 -5px; */
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 16px;
   width: 100%;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .row:after {
@@ -344,9 +345,9 @@ nav #humbuger {
 
 .card img {
   margin-top: 15px;
-  width: 290px;
-  height: 70px;
-  object-fit: contain;
+  width: 100%;
+  aspect-ratio: 19/4;
+  object-fit: cover;
 }
 
 .judul {
@@ -378,10 +379,6 @@ nav #humbuger {
 .card button:hover {
   background: #FF9800;
   font-weight: bold;
-}
-
-.bagian3 {
-  display: flex;
 }
 
 .bagian4 {
@@ -419,6 +416,7 @@ nav #humbuger {
 .bagian5 {
   display: flex;
   margin-top: 4%;
+  flex-flow: column nowrap;
 }
 
 .bagianjudul2 {
@@ -448,6 +446,102 @@ nav #humbuger {
   margin-top: 70px;
 }
 
+.bagianutuh{
+  display: flex;
+  flex-flow: row nowrap;
+  /* align-items: center; */
+  justify-content: center;
+}
+
+.temukandisini{
+  width: 30%;
+  height: 700px;
+  background-color: white;
+}
+
+.judultemukan{
+  display: flex;
+  width: 100%;
+  height: 35px;
+  background-color: #FF9800;
+  align-items: center;
+  border-radius: 5px 0 0 0;
+}
+
+.judultemukan p{
+  font-size: 18px;
+  font-weight: 450;
+  color: white;
+  margin-left: 2%;
+}
+
+.listevent{
+  height: 500px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin-top: 2%;
+}
+
+.acara{
+  height: 100px;
+  display: flex;
+  flex-flow: row nowrap;
+  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  margin-right: 2%;
+}
+
+.logoacara{
+  display: flex;
+  width: 120px;
+  align-items: center;
+}
+
+.logoacara img{
+  width: 120px;
+  margin-left: 5%;
+}
+
+.tulisanacara{
+  margin-left: 5%;
+  margin-top: 5%;
+}
+
+.judulacara{
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.jenisacara{
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--orange);
+}
+
+.informasi{
+  width: 40%;
+  border: 2px solid #001c4c;
+}
+
+.tulisanlogo{
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.logo2{
+  width: 125px;
+  display: flex;
+}
+
+
+.logo img{
+  width: 120px;
+}
+
+.tulisan{
+  font-weight: bold;
+}
+
 .bagianjudul3 {
   width: 100%;
   height: 130px;
@@ -469,8 +563,8 @@ nav #humbuger {
   color: white;
   font-size: 18px;
   background: transparent;
-  width: 10%;
-  height: 35%;
+  width: 118px;
+  height: 100%;
   margin-top: 15px;
   transition: all 0.3s;
   cursor: pointer;
@@ -483,6 +577,88 @@ nav #humbuger {
   border: none;
   font-weight: bolder;
   border-radius: 10px;
+}
+
+.card1 {
+  width: 190px;
+  height: 254px;
+  background: #ed9a09;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px #88580a6b;
+}
+
+.card1 .card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #f3c864;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.card1 span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.card1 .job {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 12px;
+}
+
+.card1 .img {
+  width: 70px;
+  height: 80px;
+  background: #f3c864;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.card1 button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #f3c864;
+  color: white;
+  font-weight: 600;
+}
+
+.card1 button:hover {
+  background: #f5b82b;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: -130px;
+  margin-top: 14px;
+  min-width: 160px;
+  z-index: 1;
+  padding: 12px 16px;
+}
+
+.show {
+  display: block;
+}
+
+.dropdown img{
+  width: 40px;
 }
 
 @media (max-width: 700px) {
@@ -529,6 +705,10 @@ nav #humbuger {
     text-align: center;
   }
 
+  .nav-links .dropdown img {
+    text-align: center;
+  }
+
   .nav-links #close {
     display: block;
     color: #FF9800;
@@ -547,5 +727,9 @@ nav #humbuger {
 
   .nav-links ul {
     padding: 30px;
+  }
+
+  .acara img{
+    width: 100px;
   }
 }

@@ -157,13 +157,13 @@ nav img {
   width: 100%;
 }
 
-.myactivityicon i {
+.addicon i {
   width: 100%;
   transform: scale(1.8);
   color: white;
 }
 
-.addicon i {
+.myactivityicon i {
   width: 100%;
   transform: scale(1.8);
 }
@@ -186,7 +186,7 @@ nav #humbuger {
   display: none;
 }
 
-.myactivitytext a {
+.addtext a {
   color: white !important;
 }
 
@@ -375,14 +375,9 @@ input[type=submit]:hover {
 .pengaturantanggal {
   display: flex;
   padding-top: 6px;
-  padding-bottom: 6px;
+  padding-bottom: 12px;
 }
 
-.TanggalMulai {
-  margin-left: 10px;
-  padding-top: 15px;
-  margin-bottom: 1px;
-}
 
 button {
   position: relative;
@@ -562,11 +557,6 @@ button:hover .button-text {
   margin-left: 10px;
 } */
 
-.pengaturantanggal {
-  display: flex;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
 .Date {
   display: flex;
   justify-content: space-between;
