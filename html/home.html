@@ -74,12 +74,31 @@
               </div>
             </li>
             <li>
-              <div class="profileicon">
+              <!-- <div class="profileicon">
                 <a href="profile.html"><i class="fa fa-user"></i></a>
               </div>
               <div class="profiletext">
                 <a href="profile.html">Profile</a>
+              </div> -->
+
+              <div class="dropdown">
+                <!-- Tampilan profile -->
+                <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
+                <div id="dropdown-content" class="dropdown-content">
+                  <!-- Konten dropdown -->
+                  <div class="card">
+                    <div class="card-border-top">
+                    </div>
+                    <div class="img">
+                    </div>
+                    <span> Person</span>
+                    <p class="job"> Job Title</p>
+                    <button> Log Out
+                    </button>
+                  </div>
+                </div>
               </div>
+
             </li>
           </ul>
         </div>
@@ -107,7 +126,7 @@
           Membuat penerimaan anggota organisasi maupun kegiatan
         </p>
         <p class="text5">kepada mahasiswa</p>
-        <button class="unggah">Unggah</button>
+        <a href="addActivity.html"><button class="unggah">Unggah</button></a>
       </div>
     </div>
 
@@ -235,9 +254,9 @@
     <div class="bagian6">
       <div class="bagianjudul3">
         <p class="pilihan">Ingin membuka kepanitiaan atau organisasi?</p>
-        <button class="unggah2">Unggah</button>
+        <a href="addActivity.html"><button class="unggah2">Unggah</button></a>
       </div>
     </div>
-    <script src="../js/javaScript.js"></script>
+    <script src="../js/home.js"></script>
   </body>
 </html>
