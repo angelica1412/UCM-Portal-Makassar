@@ -203,7 +203,12 @@ nav #humbuger {
     border: 2px solid #001c4c;
     width: 25%;
     height: 320px;
+    overflow-y: auto;
     border-radius: 10px;
+}
+
+.pengirim::-webkit-scrollbar{
+    display: none;
 }
 
 .judulpengirim {
@@ -214,6 +219,10 @@ nav #humbuger {
     font-weight: bold;
     padding: 10px;
     border-bottom: 2px solid #001c4c;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 10;
 }
 
 .listpengirim {
