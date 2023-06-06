@@ -61,7 +61,7 @@ nav {
   margin-left: 3%;
 }
 
-.nav-links{
+.nav-links {
   margin-right: 3%;
 }
 
@@ -136,10 +136,10 @@ nav img {
 }
 
 .nav-links ul li::after {
-  content: '';
+  content: "";
   width: 0%;
   height: 2px;
-  background-color: #609CF6;
+  background-color: #609cf6;
   display: block;
   margin: auto;
   transition: 0.5s;
@@ -183,7 +183,11 @@ nav #humbuger {
 }
 
 .home1 {
-  background-image: linear-gradient(rgba(255, 152, 0, 0.5), rgba(255, 152, 0, 0.5)), url("/aset/gambarHome1.png");
+  background-image: linear-gradient(
+      rgba(255, 152, 0, 0.5),
+      rgba(255, 152, 0, 0.5)
+    ),
+    url("/aset/gambarHome1.png");
   width: 50%;
   height: 650px;
   background-size: cover;
@@ -235,7 +239,11 @@ nav #humbuger {
 }
 
 .home2 {
-  background-image: linear-gradient(rgba(28, 49, 94, 0.6), rgba(28, 49, 94, 0.6)), url("/aset/gambarHome2.png");
+  background-image: linear-gradient(
+      rgba(28, 49, 94, 0.6),
+      rgba(28, 49, 94, 0.6)
+    ),
+    url("/aset/gambarHome2.png");
   width: 50%;
   height: 650px;
   background-size: cover;
@@ -247,7 +255,7 @@ nav #humbuger {
 }
 
 .cari:hover {
-  color: #FF9800;
+  color: #ff9800;
   background: white;
   border: none;
   font-weight: bolder;
@@ -267,7 +275,7 @@ nav #humbuger {
 }
 
 .unggah:hover {
-  color: #FF9800;
+  color: #ff9800;
   background: white;
   border: none;
   font-weight: bolder;
@@ -329,14 +337,13 @@ nav #humbuger {
   width: 27%;
   padding: 0 10px;
   /* padding-bottom: 80px; */
-  margin-right: 15px;
+  /* margin-right: 15px; */
 }
 
 .card {
   padding: 16px;
   text-align: center;
   min-height: 200px;
-  height: fit-content;
   box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2);
   background-color: white;
   border-radius: 15px 15px 0px 0px;
@@ -344,9 +351,8 @@ nav #humbuger {
 }
 
 .card img {
-  margin-top: 15px;
   width: 100%;
-  aspect-ratio: 19/4;
+  aspect-ratio: 16/9;
   object-fit: cover;
 }
 
@@ -377,7 +383,7 @@ nav #humbuger {
 }
 
 .card button:hover {
-  background: #FF9800;
+  background: #ff9800;
   font-weight: bold;
 }
 
@@ -386,7 +392,7 @@ nav #humbuger {
   margin-top: 7%;
 }
 
-.bagian4 img{
+.bagian4 img {
   width: 60%;
   margin-top: 2%;
 }
@@ -551,10 +557,10 @@ nav #humbuger {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #FF9800;
+  background: #ff9800;
 }
 
-.pilihan{
+.pilihan {
   font-size: 18px;
 }
 
@@ -570,9 +576,8 @@ nav #humbuger {
   cursor: pointer;
 }
 
-
 .unggah2:hover {
-  color: #FF9800;
+  color: #ff9800;
   background: white;
   border: none;
   font-weight: bolder;
@@ -673,7 +678,7 @@ nav #humbuger {
 
   .nav-links {
     position: absolute;
-    background-color: #F6F9FE;
+    background-color: #f6f9fe;
     height: 100vh;
     width: 200px;
     top: 0;
@@ -711,7 +716,7 @@ nav #humbuger {
 
   .nav-links #close {
     display: block;
-    color: #FF9800;
+    color: #ff9800;
     margin: 10px;
     font-size: 22px;
     cursor: pointer;

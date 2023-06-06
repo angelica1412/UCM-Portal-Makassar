@@ -181,6 +181,13 @@
       <!-- <a href="#" onclick="hide('popup')"></a> -->
     </div>
 
+<!-- Use a button to open the snackbar -->
+<button onclick="myFunction()">Show Snackbar</button>
+
+<!-- The actual snackbar -->
+<div id="snackbar">
+  <img src="/aset/alertsign.png" style="width: 20px; height: 20px; margin-right: 8px; margin-bottom: -4px; ">
+  Please fill all the fields</div>
 </body>
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
@@ -189,7 +196,7 @@
   $(function () {
     $("#tanggal_mulai").datepicker();
     $("#tanggal_selesai").datepicker();
-  });
+    });
 </script>
 
 <script src="/js/JSaddactivity.js"></script>

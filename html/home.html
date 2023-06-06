@@ -1,295 +1,243 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
+    <title>UCM Portal</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/home.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
-  <title>UCM Portal</title>
-</head>
+  <body>
+    <div class="navbartop">
+      <img src="/aset/logo UC.png" class="logoDiatas" />
+    </div>
+    <div class="fixnav">
+      <nav>
+        <div class="nav-left">
+          <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
+          <form action="" method="get" class="search-box">
+            <input
+              type="text"
+              class="input"
+              name="search"
+              placeholder="Search Here"
+              required
+              id="search-box"
+            />
+            <button type="submit" class="search">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
 
-<body>
-  <div class="navbartop">
-    <img src="/aset/logo UC.png" class="logoDiatas" />
-  </div>
-  <div class="fixnav">
-    <nav>
-      <div class="nav-left">
-        <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
-        <form action="" method="get" class="search-box">
-          <input type="text" class="input" name="search" placeholder="Search Here" required />
-          <button type="submit" class="search">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
-
-      <div class="nav-links" id="navLinks">
-        <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
-        <ul>
-          <li>
-            <div class="homeicon">
-              <a href="home.html"><i class="fa-solid fa-house"></i></a>
-            </div>
-            <div class="hometext">
-              <a href="home.html">Home</a>
-            </div>
-          </li>
-          <li>
-            <div class="addicon">
-              <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
-            </div>
-            <div class="addtext">
-              <a href="addActivity.html">Add Activity</a>
-            </div>
-          </li>
-          <li>
-            <div class="myactivityicon">
-              <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
-            </div>
-            <div class="myactivitytext">
-              <a href="activity.html">My Activity</a>
-            </div>
-          </li>
-          <li>
-            <!-- <div class="profileicon">
-              <a href="profile.html"><i class="fa fa-user"></i></a>
-            </div>
-            <div class="profiletext">
-              <a href="profile.html">Profile</a>
-            </div> -->
-
-            <div class="dropdown">
-              <!-- Tampilan profile -->
-              <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
-              <div id="dropdown-content" class="dropdown-content">
-                <!-- Konten dropdown -->
-                <div class="card1">
-                  <div class="card-border-top">
-                  </div>
-                  <div class="img">
-                  </div>
-                  <span> Person</span>
-                  <p class="job"> Job Title</p>
-                  <button> Log Out</button>
-                </div>
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
+          <ul>
+            <li>
+              <div class="homeicon">
+                <a href="home.html"><i class="fa-solid fa-house"></i></a>
               </div>
-            </div>
-
-          </li>
-        </ul>
-      </div>
-      <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
-    </nav>
-  </div>
-
-  <div class="gabung">
-    <div class="home1">
-      <p class="text1">Saya adalah kandidat</p>
-      <p class="text2">CARI ORGANISASI</p>
-      <p class="text3">ATAU KEPANITIAAN</p>
-      <p class="text4">Telusuri organisasi atau kepanitiaan sesuai</p>
-      <p class="text5">dengan minat dan bakat anda</p>
-      <button class="cari" onclick="search()">Cari Sekarang</button>
+              <div class="hometext">
+                <a href="home.html">Home</a>
+              </div>
+            </li>
+            <li>
+              <div class="addicon">
+                <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
+              </div>
+              <div class="addtext">
+                <a href="addActivity.html">Add Activity</a>
+              </div>
+            </li>
+            <li>
+              <div class="myactivityicon">
+                <a href="myActivity.html"
+                  ><i class="fa fa-clipboard-list"></i
+                ></a>
+              </div>
+              <div class="myactivitytext">
+                <a href="myActivity.html">My Activity</a>
+              </div>
+            </li>
+            <li>
+              <div class="profileicon">
+                <a href="profile.html"><i class="fa fa-user"></i></a>
+              </div>
+              <div class="profiletext">
+                <a href="profile.html">Profile</a>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
+      </nav>
     </div>
 
-    <div class="home2">
-      <p class="text1">Saya adalah rekruter</p>
-      <p class="text2">MEMBUKA REKRUT</p>
-      <p class="text3">UNTUK MAHASISWA</p>
-      <p class="text4">Membuat penerimaan anggota organisasi maupun kegiatan</p>
-      <p class="text5">kepada mahasiswa</p>
-      <a href="/html/addActivity.html"><button class="unggah">Unggah</button></a>
-    </div>
-  </div>
-
-  <div class="bagian1">
-    <div class="bagian1atas">
-      <p class="text12">Sedang Trending</p>
-      <p class="text22">Beberapa kepanitiaan atau organisasi yang banyak didaftar</p>
-      <p class="text32">boleh mahasiswa dalam beberapa waktu dekat</p>
-    </div>
-  </div>
-
-  <div class="bagian2">
-    <div class="row">
-
-      <div class="column">
-        <div class="card">
-          <img src="/aset/oweek.png">
-          <p class="judul">O-Week UC Makassar 2023</p>
-          <p class="tutup">Berakhir pada : 12 Januari 2023</p>
-          <button>Selengkapnya</button>
-        </div>
+    <div class="gabung">
+      <div class="home1">
+        <p class="text1">Saya adalah kandidat</p>
+        <p class="text2">CARI ORGANISASI</p>
+        <p class="text3">ATAU KEPANITIAAN</p>
+        <p class="text4">Telusuri organisasi atau kepanitiaan sesuai</p>
+        <p class="text5">dengan minat dan bakat anda</p>
+        <button class="cari" id="btn-search" onclick="focusToSearchBox()">
+          Cari Sekarang
+        </button>
       </div>
 
-      <div class="column">
-        <div class="card">
-          <img src="/aset/infinity.png">
-          <p class="judul">Infinity Generasi Ke - 3</p>
-          <p class="tutup">Berakhir pada : 30 September 2023</p>
-          <button>Selengkapnya</button>
-        </div>
+      <div class="home2">
+        <p class="text1">Saya adalah rekruter</p>
+        <p class="text2">MEMBUKA REKRUT</p>
+        <p class="text3">UNTUK MAHASISWA</p>
+        <p class="text4">
+          Membuat penerimaan anggota organisasi maupun kegiatan
+        </p>
+        <p class="text5">kepada mahasiswa</p>
+        <button class="unggah">Unggah</button>
       </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="/aset/fdu.png">
-          <p class="judul">Faith Diversity Unity</p>
-          <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
-          <button>Selengkapnya</button>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="/aset/fdu.png">
-          <p class="judul">Faith Diversity Unity</p>
-          <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
-          <button>Selengkapnya</button>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="/aset/infinity.png">
-          <p class="judul">Infinity Generasi Ke - 3</p>
-          <p class="tutup">Berakhir pada : 30 September 2023</p>
-          <button>Selengkapnya</button>
-        </div>
-      </div>
-
-      <div class="column">
-        <div class="card">
-          <img src="/aset/oweek.png">
-          <p class="judul">O-Week UC Makassar 2023</p>
-          <p class="tutup">Berakhir pada : 12 Januari 2023</p>
-          <button>Selengkapnya</button>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <div class="bagian4">
-    <div class="bagianjudul">
-      <p class="caramendaftar">Cara Mendaftar</p>
-      <p class="descdaftar">Berikut merupakan langkah-langkah yang dapat anda ikuti dalam mendaftar</p>
-      <p class="lanjutandaftar">sebuah kepanitiaan ataupun organisasi</p>
-      <img src="/aset/cari.png">
-    </div>
-  </div>
-
-  <div class="bagian5">
-
-    <div class="bagianjudul2">
-      <p class="sedangberlangsung">Sedang Berlangsung</p>
-      <p class="desclangsung">Temukan organisasi maupun kepanitiaan yang sedang membuka rekrutan</p>
-      <p class="lanjutanlangsung">di kampus UC Makassar</p>
     </div>
 
-    <div class="bagianutuh">
-
-      <div class="temukandisini">
-
-        <div class="judultemukan">
-          <p>Temukan di sini</p>
-        </div>
-
-        <div class="listevent">
-
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/infinity.png">
-            </div>
-            <div class="tulisanacara">
-              <p class="judulacara">Infinity Generasi ke - 3</p>
-              <p class="jenisacara">Organisasi</p>
-            </div>
-          </div>
-
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/fdu.png">
-            </div>
-            <div class="tulisanacara">
-              <p class="judulacara">Infinity Generasi ke - 3</p>
-              <p class="jenisacara">Organisasi</p>
-            </div>
-          </div>
-
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/oweek.png">
-            </div>
-            <div class="tulisanacara">
-              <p class="judulacara">Open Recruitment Pengurus Bultang 2023/2024</p>
-              <p class="jenisacara">UKM</p>
-            </div>
-          </div>
-
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/infinity.png">
-            </div>
-            <div class="tulisanacara">
-              <p class="judulacara">Infinity Generasi ke - 3</p>
-              <p class="jenisacara">Organisasi</p>
-            </div>
-          </div>
-
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/fdu.png">
-            </div>
-            <div class="tulisanacara">
-              <p class="judulacara">Infinity Generasi ke - 3</p>
-              <p class="jenisacara">Organisasi</p>
-            </div>
-          </div>
-
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/oweek.png">
-            </div>
-            <div class="tulisanacara">
-              <p class="judulacara">Open Recruitment Pengurus Bultang 2023/2024</p>
-              <p class="jenisacara">UKM</p>
-            </div>
-          </div>
-
-        </div>
+    <div class="bagian1">
+      <div class="bagian1atas">
+        <p class="text12">Sedang Trending</p>
+        <p class="text22">
+          Beberapa kepanitiaan atau organisasi yang banyak didaftar
+        </p>
+        <p class="text32">boleh mahasiswa dalam beberapa waktu dekat</p>
       </div>
+    </div>
 
-      <div class="informasi">
-          <div class="tulisanlogo">
-            <div class="logo2">
-              <img src="/aset/oweek.png">
-            </div>
-            <div class="tulisan">
-              <p>Open Recruitment Pengurus FDU</p>
-            </div>
+    <div class="bagian2">
+      <div class="row" id="trending">
+        <!-- <div class="column">
+          <div class="card">
+            <img src="/aset/oweek.png" />
+            <p class="judul">O-Week UC Makassar 2023</p>
+            <p class="tutup">Berakhir pada : 12 Januari 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div> -->
+
+        <!-- <div class="column">
+          <div class="card">
+            <img src="/aset/infinity.png" />
+            <p class="judul">Infinity Generasi Ke - 3</p>
+            <p class="tutup">Berakhir pada : 30 September 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/aset/fdu.png" />
+            <p class="judul">Faith Diversity Unity</p>
+            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/aset/fdu.png" />
+            <p class="judul">Faith Diversity Unity</p>
+            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/aset/fdu.png" />
+            <p class="judul">Faith Diversity Unity</p>
+            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div>
+        <div class="column">
+          <div class="card">
+            <img src="/aset/fdu.png" />
+            <p class="judul">Faith Diversity Unity</p>
+            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div> -->
+      </div>
+    </div>
+
+    <!-- <div class="bagian3">
+      <div class="row">
+        <div class="column">
+          <div class="card">
+            <img src="/aset/oweek.png" />
+            <p class="judul">O-Week UC Makassar 2023</p>
+            <p class="tutup">Berakhir pada : 12 Januari 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/aset/infinity.png" />
+            <p class="judul">Infinity Generasi Ke - 3</p>
+            <p class="tutup">Berakhir pada : 30 September 2023</p>
+            <button>Selengkapnya</button>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="/aset/fdu.png" />
+            <p class="judul">Faith Diversity Unity</p>
+            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
+            <button>Selengkapnya</button>
           </div>
         </div>
       </div>
-  </div>
+    </div> -->
 
-  <div class="bagian6">
-    <div class="bagianjudul3">
-      <p class="pilihan">Ingin membuka kepanitiaan atau organisasi?</p>
-      <a href="/html/addActivity.html"><button class="unggah2">Unggah</button></a>
+    <div class="bagian4">
+      <div class="bagianjudul">
+        <p class="caramendaftar">Cara Mendaftar</p>
+        <p class="descdaftar">
+          Berikut merupakan langkah-langkah yang dapat anda ikuti dalam
+          mendaftar
+        </p>
+        <p class="lanjutandaftar">sebuah kepanitiaan ataupun organisasi</p>
+        <img src="/aset/cari.png" />
+      </div>
     </div>
-  </div>
 
-</body>
+    <div class="bagian5">
+      <div class="bagianjudul2">
+        <p class="sedangberlangsung">Sedang Berlangsung</p>
+        <p class="desclangsung">
+          Temukan organisasi maupun kepanitiaan yang sedang membuka rekrutan
+        </p>
+        <p class="lanjutanlangsung">di kampus UC Makassar</p>
+      </div>
+      <div class="bagianutuh"></div>
+    </div>
 
-<script src="/js/home.js"></script>
-<script src="/js/profileJS.js"></script>
-
+    <div class="bagian6">
+      <div class="bagianjudul3">
+        <p class="pilihan">Ingin membuka kepanitiaan atau organisasi?</p>
+        <button class="unggah2">Unggah</button>
+      </div>
+    </div>
+    <script src="../js/javaScript.js"></script>
+  </body>
 </html>
