@@ -834,24 +834,42 @@ nav #humbuger {
   align-items: center; */
   flex-flow: column nowrap;
   font-weight: bold;
+  border-radius: 10px;
 }
 
 #cancel{
   float: right;
   margin-right: 2%;
+  margin-top: 2%;
+  color: #000000;
 }
 
 #tidak{
   float: right;
   margin-right: 2%;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 20%;
+  height: 30px;
+  border: none;
 }
 
 #ya{
   float: right;
   margin-right: 2%;
-  background-color: #E04747;
+  background-color: rgb(224,71,71, 0.7);
   border: none;
-  border-radius: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  width: 20%;
+  height: 30px;
+  color: white;
+  
+}
+
+#ya:hover{
+  background-color: rgb(224,71,71);
+  font-weight: bold;
 }
 
 #popup:after {
@@ -864,6 +882,7 @@ nav #humbuger {
   background: rgba(0, 0, 0, 0.5);
   z-index: -2;
   display: flex;
+  border-radius: 10px;
   justify-content: center;
 }
 
@@ -896,5 +915,5 @@ nav #humbuger {
 }
 
 .buttonlog {
-  margin-top: 10%;
+  margin-top: 7%;
 }

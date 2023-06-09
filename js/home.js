@@ -30,6 +30,7 @@ window.addEventListener('click', function(event) {
       hide('popup');
   }
 });
+
 // async function getTrendingData() {
 //   const res = await fetch("https://jsonplaceholder.typicode.com/albums/1/photos");
 //   const data = await res.json();

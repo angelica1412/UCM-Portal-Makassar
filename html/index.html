@@ -24,10 +24,10 @@
             <h1 class="judulWelcome">Selamat Datang</h1>
             <p class="petunjuk">Silahkan mengisi data dibawah untuk melanjutkan</p>
         </div>
-    
+    <form id="loginForm">
         <div class="inputUsername">
             <p class="username">Username</p>
-            <input type="text" name="name" placeholder="Masukkan username anda" id="username" value="">
+            <input type="text" name="name" placeholder="Masukkan username anda" id="name" value="">
         </div>
 
         <div class="inputPassword">
@@ -36,9 +36,10 @@
         </div>
 
         <div class="buttonMasuk">
-            <button class="masuk">Masuk</button>
-            <button onclick=""></button>
+            <button type="submit" class="masuk">Masuk</button>
         </div>
+    </form>
+        
         
         <div class="bagianDaftar">
             <p class="daftar">Belum mempunyai akun?</p>
@@ -46,7 +47,8 @@
         </div>
     </div>
 </div>
-    <script src="/js/home.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/index.js"></script>
 </body>
 
 </html>
