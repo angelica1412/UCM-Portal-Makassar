@@ -208,7 +208,7 @@ nav #humbuger {
     border-radius: 10px;
 }
 
-.pengirim::-webkit-scrollbar{
+.pengirim::-webkit-scrollbar {
     display: none;
 }
 
@@ -247,14 +247,14 @@ nav #humbuger {
     flex-flow: row nowrap;
 }
 
-.profile{
+.profile {
     display: flex;
     width: 23%;
     align-items: center;
     justify-content: center;
 }
 
-.dotprofile i{
+.dotprofile i {
     z-index: 1;
     transform: scale(1.5);
     justify-content: center;
@@ -270,21 +270,21 @@ nav #humbuger {
     justify-content: center;
 }
 
-.namepengirim{
+.namepengirim {
     font-weight: bold;
     font-size: 16px;
 }
 
-.jurusan{
+.jurusan {
     color: white;
     font-weight: 400;
 }
 
-.iconbeside{
+.iconbeside {
     width: 5%;
 }
 
-.iconbeside i{
+.iconbeside i {
     color: #000000;
     transform: scale(1.5);
 }
@@ -300,7 +300,7 @@ nav #humbuger {
     margin-bottom: 20px;
 }
 
-.judulkegiatan{
+.judulkegiatan {
     height: 80px;
     display: flex;
     justify-content: center;
@@ -309,7 +309,7 @@ nav #humbuger {
     font-size: 18px;
 }
 
-.infokegiatan{
+.infokegiatan {
     margin-left: 4%;
     margin-top: 3%;
 }
@@ -319,43 +319,55 @@ nav #humbuger {
     font-size: 16px;
 } */
 
-.jawabanjenis{
+.jawabanjenis {
     font-size: 14px;
 }
 
-.tanggal, .deskripsi, .logo1, .jeniskegiatan, .form{
+.tanggal,
+.deskripsi,
+.logo1,
+.jeniskegiatan,
+.form {
     margin-top: 4%;
 }
 
-.atastanggal, .atasdeskripsi, .ataslogo, .atasjenis, .atasform{
+.atastanggal,
+.atasdeskripsi,
+.ataslogo,
+.atasjenis,
+.atasform {
     font-weight: bold;
     font-size: 16px;
 }
 
-.tanggalmulai, .tanggalakhir, .jawabanjenis{
+.tanggalmulai,
+.tanggalakhir,
+.jawabanjenis {
     font-size: 14px;
 }
 
-.deskripsi input{
+.descinfo {
     border: 2px solid #E4E4E4;
     width: 80%;
     height: 180px;
     margin-top: 1%;
+    border-radius: 5px;
 }
 
-.logo1 img{
+.logo1 img {
     width: 35%;
     margin-top: 2%;
 }
 
-.rectangle{
+.rectangle {
     border: 2px solid #E4E4E4;
     width: 80%;
     margin-top: 2%;
     height: 60px;
+    border-radius: 5px;
 }
 
-.tombol{
+.tombol {
     margin-top: 5%;
     height: 50px;
     display: flex;
@@ -363,7 +375,7 @@ nav #humbuger {
     align-items: center;
 }
 
-.tolak{
+.tolak {
     width: 15%;
     height: 35px;
     font-size: 16px;
@@ -374,7 +386,7 @@ nav #humbuger {
     margin-right: 1%;
 }
 
-.acc{
+.acc {
     width: 15%;
     height: 35px;
     font-size: 16px;
@@ -391,44 +403,44 @@ nav #humbuger {
     background: #ed9a09;
     border-radius: 15px;
     box-shadow: 1px 5px 60px 0px #88580a6b;
-  }
-  
-  .card .card-border-top {
+}
+
+.card .card-border-top {
     width: 60%;
     height: 3%;
     background: #f3c864;
     margin: auto;
     border-radius: 0px 0px 15px 15px;
-  }
-  
-  .card span {
+}
+
+.card span {
     font-weight: 600;
     color: white;
     text-align: center;
     display: block;
     padding-top: 10px;
     font-size: 16px;
-  }
-  
-  .card .job {
+}
+
+.card .job {
     font-weight: 400;
     color: white;
     display: block;
     text-align: center;
     padding-top: 3px;
     font-size: 12px;
-  }
-  
-  .card .img {
+}
+
+.card .img {
     width: 70px;
     height: 80px;
     background: #f3c864;
     border-radius: 15px;
     margin: auto;
     margin-top: 25px;
-  }
-  
-  .card button {
+}
+
+.card button {
     padding: 8px 25px;
     display: block;
     margin: auto;
@@ -438,18 +450,18 @@ nav #humbuger {
     background: #f3c864;
     color: white;
     font-weight: 600;
-  }
-  
-  .card button:hover {
+}
+
+.card button:hover {
     background: #f5b82b;
-  }
-  
-  .dropdown {
+}
+
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  .dropdown-content {
+}
+
+.dropdown-content {
     display: none;
     position: absolute;
     margin-left: -130px;
@@ -457,12 +469,67 @@ nav #humbuger {
     min-width: 160px;
     z-index: 1;
     padding: 12px 16px;
-  }
-  
-  .show {
+}
+
+.show {
     display: block;
-  }
-  
-  .dropdown img{
+}
+
+.dropdown img {
     width: 40px;
-  }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 27%;
+    left: 50%;
+    margin-left: -150px;
+    height: 200px;
+    top: 50%;
+    margin-top: -100px;
+    background: #FFF;
+    z-index: 20;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column nowrap;
+    font-weight: bold;
+}
+
+#popup:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+    display: flex;
+    justify-content: center;
+}
+
+#popup:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.popup img {
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup p {
+    font-weight: bold;
+    font-size: 16px;
+}
