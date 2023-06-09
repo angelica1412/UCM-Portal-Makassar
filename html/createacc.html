@@ -17,7 +17,7 @@
     di organisasi atau kepanitiaan yang kamu inginkan melalui website kami!</pre>
     </div>
 
-     <div class="home2">
+     <form class="home2" id="homeregister" method="post">
         <div class="atas">
             <h1 class="judulWelcome">Selamat Datang</h1>
             <p class="petunjukCreate">Lengkapi data dibawah ini untuk mendaftarkan</p>
@@ -36,7 +36,7 @@
 
         <p class="Jurusan">Jurusan</p>
         <div class="inputJurusan">
-            <input type="text" name="Jurusan" placeholder="Masukkan jurusan anda" id="Jurusan" value="">
+            <input type="text" name="Jurusan" placeholder="Masukkan jurusan anda" id="jurusan" value="">
         </div>
 
         <p class="Spesialisasi">Spesialisasi</p>
@@ -55,14 +55,16 @@
         </div>
 
         <div class="buttonMasuk">
-            <button class="masuk">Masuk</button>
+            <button class="masuk" type="submit">Daftar</button>
         </div>
 
         <div class="bagianMasuk">
             <p class="masukCreate">Sudah Punya akun?</p>
             <a href="index.html"><p class="masukAkun">Masuk</p></a>
         </div>
-    </div>
+    </form>
 </div>
+<script src="../js/register.js"></script>
+
 </body>
 </html>

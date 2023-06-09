@@ -183,10 +183,8 @@ nav #humbuger {
 }
 
 .home1 {
-  background-image: linear-gradient(
-      rgba(255, 152, 0, 0.5),
-      rgba(255, 152, 0, 0.5)
-    ),
+  background-image: linear-gradient(rgba(255, 152, 0, 0.5),
+      rgba(255, 152, 0, 0.5)),
     url("/aset/gambarHome1.png");
   width: 50%;
   height: 650px;
@@ -239,10 +237,8 @@ nav #humbuger {
 }
 
 .home2 {
-  background-image: linear-gradient(
-      rgba(28, 49, 94, 0.6),
-      rgba(28, 49, 94, 0.6)
-    ),
+  background-image: linear-gradient(rgba(28, 49, 94, 0.6),
+      rgba(28, 49, 94, 0.6)),
     url("/aset/gambarHome2.png");
   width: 50%;
   height: 650px;
@@ -452,20 +448,20 @@ nav #humbuger {
   margin-top: 70px;
 }
 
-.bagianutuh{
+.bagianutuh {
   display: flex;
   flex-flow: row nowrap;
   /* align-items: center; */
   justify-content: center;
 }
 
-.temukandisini{
+.bagiankiriacara {
   width: 30%;
   height: 700px;
   background-color: white;
 }
 
-.judultemukan{
+.judultemukan {
   display: flex;
   width: 100%;
   height: 35px;
@@ -474,77 +470,78 @@ nav #humbuger {
   border-radius: 5px 0 0 0;
 }
 
-.judultemukan p{
+.judultemukan p {
   font-size: 18px;
   font-weight: 450;
   color: white;
   margin-left: 2%;
 }
 
-.listevent{
+.listevent {
   height: 500px;
   display: flex;
   flex-flow: column nowrap;
   margin-top: 2%;
 }
 
-.acara{
+.acara {
   height: 100px;
   display: flex;
   flex-flow: row nowrap;
   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
+  /* margin-left: 2%; */
   margin-right: 2%;
 }
 
-.logoacara{
+.logoacara {
   display: flex;
   width: 120px;
   align-items: center;
 }
 
-.logoacara img{
+.logoacara img {
   width: 120px;
   margin-left: 5%;
 }
 
-.tulisanacara{
+.tulisanacara {
   margin-left: 5%;
   margin-top: 5%;
 }
 
-.judulacara{
+.judulacara {
   font-size: 16px;
   font-weight: 600;
 }
 
-.jenisacara{
+.jenisacara {
   font-size: 14px;
   font-weight: 500;
   color: var(--orange);
 }
 
-.informasi{
-  width: 40%;
-  border: 2px solid #001c4c;
+.bagiankananacara {
+  width: 30%;
+  border: 1.5px solid #4e5053;
 }
 
-.tulisanlogo{
+.tulisanlogo {
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
 }
 
-.logo2{
+.logo2 {
   width: 125px;
   display: flex;
 }
 
 
-.logo img{
+.logo img {
   width: 120px;
 }
 
-.tulisan{
+.tulisan {
   font-weight: bold;
 }
 
@@ -662,7 +659,7 @@ nav #humbuger {
   display: block;
 }
 
-.dropdown img{
+.dropdown img {
   width: 40px;
 }
 
@@ -734,7 +731,170 @@ nav #humbuger {
     padding: 30px;
   }
 
-  .acara img{
+  .acara img {
     width: 100px;
   }
+}
+
+.card2 {
+  width: 190px;
+  height: 254px;
+  background: #ed9a09;
+  border-radius: 15px;
+  box-shadow: 1px 5px 60px 0px #88580a6b;
+}
+
+.card2 .card-border-top {
+  width: 60%;
+  height: 3%;
+  background: #f3c864;
+  margin: auto;
+  border-radius: 0px 0px 15px 15px;
+}
+
+.card2 span {
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  display: block;
+  padding-top: 10px;
+  font-size: 16px;
+}
+
+.card2 .job {
+  font-weight: 400;
+  color: white;
+  display: block;
+  text-align: center;
+  padding-top: 3px;
+  font-size: 12px;
+}
+
+.card2 .img {
+  width: 70px;
+  height: 80px;
+  background: #f3c864;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 25px;
+}
+
+.card2 button {
+  padding: 8px 25px;
+  display: block;
+  margin: auto;
+  border-radius: 8px;
+  border: none;
+  margin-top: 30px;
+  background: #f3c864;
+  color: white;
+  font-weight: 600;
+}
+
+.card2 button:hover {
+  background: #f5b82b;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  margin-left: -130px;
+  margin-top: 14px;
+  min-width: 160px;
+  z-index: 1;
+  padding: 12px 16px;
+}
+
+.show {
+  display: block;
+}
+
+.dropdown img {
+  width: 40px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  padding: 10px;
+  width: 20%;
+  left: 50%;
+  margin-left: -150px;
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  z-index: 20;
+  /* justify-content: center;
+  align-items: center; */
+  flex-flow: column nowrap;
+  font-weight: bold;
+}
+
+#cancel{
+  float: right;
+  margin-right: 2%;
+}
+
+#tidak{
+  float: right;
+  margin-right: 2%;
+}
+
+#ya{
+  float: right;
+  margin-right: 2%;
+  background-color: #E04747;
+  border: none;
+  border-radius: 10px;
+}
+
+#popup:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+  display: flex;
+  justify-content: center;
+}
+
+#popup:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+  border-radius: 10px;
+}
+
+.judulLogout {
+  display: flex;
+  font-size: 22px;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+}
+
+.pertanyaankeluar {
+  font-size: 16px;
+  font-weight: normal;
+  margin-top: 2%;
+  margin-right: 2%;
+  margin-left: 2%;
+}
+
+.buttonlog {
+  margin-top: 10%;
 }
