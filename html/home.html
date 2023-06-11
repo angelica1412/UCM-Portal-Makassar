@@ -59,13 +59,6 @@
             </div>
           </li>
           <li>
-            <!-- <div class="profileicon">
-                <a href="profile.html"><i class="fa fa-user"></i></a>
-              </div>
-              <div class="profiletext">
-                <a href="profile.html">Profile</a>
-              </div> -->
-
             <!-- PROFILE -->
             <div class="dropdown">
               <!-- Tampilan profile -->
@@ -106,11 +99,25 @@
     <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
 
     <div class="buttonlog">
-      <button id="ya">Keluar</button>
-      <button id="tidak">Tidak</button>
+      <a href="index.html"><button id="ya">Keluar</button></a>
+      <button id="tidak" href ="#" onclick="hide('popup')">Tidak</button>
     </div>
   </div>
 
+  <!-- Pop Up Selengkapnya -->
+  <div class="bagianluar">
+    <div class="popupmore" id="popupmore">
+      <div class="judullogo">
+        <div class="logopop">
+          <img src="/aset/fdu.png" alt="">
+        </div>
+        <div class="judulpop">
+          <p>Open Recruitment Oweek</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
 <!-- BAGIAN PERTAMA HOME -->
   <div class="gabung">
 
@@ -142,24 +149,24 @@
 <!-- SEDANG TRENDING -->
   <div class="bagian1">
     <div class="bagian1atas">
-      <p class="text12">Sedang Trending</p>
+      <p class="text12">Sedang Berlangsung</p>
       <p class="text22">
-        Beberapa kepanitiaan atau organisasi yang banyak didaftar
+        Temukan organisasi maupun kepanitiaan yang sedang membuka rekrutan
       </p>
-      <p class="text32">boleh mahasiswa dalam beberapa waktu dekat</p>
+      <p class="text32">di kampus UC Makassar</p>
     </div>
   </div>
 
   <div class="bagian2">
     <div class="row" id="trending">
-      <!-- <div class="column">
+      <div class="column">
           <div class="card">
             <img src="/aset/oweek.png" />
             <p class="judul">O-Week UC Makassar 2023</p>
             <p class="tutup">Berakhir pada : 12 Januari 2023</p>
-            <button>Selengkapnya</button>
+            <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
           </div>
-        </div> -->
+        </div>
 
       <!-- <div class="column">
           <div class="card">
@@ -221,7 +228,7 @@
   </div>
 
   <!-- ACARA YANG BERLANGSUNG -->
-  <div class="bagian5">
+  <!-- <div class="bagian5">
     <div class="bagianjudul2">
       <p class="sedangberlangsung">Sedang Berlangsung</p>
       <p class="desclangsung">
@@ -254,7 +261,7 @@
 
       </div>
     </div>
-  </div>
+  </div> -->
 
   <!-- BAGIAN AKHIR HOME -->
   <div class="bagian6">

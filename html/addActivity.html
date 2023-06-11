@@ -23,11 +23,11 @@
     <img src="/aset/logo UC.png" class="logoDiatas" />
   </div>
   <div class="fixnav">
-    <nav>
+ <nav>
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
         <form action="" method="get" class="search-box">
-          <input type="text" class="inputcari" name="search" placeholder="Search Here" />
+          <input type="text" class="input" name="search" placeholder="Search Here" required id="search-box" />
           <button type="submit" class="search">
             <i class="fa fa-search"></i>
           </button>
@@ -38,7 +38,7 @@
         <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
         <ul>
           <li>
-            <div class="homeicon">
+            <div class="homeicon" id="homeLink">
               <a href="home.html"><i class="fa-solid fa-house"></i></a>
             </div>
             <div class="hometext">
@@ -46,7 +46,7 @@
             </div>
           </li>
           <li>
-            <div class="addicon">
+            <div class="addicon" id="addActivityLink">
               <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
             </div>
             <div class="addtext">
@@ -54,7 +54,7 @@
             </div>
           </li>
           <li>
-            <div class="myactivityicon">
+            <div class="myactivityicon" id="myActivityLink">
               <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
             </div>
             <div class="myactivitytext">
@@ -63,11 +63,13 @@
           </li>
           <li>
             <!-- <div class="profileicon">
-              <a href="profile.html"><i class="fa fa-user"></i></a>
-            </div>
-            <div class="profiletext">
-              <a href="profile.html">Profile<i class="fa-solid fa-chevron-down"></i></a>
-            </div> -->
+                <a href="profile.html"><i class="fa fa-user"></i></a>
+              </div>
+              <div class="profiletext">
+                <a href="profile.html">Profile</a>
+              </div> -->
+
+            <!-- PROFILE -->
             <div class="dropdown">
               <!-- Tampilan profile -->
               <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
@@ -80,7 +82,8 @@
                   </div>
                   <span> Person</span>
                   <p class="job"> Job Title</p>
-                  <button> Log Out</button>
+                  <button id="btnlogout" onclick="show('popup')"> Log Out
+                  </button>
                 </div>
               </div>
             </div>
@@ -92,28 +95,28 @@
   </div>
 
   <div class="containerSemua">
-    <form id="">
+    <form id="form">
 
       <p class="Judul">REQUEST FORM</p>
 
       <label for="fname" class="fontjudul">Judul</label>
-      <input type="text" id="Judul" name="JudulKegiatan" placeholder="Masukkan judul anda.." required>
+      <input type="text" id="judul" name="JudulKegiatan" placeholder="Masukkan judul anda.." value="" required>
 
       <label for="country" class="fontjudul">Jenis Kegiatan</label>
       <div class="pilihankegiatan">
-        <div class="radio-buttons">
+        <div class="radio-buttons" id="jenisKegiatan">
           <label class="radio-button">
-            <input value="option1" name="option" type="radio" required>
+            <input value="option1" name="option" type="radio" id="jenis1" required>
             <div class="radio-circle"></div>
             <span class="radio-label">Organisasi</span>
           </label>
           <label class="radio-button">
-            <input value="option2" name="option" type="radio" required>
+            <input value="option2" name="option" type="radio" required id="jenis2">
             <div class="radio-circle"></div>
             <span class="radio-label">Unit Kegiatan Mahasiswa (UKM)</span>
           </label>
           <label class="radio-button">
-            <input value="option3" name="option" type="radio" required>
+            <input value="option3" name="option" type="radio" required id="jenis3">
             <div class="radio-circle"></div>
             <span class="radio-label">Acara/Kepanitiaan</span>
           </label>
@@ -123,17 +126,17 @@
 
       <label class="fontjudul">Tanggal</label>
       <!-- Date -->
-      <div class="pengaturantanggal">
+      <div class="pengaturantanggal" id="tanggal">
         <div class="Date-Start">
           <form>
             <label for="tanggal_mulai">Tanggal Mulai:</label><br>
-            <input type="date" id="tanggal_mulai" name="tanggal_mulai" required><br>
+            <input type="date" id="tanggal_mulai" name="tanggal_mulai" value=""><br>
           </form>
         </div>
         <div class="Date-End">
           <form>
             <label for="tanggal_selesai">Tanggal Selesai:</label><br>
-            <input type="date" id="tanggal_selesai" name="tanggal_selesai" required><br>
+            <input type="date" id="tanggal_selesai" name="tanggal_selesai" value="" required><br>
           </form>
         </div>
       </div>
@@ -142,7 +145,7 @@
 
       <!-- <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
 
-      <textarea name="content" rows="5" cols="80"></textarea>
+      <textarea name="content" rows="5" cols="80" id="deskripsi"></textarea>
       <script>
         CKEDITOR.replace('content');
       </script>
@@ -155,24 +158,25 @@
             <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
           </div>
 
-          <input type="file" id="input" class="UnggahGambar" required>
+          <input type="file" id="input" class="UnggahGambar" value="" required>
         </div>
 
         <div class="googleform">
           <label for="fname" class="fontjudul">Link Google Form</label>
-          <input type="text" id="Link" name="LinkGoogleForm" placeholder="Masukkan link anda.." required>
+          <input type="text" id="link" name="LinkGoogleForm" placeholder="Masukkan link anda.." value="" required>
         </div>
 
     </form>
   </div>
 
-  <div class="submitform">
-    <button class="learn-more" href="#" onclick="show('popup')">
+  <div class="submitform" id="submit">
+    <button class="learn-more" type="submit">
       <span class="circle" aria-hidden="true">
         <span class="icon arrow"></span>
       </span>
       <span class="button-text">Submit</span>
     </button>
+  </div>
 
     <div class="popup" id="popup">
       <img src="/aset/benar.png">
@@ -182,23 +186,37 @@
     </div>
 
     <!-- Use a button to open the snackbar -->
-    <button onclick="myFunction()">Show Snackbar</button>
+    <!-- <button onclick="myFunction()">Show Snackbar</button> -->
 
-    <!-- The actual snackbar -->
+    <!-- Snack Bar -->
     <div id="snackbar">
       <img src="/aset/alertsign.png" style="width: 20px; height: 20px; margin-right: 8px; margin-bottom: -4px; ">
       Please fill all the fields
     </div>
+
+    <!-- Pop up Logout -->
+    <div class="popup" id="popup">
+      <div class="logocancel">
+        <a href="#" onclick="hide('popup')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+      </div>
+  
+      <div class="judulLogout">
+        Logout
+      </div>
+  
+      <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
+  
+      <div class="buttonlog">
+        <a href="index.html"><button id="ya">Keluar</button></a>
+        <button id="tidak" href ="#" onclick="hide('popup')">Tidak</button>
+      </div>
+    </div>
+    
 </body>
 
 <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-<script>
-  $(function () {
-    $("#tanggal_mulai").datepicker();
-    $("#tanggal_selesai").datepicker();
-  });
-</script>
+
 
 <script src="/js/JSaddactivity.js"></script>
 <script src="/js/profileJS.js"></script>

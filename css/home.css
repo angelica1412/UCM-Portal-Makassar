@@ -854,6 +854,11 @@ nav #humbuger {
   border: none;
 }
 
+#tidak:hover{
+  font-weight: bold;
+  background-color: #6f7378;
+}
+
 #ya{
   float: right;
   margin-right: 2%;
@@ -958,4 +963,59 @@ nav #humbuger {
 .logoPanjang {
   width: 191.2248px;
   height: 76.137px;
+}
+
+.bagianluar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.popupmore {
+  display: flex;
+  position: fixed;
+  padding: 10px;
+  width: 35%;
+  left: 50%;
+  /* margin-left: -150px; */
+  height: 180px;
+  top: 50%;
+  margin-top: -100px;
+  background: #FFF;
+  z-index: 20;
+  flex-flow: column nowrap;
+  justify-content: center;
+  /* align-items: center; */
+  font-weight: bold;
+  border-radius: 10px;
+}
+
+#popupmore:after {
+  position: fixed;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: -2;
+  display: flex;
+  border-radius: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+#popupmore:before {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: #FFF;
+  z-index: -1;
+  border-radius: 10px;
 }
