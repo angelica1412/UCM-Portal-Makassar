@@ -23,7 +23,7 @@
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
         <form action="" method="get" class="search-box">
-          <input type="text" class="input" name="search" placeholder="Search Here" />
+          <input type="text" class="input" name="search" placeholder="Search Here" required id="search-box" />
           <button type="submit" class="search">
             <i class="fa fa-search"></i>
           </button>
@@ -34,7 +34,7 @@
         <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
         <ul>
           <li>
-            <div class="homeicon">
+            <div class="homeicon" id="homeLink">
               <a href="home.html"><i class="fa-solid fa-house"></i></a>
             </div>
             <div class="hometext">
@@ -42,7 +42,7 @@
             </div>
           </li>
           <li>
-            <div class="addicon">
+            <div class="addicon" id="addActivityLink">
               <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
             </div>
             <div class="addtext">
@@ -50,7 +50,7 @@
             </div>
           </li>
           <li>
-            <div class="myactivityicon">
+            <div class="myactivityicon" id="myActivityLink">
               <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
             </div>
             <div class="myactivitytext">
@@ -59,12 +59,13 @@
           </li>
           <li>
             <!-- <div class="profileicon">
-              <a href="profile.html"><i class="fa fa-user"></i></a>
-            </div>
-            <div class="profiletext">
-              <a href="profile.html">Profile<i class="fa-solid fa-chevron-down"></i></a>
-            </div> -->
+                <a href="profile.html"><i class="fa fa-user"></i></a>
+              </div>
+              <div class="profiletext">
+                <a href="profile.html">Profile</a>
+              </div> -->
 
+            <!-- PROFILE -->
             <div class="dropdown">
               <!-- Tampilan profile -->
               <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
@@ -77,7 +78,7 @@
                   </div>
                   <span> Person</span>
                   <p class="job"> Job Title</p>
-                  <button> Log Out
+                  <button id="btnlogout" onclick="show('popup')"> Log Out
                   </button>
                 </div>
               </div>
@@ -88,6 +89,24 @@
       </div>
       <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
     </nav>
+  </div>
+
+  <!-- Pop Up Log OUt -->
+  <div class="popup" id="popup">
+    <div class="logocancel">
+      <a href="#" onclick="hide('popup')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+    </div>
+
+    <div class="judulLogout">
+      Logout
+    </div>
+
+    <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
+
+    <div class="buttonlog">
+      <a href="index.html"><button id="ya">Keluar</button></a>
+      <button id="tidak" href="#" onclick="hide('popup')">Tidak</button>
+    </div>
   </div>
 
   <!-- <div class="containerSemua">
@@ -128,42 +147,42 @@
         </table>
       </div> -->
 
-      <body>
-        <table>
-            <tr id="header">
-                <th>Judul</th>
-                <th>Jenis Kegiatan</th>
-                <th>Status</th>
-                <th>Tanggal Pendaftaran</th>
-            </tr>
-            <tr>
-                <td>Open Recruitment Infinity </td>
-                <td>Organisasi </td>
-                <td class="status"> <span class="dotterima"></span> Diterima</td>
-                <td>16 - 03 - 2023 </td>
-    
-            </tr>
-            <tr>
-                <td>Orientation Week 2023 </td>
-                <td>Kepanitiaan </td>
-                <td>Diperiksa </td>
-                <td>18 - 04 - 2023 </td>
-    
-            </tr>
-            <tr>
-                <td>Kepengurusan UKM Bulu Tangkis </td>
-                <td>Unit Kegiatan Mahasiswa (UKM) </td>
-                <td>Ditolak </td>
-                <td>20 - 10 - 2022 </td>
-    
-            </tr>
+  <body>
+    <table>
+      <tr id="header">
+        <th>Judul</th>
+        <th>Jenis Kegiatan</th>
+        <th>Status</th>
+        <th>Tanggal Pendaftaran</th>
+      </tr>
+      <tr>
+        <td>Open Recruitment Infinity </td>
+        <td>Organisasi </td>
+        <td class="status"> <span class="dotterima"></span> Diterima</td>
+        <td>16 - 03 - 2023 </td>
 
-    
-        </table>
-    
-    </body>
+      </tr>
+      <tr>
+        <td>Orientation Week 2023 </td>
+        <td>Kepanitiaan </td>
+        <td>Diperiksa </td>
+        <td>18 - 04 - 2023 </td>
+
+      </tr>
+      <tr>
+        <td>Kepengurusan UKM Bulu Tangkis </td>
+        <td>Unit Kegiatan Mahasiswa (UKM) </td>
+        <td>Ditolak </td>
+        <td>20 - 10 - 2022 </td>
+
+      </tr>
+    </table>
+
+  </body>
+  
+  <script src="/js/activity.js"></script>
+  <script src="/js/profileJS.js"></script>
+  <script src="/js/getNameSessionStorage.js"></script>
 </body>
-
-<script src="/js/profileJS.js"></script>
 
 </html>
