@@ -243,10 +243,10 @@ body {
 table {
     position: absolute;
     left: 50%;
-    top: 340px;
+    top: 400px;
     transform: translate(-50%, -50%);
     border-collapse: collapse;
-    width: 800px;
+    width: 1200px;
     height: 200px;
     border: 1px solid #bdc3c7;
 }
@@ -300,8 +300,8 @@ tr:hover {
 }
 
 .dottolak {
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     background-color: #FA7575;
     border-radius: 50%;
     display: inline-block;
@@ -309,8 +309,8 @@ tr:hover {
 }
 
 .dotperiksa {
-    height: 20px;
-    width: 20px;
+    height: 10px;
+    width: 10px;
     background-color: #797979;
     border-radius: 50%;
     display: inline-block;

@@ -917,3 +917,45 @@ nav #humbuger {
 .buttonlog {
   margin-top: 7%;
 }
+
+.footer {
+  padding: 40px 0;
+  background-color: #ff9800;
+  margin-top: 50px;
+}
+.footer .nama {
+  text-align: center;
+  padding-bottom: 10px;
+  color: #ffffff;
+}
+.footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+.footer ul a {
+  color: white;
+  text-decoration: none;
+}
+.footer ul li {
+  display: inline-block;
+  padding: 0 15px;
+}
+.footer ul a:hover {
+  color: black;
+}
+.footer .jurusantahun {
+  margin-top: 15px;
+  text-align: center;
+  font-size: 13px;
+  color: #e7e7e7;
+}
+
+.logoPanjang {
+  width: 191.2248px;
+  height: 76.137px;
+}
