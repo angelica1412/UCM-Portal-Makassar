@@ -31,33 +31,51 @@ window.addEventListener('click', function(event) {
   }
 });
 
-// async function getTrendingData() {
-//   const res = await fetch("https://jsonplaceholder.typicode.com/albums/1/photos");
-//   const data = await res.json();
-//   const container = document.getElementById("trending");
+function getAcceptedForms() {
+  var apiUrl = "http://localhost:4000/ucmportal/form/accepted"; // Ganti dengan URL API yang sesuai
 
-//   data.forEach((item) => {
-//     const cardTemplate = templateCardTrending({
-//       image: item.thumbnailUrl,
-//       judul: item.title,
-//       waktu: "27 Nov 2023",
-//     });
-//     container.innerHTML += cardTemplate;
-//   });
-// }
+  // Lakukan request AJAX ke API
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", apiUrl, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var acceptedForms = JSON.parse(xhr.responseText);
 
-// const templateCardTrending = ({ image, judul, waktu }) => {
-//   return `
-//         <div class="column">
-//             <div class="card">
-//                 <img src="${image}" />
-//                 <p class="judul">${judul}</p>
-//                 <p class="tutup">Berakhir pada : ${waktu}</p>
-//                 <button>Selengkapnya</button>
-//             </div>
-//         </div>
-//         `;
-// };
+      // Panggil fungsi untuk memproses dan menampilkan form yang diterima
+      processAcceptedForms(acceptedForms);
+    }
+  };
+  xhr.send();
+}
 
-// getTrendingData();
+function processAcceptedForms(acceptedForms) {
+  var latestContainer = document.getElementById("latest");
+
+  // Kosongkan kontainer
+  latestContainer.innerHTML = "";
+
+  // Mengecek apakah ada data form terbaru
+  if (acceptedForms.length > 0) {
+    acceptedForms.forEach(function (form) {
+      // Membuat elemen HTML untuk form
+      var card = document.createElement("div");
+      card.className = "column";
+      card.innerHTML = `
+        <div class="card">
+          <img src="data:image/jpeg;base64,${form.logo}" />
+          <p class="judul">${form.title}</p>
+          <p class="tutup">${form.type}</p>
+          <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
+        </div>
+      `;
+      // Tambahkan elemen form ke dalam kontainer
+      latestContainer.appendChild(card);
+    });
+  } else {
+    latestContainer.innerHTML = "Tidak ada data form terbaru.";
+  }
+}
+
+// Panggil fungsi untuk mengambil data form terbaru dari API
+getAcceptedForms();
 

@@ -1,79 +1,128 @@
-let img = document.getElementById('img');
-let input = document.getElementById('input');
-
-input.onchange = (e) => {
-    if (input.files[0])
-        img.src = URL.createObjectURL(input.files[0])
-};
-
-function validateForm() {
-    var inputs = document.getElementsByTagName('input');
-    for (var i = 0; i < inputs.length; i++) {
-        if (inputs[i].value == '') {
-            inputs[i].classList.add('error');
-        } else {
-            inputs[i].classList.remove('error');
-        }
-    }
-}
-
-$ = function (id) {
-    return document.getElementById(id);
-}
-
-var show = function (id) {
-    $(id).style.display = 'flex';
-}
-var hide = function (id) {
-    $(id).style.display = 'none';
-}
-
-window.addEventListener('click', function(event) {
-    var popup = document.getElementById('popup');
-    if (event.target == popup) {
-        hide('popup');
-    }
-});
-
-// function choice(){
-    // var submit = document.getElementById('submit');
-    // let form = document.getElementById('form');
-    // form.addEventListener("submit", (e) => {
-    //     e.preventDefault();
-      
-    //     let judul = document.getElementById("judul").value;
-    //     let jenisKegiatan = document.getElementById("jenisKegiatan").value;
-    //     let tanggal_mulai = document.getElementById("tanggal_mulai").value;
-    //     let tanggal_selesai = document.getElementById("tanggal_selesai").value;
-    //     let jenis1 = document.getElementById("jenis1").value;
-    //     let jenis2 = document.getElementById("jenis2").value;
-    //     let jenis3 = document.getElementById("jenis3").value;
-    //     let deskripsi = document.getElementById("deskripsi").value;
-    //     let input = document.getElementById("input").value;
-    //     let link = document.getElementById("link").value;
-      
-    //     if (judul == "" || link == "") {
-    //       alert("Ensure you input a value in both fields!");
-    //       console.log(
-    //         `This form has a username of ${judul.value} and link of ${link.value}`
-    //       );
-    //     } else {
-    //       // perform operation with form input
-    //       alert("This form has been successfully submitted!");
-    //       console.log(
-    //         `This form has a username of ${judul.value} and link of ${link.value}`
-    //       );
-    //     }
-    //   });
-// }
-
-function myFunction() {
-    // Get the snackbar DIV
-    var x = document.getElementById("snackbar");
-  
-    // Add the "show" class to DIV
-    x.className = "show";
-  
-    // After 3 seconds, remove the show class from DIV
-    setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+// Function to show the popup
+function show(elementId) {
+    var popup = document.getElementById(elementId);
+    popup.style.display = "block";
   }
+  
+  // Function to hide the popup
+  function hide(elementId) {
+    var popup = document.getElementById(elementId);
+    popup.style.display = "none";
+  }
+  
+  // Function to show/hide the mobile menu
+  function showMenu() {
+    var menu = document.getElementById("menu");
+    menu.classList.toggle("show");
+  }
+  
+  // Function to validate the form before submission
+  function validateForm() {
+    var judul = document.getElementById("judul").value;
+    var jenis1 = document.getElementById("jenis1").checked;
+    var jenis2 = document.getElementById("jenis2").checked;
+    var jenis3 = document.getElementById("jenis3").checked;
+    var tanggalMulai = document.getElementById("tanggal_mulai").value;
+    var tanggalSelesai = document.getElementById("tanggal_selesai").value;
+    var deskripsi = CKEDITOR.instances.deskripsi.getData();
+    var link = document.getElementById("link").value;
+  
+    console.log("Judul:", judul);
+    console.log("Jenis 1:", jenis1);
+    console.log("Jenis 2:", jenis2);
+    console.log("Jenis 3:", jenis3);
+    console.log("Tanggal Mulai:", tanggalMulai);
+    console.log("Tanggal Selesai:", tanggalSelesai);
+    console.log("Deskripsi:", deskripsi);
+    console.log("Link:", link);
+  
+    if (
+      judul.trim() === "" ||
+      (!jenis1 && !jenis2 && !jenis3) ||
+      tanggalMulai.trim() === "" ||
+      tanggalSelesai.trim() === "" ||
+      deskripsi.trim() === "" ||
+      link.trim() === ""
+    ) {
+      // Show the snackbar message if any field is empty
+      var snackbar = document.getElementById("snackbar");
+      snackbar.className = "show";
+      setTimeout(function () {
+        snackbar.className = snackbar.className.replace("show", "");
+      }, 3000);
+      return false;
+    } else {
+      return true;
+    }
+  }
+  
+  // Event listener for form submission
+  var submitBtn = document.getElementById("submit");
+  submitBtn.addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the form from submitting
+    if (validateForm()) {
+      // Show the success popup if the form is valid
+      show("popup");
+      sendFormDataToServer(); // Send form data to the server
+    }
+  });
+  
+  // Update the image preview when selecting a file
+  var img = document.getElementById("img");
+  var input = document.getElementById("input");
+  
+  input.onchange = function (e) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+  
+      reader.onload = function (e) {
+        img.src = e.target.result;
+        console.log("Data Gambar:", img);
+      };
+  
+      reader.readAsDataURL(input.files[0]);
+    }
+  };
+  
+  // Function to send form data to the server
+  function sendFormDataToServer() {
+    var judul = document.getElementById("judul").value;
+    var jenis1 = document.getElementById("jenis1").checked;
+    var jenis2 = document.getElementById("jenis2").checked;
+    var jenis3 = document.getElementById("jenis3").checked;
+    var tanggalMulai = document.getElementById("tanggal_mulai").value;
+    var tanggalSelesai = document.getElementById("tanggal_selesai").value;
+    var deskripsi = CKEDITOR.instances.deskripsi.getData();
+    var link = document.getElementById("link").value;
+  
+    // Get the value of "name" from sessionStorage
+    var name = sessionStorage.getItem("username");
+    if (!name) {
+      console.error("Nilai 'name' tidak ditemukan dalam sessionStorage");
+      return;
+    }
+  
+    var formData = new FormData();
+    formData.append("logo_form", input.files[0]);
+    formData.append("title_form", judul);
+    formData.append("type_form", jenis1 ? "Organisasi" : jenis2 ? "Unit Kegiatan Mahasiswa (UKM)" : "Acara/Kepanitiaan");
+    formData.append("date_start_form", tanggalMulai);
+    formData.append("date_end_form", tanggalSelesai);
+    formData.append("description_form", deskripsi);
+    formData.append("link_google_form", link);
+  
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "http://localhost:4000/ucmportal/" + name + "/saveform");
+    xhr.onload = function () {
+      if (xhr.status === 200) {
+        console.log("Formulir berhasil disimpan.");
+      } else {
+        console.error("Terjadi kesalahan saat menyimpan formulir:", xhr.status);
+      }
+    };
+    xhr.onerror = function () {
+      console.error("Terjadi kesalahan koneksi saat menyimpan formulir.");
+    };
+    xhr.send(formData);
+  }
+  

@@ -103,7 +103,7 @@
   </div>
 
   <!-- Pop Up Selengkapnya -->
-  <!-- <div class="bungkus">
+  <!-- <!-- <div class="bungkus">
     <div class="popupmore" id="popupmore">
       <div class="judullogo">
         <div class="logopop">
@@ -161,59 +161,8 @@
   </div>
 
   <div class="bagian2">
-    <div class="row" id="trending">
-      <div class="column">
-        <div class="card">
-          <img src="/aset/oweek.png" />
-          <p class="judul">O-Week UC Makassar 2023</p>
-          <p class="tutup">Berakhir pada : 12 Januari 2023</p>
-          <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
-        </div>
-      </div> -->
-
-      <!-- <div class="column">
-          <div class="card">
-            <img src="/aset/infinity.png" />
-            <p class="judul">Infinity Generasi Ke - 3</p>
-            <p class="tutup">Berakhir pada : 30 September 2023</p>
-            <button>Selengkapnya</button>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <img src="/aset/fdu.png" />
-            <p class="judul">Faith Diversity Unity</p>
-            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
-            <button>Selengkapnya</button>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <img src="/aset/fdu.png" />
-            <p class="judul">Faith Diversity Unity</p>
-            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
-            <button>Selengkapnya</button>
-          </div>
-        </div>
-
-        <div class="column">
-          <div class="card">
-            <img src="/aset/fdu.png" />
-            <p class="judul">Faith Diversity Unity</p>
-            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
-            <button>Selengkapnya</button>
-          </div>
-        </div>
-        <div class="column">
-          <div class="card">
-            <img src="/aset/fdu.png" />
-            <p class="judul">Faith Diversity Unity</p>
-            <p class="tutup">Berakhir pada : 12 Desembar 2023</p>
-            <button>Selengkapnya</button>
-          </div>
-        </div> -->
+    <div class="row" id="latest">
+      <!-- Data form terbaru akan dimasukkan di sini -->
     </div>
   </div>
 
@@ -264,7 +213,56 @@
 
   <script src="/js/home.js"></script>
   <script src="/js/profileJS.js"></script>
-  <script src="/js/getNameSessionStorage.js"></script>
+  <script>
+    function getAcceptedForms() {
+  var apiUrl = "http://localhost:4000/ucmportal/form/accepted"; // Ganti dengan URL API yang sesuai
+
+  // Lakukan request AJAX ke API
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", apiUrl, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      var acceptedForms = JSON.parse(xhr.responseText);
+
+      // Panggil fungsi untuk memproses dan menampilkan form yang diterima
+      processAcceptedForms(acceptedForms);
+    }
+  };
+  xhr.send();
+}
+
+function processAcceptedForms(acceptedForms) {
+  var latestContainer = document.getElementById("latest");
+
+  // Kosongkan kontainer
+  latestContainer.innerHTML = "";
+
+  // Mengecek apakah ada data form terbaru
+  if (acceptedForms.length > 0) {
+    acceptedForms.forEach(function (form) {
+      // Membuat elemen HTML untuk form
+      var card = document.createElement("div");
+      card.className = "column";
+      card.innerHTML = `
+        <div class="card">
+          <img src="data:image/jpeg;base64,${form.logo}" />
+          <p class="judul">${form.title}</p>
+          <p class="tutup">${form.type}</p>
+          <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
+        </div>
+      `;
+      // Tambahkan elemen form ke dalam kontainer
+      latestContainer.appendChild(card);
+    });
+  } else {
+    latestContainer.innerHTML = "Tidak ada data form terbaru.";
+  }
+}
+
+// Panggil fungsi untuk mengambil data form terbaru dari API
+getAcceptedForms();
+
+  </script>
 </body>
 
 </html>
