@@ -23,7 +23,7 @@
     <img src="/aset/logo UC.png" class="logoDiatas" />
   </div>
   <div class="fixnav">
-    <nav>
+ <nav>
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
         <form action="" method="get" class="search-box">
@@ -62,15 +62,27 @@
             </div>
           </li>
           <li>
+            <!-- <div class="profileicon">
+                <a href="profile.html"><i class="fa fa-user"></i></a>
+              </div>
+              <div class="profiletext">
+                <a href="profile.html">Profile</a>
+              </div> -->
+
+            <!-- PROFILE -->
             <div class="dropdown">
+              <!-- Tampilan profile -->
               <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
               <div id="dropdown-content" class="dropdown-content">
+                <!-- Konten dropdown -->
                 <div class="card">
-                  <div class="card-border-top"></div>
-                  <div class="img"></div>
+                  <div class="card-border-top">
+                  </div>
+                  <div class="img">
+                  </div>
                   <span> Person</span>
                   <p class="job"> Job Title</p>
-                  <button id="btnlogout" onclick="show('popup2')"> Log Out
+                  <button id="btnlogout" onclick="show('popup')"> Log Out
                   </button>
                 </div>
               </div>
@@ -113,6 +125,7 @@
 
 
       <label class="fontjudul">Tanggal</label>
+      <!-- Date -->
       <div class="pengaturantanggal" id="tanggal">
         <div class="Date-Start">
           <form>
@@ -129,6 +142,9 @@
       </div>
 
       <label for="subject" class="fontjudul">Deskripsi Kegiatan</label>
+
+      <!-- <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea> -->
+
       <textarea name="content" rows="5" cols="80" id="deskripsi"></textarea>
       <script>
         CKEDITOR.replace('content');
@@ -138,8 +154,10 @@
         <div class="unggahLogo">
           <label for="fname" class="fontjudul">Unggah Logo</label>
           <div>
+
             <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
           </div>
+
           <input type="file" id="input" class="UnggahGambar" value="" required>
         </div>
 
@@ -147,7 +165,6 @@
           <label for="fname" class="fontjudul">Link Google Form</label>
           <input type="text" id="link" name="LinkGoogleForm" placeholder="Masukkan link anda.." value="" required>
         </div>
-      </div>
 
     </form>
   </div>
@@ -160,7 +177,7 @@
       <span class="button-text">Submit</span>
     </button>
   </div>
-
+<!-- Pengajuan Pop Up -->
     <div class="popup" id="popup">
       <img src="/aset/benar.png">
       <p class="statuspengajuan">Pengajuan Pendaftaran</p>
@@ -168,18 +185,13 @@
       <!-- <a href="#" onclick="hide('popup')"></a> -->
     </div>
 
-  <div id="snackbar">
-    <img src="/aset/alertsign.png" style="width: 20px; height: 20px; margin-right: 8px; margin-bottom: -4px; ">
-    Please fill all the fields
-  </div>
+    <!-- Use a button to open the snackbar -->
+    <!-- <button onclick="myFunction()">Show Snackbar</button> -->
 
-  <div class="popup" id="popup">
-    <div class="logocancel">
-      <a href="#" onclick="hide('popup')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
-    </div>
-
-    <div class="judulLogout">
-      Logout
+    <!-- Snack Bar -->
+    <div id="snackbar">
+      <img src="/aset/alertsign.png" style="width: 20px; height: 20px; margin-right: 8px; margin-bottom: -4px; ">
+      Please fill all the fields
     </div>
 
     <!-- Pop up Logout -->
@@ -199,14 +211,15 @@
         <button id="tidak" href ="#" onclick="hide('popup2')">Tidak</button>
       </div>
     </div>
-  </div>
-  <script src="https://cdn.ckeditor.com/4.19.1/standard/ckeditor.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-  <script src="/js/JSaddactivity.js"></script>
-  <script src="/js/profileJS.js"></script>
-  <script src="/js/getNameSessionStorage.js"></script>
-
+    
 </body>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+
+<script src="/js/JSaddactivity.js"></script>
+<script src="/js/profileJS.js"></script>
+<script src="/js/activity.js"></script>
 
 </html>
