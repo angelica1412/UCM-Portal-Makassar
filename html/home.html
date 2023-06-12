@@ -81,44 +81,47 @@
           </li>
         </ul>
       </div>
+      <!-- HAMBURGER -->
       <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
     </nav>
   </div>
 
   <!-- POP UP LOGOUT -->
-
   <div class="popup" id="popup">
     <div class="logocancel">
       <a href="#" onclick="hide('popup')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
     </div>
-
     <div class="judulLogout">
       Logout
     </div>
-
-    <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
-
+    <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?
+    </div>
     <div class="buttonlog">
       <a href="index.html"><button id="ya">Keluar</button></a>
-      <button id="tidak" href ="#" onclick="hide('popup')">Tidak</button>
+      <button id="tidak" href="#" onclick="hide('popup')">Tidak</button>
     </div>
   </div>
 
   <!-- Pop Up Selengkapnya -->
-  <div class="bagianluar">
+  <!-- <div class="bungkus">
     <div class="popupmore" id="popupmore">
       <div class="judullogo">
         <div class="logopop">
-          <img src="/aset/fdu.png" alt="">
+          <img src="/aset/fdu.png" class="logokegiatan">
         </div>
+  
         <div class="judulpop">
           <p>Open Recruitment Oweek</p>
         </div>
+
+        <div class="deskripsi">
+
+        </div>
       </div>
     </div>
-  
-  </div>
-<!-- BAGIAN PERTAMA HOME -->
+  </div> -->
+
+  <!-- BAGIAN PERTAMA HOME -->
   <div class="gabung">
 
     <!-- BAGIAN SEARCH -->
@@ -146,8 +149,8 @@
     </div>
   </div>
 
-<!-- SEDANG TRENDING -->
-  <div class="bagian1">
+  <!-- SEDANG BERLANGSUNG -->
+  <!-- <div class="bagian1">
     <div class="bagian1atas">
       <p class="text12">Sedang Berlangsung</p>
       <p class="text22">
@@ -160,13 +163,13 @@
   <div class="bagian2">
     <div class="row" id="trending">
       <div class="column">
-          <div class="card">
-            <img src="/aset/oweek.png" />
-            <p class="judul">O-Week UC Makassar 2023</p>
-            <p class="tutup">Berakhir pada : 12 Januari 2023</p>
-            <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
-          </div>
+        <div class="card">
+          <img src="/aset/oweek.png" />
+          <p class="judul">O-Week UC Makassar 2023</p>
+          <p class="tutup">Berakhir pada : 12 Januari 2023</p>
+          <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
         </div>
+      </div> -->
 
       <!-- <div class="column">
           <div class="card">
@@ -214,7 +217,7 @@
     </div>
   </div>
 
-<!-- CARA DAFTAR -->
+  <!-- CARA DAFTAR -->
   <div class="bagian4">
     <div class="bagianjudul">
       <p class="caramendaftar">Cara Mendaftar</p>
@@ -227,41 +230,6 @@
     </div>
   </div>
 
-  <!-- ACARA YANG BERLANGSUNG -->
-  <!-- <div class="bagian5">
-    <div class="bagianjudul2">
-      <p class="sedangberlangsung">Sedang Berlangsung</p>
-      <p class="desclangsung">
-        Temukan organisasi maupun kepanitiaan yang sedang membuka rekrutan
-      </p>
-      <p class="lanjutanlangsung">di kampus UC Makassar</p>
-    </div>
-    <div class="bagianutuh">
-      <div class="bagiankiriacara">
-        <div class="judultemukan">
-          <p>Temukan di sini</p>
-        </div>
-
-        <div class="listacara" id="listacara">
-          <div class="acara">
-            <div class="logoacara">
-              <img src="/aset/fdu.png">
-            </div>
-
-            <div class="tulisanacara">
-              <p class="judulacara">Infinity Generasi ke - 3</p>
-              <p class="jenisacara">Organisasi</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-      <div class="bagiankananacara">
-
-      </div>
-    </div>
-  </div> -->
 
   <!-- BAGIAN AKHIR HOME -->
   <div class="bagian6">
@@ -273,12 +241,6 @@
 
   <!-- BAGIAN FOOTER -->
   <section class="footer">
-    <!-- <div class="social">
-      <a href="#"><i class="fab fa-instagram"></i></a>
-      <a href="#"><i class="fab fa-snapchat"></i></a>
-      <a href="#"><i class="fab fa-twitter"></i></a>
-      <a href="#"><i class="fab fa-facebook-f"></i></a>
-    </div> -->
     <div class="nama">
       <img src="/aset/LogoPanjang.png" class="logoPanjang">
       <p>Developed by</p>
@@ -302,6 +264,7 @@
 
   <script src="/js/home.js"></script>
   <script src="/js/profileJS.js"></script>
+  <script src="/js/getNameSessionStorage.js"></script>
 </body>
 
 </html>

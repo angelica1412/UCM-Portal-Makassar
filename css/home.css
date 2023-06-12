@@ -16,6 +16,7 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* NAVBAR */
 .navbartop {
   overflow: hidden;
   background-color: white;
@@ -165,11 +166,6 @@ nav img {
   transform: scale(1.8);
 }
 
-.profileicon i {
-  width: 100%;
-  transform: scale(1.8);
-}
-
 .nav-links #close {
   display: none;
 }
@@ -182,6 +178,7 @@ nav #humbuger {
   display: flex;
 }
 
+/* BAGIAN PERTAMA HOME */
 .home1 {
   background-image: linear-gradient(rgba(255, 152, 0, 0.5),
       rgba(255, 152, 0, 0.5)),
@@ -430,101 +427,6 @@ nav #humbuger {
   flex-direction: column;
 }
 
-.sedangberlangsung {
-  font-size: 45px;
-  font-weight: bolder;
-}
-
-.desclangsung {
-  font-size: 16px;
-}
-
-.lanjutanlangsung {
-  font-size: 16px;
-}
-
-.bagian6 {
-  display: flex;
-  margin-top: 70px;
-}
-
-.bagianutuh {
-  display: flex;
-  flex-flow: row nowrap;
-  /* align-items: center; */
-  justify-content: center;
-}
-
-.bagiankiriacara {
-  width: 30%;
-  height: 700px;
-  background-color: white;
-}
-
-.judultemukan {
-  display: flex;
-  width: 100%;
-  height: 35px;
-  background-color: #FF9800;
-  align-items: center;
-  border-radius: 5px 0 0 0;
-}
-
-.judultemukan p {
-  font-size: 18px;
-  font-weight: 450;
-  color: white;
-  margin-left: 2%;
-}
-
-.listevent {
-  height: 500px;
-  display: flex;
-  flex-flow: column nowrap;
-  margin-top: 2%;
-}
-
-.acara {
-  height: 100px;
-  display: flex;
-  flex-flow: row nowrap;
-  box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-  /* margin-left: 2%; */
-  margin-right: 2%;
-}
-
-.logoacara {
-  display: flex;
-  width: 120px;
-  align-items: center;
-}
-
-.logoacara img {
-  width: 120px;
-  margin-left: 5%;
-}
-
-.tulisanacara {
-  margin-left: 5%;
-  margin-top: 5%;
-}
-
-.judulacara {
-  font-size: 16px;
-  font-weight: 600;
-}
-
-.jenisacara {
-  font-size: 14px;
-  font-weight: 500;
-  color: var(--orange);
-}
-
-.bagiankananacara {
-  width: 30%;
-  border: 1.5px solid #4e5053;
-}
-
 .tulisanlogo {
   display: flex;
   flex-flow: row nowrap;
@@ -662,6 +564,7 @@ nav #humbuger {
 .dropdown img {
   width: 40px;
 }
+
 
 @media (max-width: 700px) {
   .nav-links ul li {
@@ -942,17 +845,21 @@ nav #humbuger {
   line-height: 1.6;
   margin-bottom: 0;
 }
+
 .footer ul a {
   color: white;
   text-decoration: none;
 }
+
 .footer ul li {
   display: inline-block;
   padding: 0 15px;
 }
+
 .footer ul a:hover {
   color: black;
 }
+
 .footer .jurusantahun {
   margin-top: 15px;
   text-align: center;
@@ -965,32 +872,28 @@ nav #humbuger {
   height: 76.137px;
 }
 
-.bagianluar{
+.bungkus{
   display: flex;
-  align-items: center;
   justify-content: center;
 }
 
 .popupmore {
-  display: flex;
   position: fixed;
   padding: 10px;
   width: 35%;
-  left: 50%;
-  /* margin-left: -150px; */
   height: 180px;
   top: 50%;
   margin-top: -100px;
   background: #FFF;
   z-index: 20;
-  flex-flow: column nowrap;
-  justify-content: center;
-  /* align-items: center; */
   font-weight: bold;
   border-radius: 10px;
 }
 
 #popupmore:after {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: fixed;
   content: "";
   top: 0;
@@ -999,16 +902,10 @@ nav #humbuger {
   right: 0;
   background: rgba(0, 0, 0, 0.5);
   z-index: -2;
-  display: flex;
-  border-radius: 10px;
-  justify-content: center;
-  align-items: center;
+  /* border-radius: 10px; */
 }
 
 #popupmore:before {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   position: absolute;
   content: "";
   top: 0;
@@ -1018,4 +915,31 @@ nav #humbuger {
   background: #FFF;
   z-index: -1;
   border-radius: 10px;
+}
+
+.judullogo{
+  width: 100%;
+  height: 60px;
+  margin-top: 2%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid #a9a9a9;
+}
+
+.logopop{
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.judulpop p{
+  font-size: 26px;
+  font-weight: bold;
+}
+
+.logokegiatan{
+  width: 130px;
+  /* aspect-ratio: 38/8; */
 }
