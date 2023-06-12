@@ -1,4 +1,3 @@
-// HAMBURGER NAVBAR 
 var navLinks = document.getElementById("navLinks");
 
 function showMenu() {
@@ -9,7 +8,6 @@ function hideMenu() {
   navLinks.style.left = "-200px";
 }
 
-// Untuk Semua Pop Up
 $ = function (id) {
     return document.getElementById(id);
 }
