@@ -13,6 +13,7 @@
     /* text-transform: capitalize; */
     transition: all 0.2s linear;
     text-decoration: none;
+    font-size: 14px;
     font-family: "Poppins", sans-serif;
 }
 

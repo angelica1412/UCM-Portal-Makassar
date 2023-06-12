@@ -239,11 +239,10 @@ nav #humbuger {
     background-color: rgb(255, 152, 0, 0.6);
     border-radius: 10px;
     width: 95%;
-    height: 70px;
+    height: 80px;
     align-items: center;
-    margin-top: 5%;
-    /* margin-right: 3%; */
-    justify-content: space-between;
+    margin-top: 3%;
+    justify-content: space-around;
     flex-flow: row nowrap;
 }
 
@@ -254,30 +253,19 @@ nav #humbuger {
     justify-content: center;
 }
 
-.dotprofile i {
-    z-index: 1;
-    transform: scale(1.5);
-    justify-content: center;
-}
-
-.dotprofile {
-    height: 50px;
-    width: 50px;
-    background-color: #a8a5a5;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .namepengirim {
     font-weight: bold;
-    font-size: 16px;
+    font-size: 18px;
+}
+
+.name{
+    margin-left: 2%;
 }
 
 .jurusan {
     color: white;
     font-weight: 400;
+    font-size: 16px;
 }
 
 .iconbeside {
@@ -533,3 +521,185 @@ nav #humbuger {
     font-weight: bold;
     font-size: 16px;
 }
+
+/* MEDIA QUERY */
+@media (max-width: 700px) {
+    .search-box {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        width: 200px;
+        margin-left: 20px;
+    }
+
+    .nav-links ul li {
+      display: block;
+    }
+  
+    .hometext a,
+    .homeicon i {
+      color: black !important;
+    }
+  
+    .nav-links {
+      position: absolute;
+      background-color: #f6f9fe;
+      height: 100vh;
+      width: 200px;
+      top: 0;
+      left: -200px;
+      text-align: left;
+      z-index: 4;
+      transition: 1s;
+    }
+  
+    .logoNav {
+      align-items: center;
+      position: relative;
+      width: 50%;
+    }
+  
+    .nav-links .hometext {
+      text-align: center;
+    }
+  
+    .nav-links .dropdown img {
+      text-align: center;
+    }
+  
+    .nav-links #close {
+      display: block;
+      color: #ff9800;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  
+    nav #humbuger {
+      display: block;
+      color: black;
+      margin: 10px;
+      font-size: 22px;
+      cursor: pointer;
+    }
+  
+    .nav-links ul {
+      padding: 30px;
+    }
+  
+    .acara img {
+      width: 100px;
+    }
+
+    .homeadmin {
+        display: flex;
+        justify-content: center;
+        flex-flow: column nowrap;
+        align-items: center;
+    }
+
+    .pengirim {
+        margin-top: 3%;
+        /* margin-left: 10%; */
+        border: 2px solid #001c4c;
+        width: 60%;
+        height: 320px;
+        overflow-y: auto;
+        border-radius: 10px;
+    }
+
+    .tampilaninfo {
+        margin-top: 5%;
+        border: 2px solid #001c4c;
+        width: 80%;
+        height: 780px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .popup {
+        display: none;
+        position: fixed;
+        padding: 10px;
+        width: 53%;
+        /* margin-left: -100px; */
+        height: 180px;
+        /* top: 50%; */
+        /* margin-top: -100px; */
+        background: #FFF;
+        z-index: 20;
+        /* justify-content: center; */
+        /* align-items: center; */
+        flex-flow: column nowrap;
+        font-weight: bold;
+    }
+    
+    #popup:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -2;
+    }
+    
+    #popup:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #FFF;
+        z-index: -1;
+        border-radius: 10px;
+    }
+    
+    .popup img {
+        display: flex;
+        width: 30%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup p {
+        text-align: center;
+        font-weight: bold;
+        font-size: 16px;
+    }
+
+    .judulkegiatan {
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        text-align: center;
+        font-size: 18px;
+    }
+
+    .namepengirim {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    
+    .name{
+        margin-left: 2%;
+    }
+    
+    .jurusan {
+        color: white;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    
+    .tombol{
+        margin-top: 15%;
+    }
+
+    .tolak, .acc {
+        width: 23%;
+    }
+  }

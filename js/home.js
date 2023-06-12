@@ -1,3 +1,4 @@
+// HAMBURGER NAVBAR 
 var navLinks = document.getElementById("navLinks");
 
 function showMenu() {
@@ -8,6 +9,7 @@ function hideMenu() {
   navLinks.style.left = "-200px";
 }
 
+//Tekan Cari Sekarang Langsung ke Search Bar
 function focusToSearchBox() {
   const searchBox = document.getElementById("search-box");
   searchBox.focus();
