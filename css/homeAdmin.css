@@ -352,6 +352,7 @@ nav #humbuger {
     height: 180px;
     margin-top: 1%;
     border-radius: 5px;
+    overflow-y: scroll;
 }
 
 .logo1 img {
@@ -365,6 +366,7 @@ nav #humbuger {
     margin-top: 2%;
     height: 60px;
     border-radius: 5px;
+    overflow-x: scroll;
 }
 
 .tombol {

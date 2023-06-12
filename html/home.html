@@ -259,7 +259,7 @@
   <script src="/js/profileJS.js"></script>
   <script>
     function getAcceptedForms() {
-      var apiUrl = "http://localhost:4000/ucmportal/form/accepted"; // Ganti dengan URL API yang sesuai
+      var apiUrl = "http://localhost:4000/ucmportal/accepted"; // Ganti dengan URL API yang sesuai
 
       // Lakukan request AJAX ke API
       var xhr = new XMLHttpRequest();
@@ -286,10 +286,6 @@
       // Mengecek apakah ada data form terbaru
       if (acceptedForms.length > 0) {
         acceptedForms.forEach(function (form) {
-          if (counter >= 6) {
-            return; // Exit the loop if 6 forms have been added
-          }
-
           // Membuat elemen HTML untuk form
           var card = document.createElement("div");
           card.className = "column";
