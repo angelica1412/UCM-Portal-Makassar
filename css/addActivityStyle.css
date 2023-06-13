@@ -579,6 +579,7 @@ button:hover .button-text {
   margin-top: 13px;
 }
 
+
 .popup {
   display: none;
   position: fixed;
@@ -608,6 +609,7 @@ button:hover .button-text {
   z-index: -2;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 #popup:before {

@@ -63,16 +63,17 @@ function showFormularData(userName, formTitle) {
     success: function (formularData) {
       console.log(formularData);
       // Memperbarui tampilan HTML dengan data formular
-      const judulKegiatan = document.querySelector(".judulkegiatan");
-      const jenisKegiatan = document.querySelector(".jawabanjenis");
-      const tanggalMulai = document.querySelector(".tanggalmulai");
-      const tanggalAkhir = document.querySelector(".tanggalakhir");
-      const deskripsi = document.querySelector(".descinfo");
-      const logoKegiatan = document.querySelector(".logo1 img");
-      const linkGoogleForm = document.querySelector(".rectangle");
-      const tombolTolak = document.getElementById("tolak");
-      const tombolTerima = document.getElementById("acc");
-  
+      var judulKegiatan = document.querySelector(".judulkegiatan");
+      var jenisKegiatan = document.querySelector(".jawabanjenis");
+      var tanggalMulai = document.querySelector(".tanggalmulai");
+      var tanggalAkhir = document.querySelector(".tanggalakhir");
+      var deskripsi = document.querySelector(".descinfo");
+      var logoKegiatan = document.querySelector(".logo1 img");
+      var linkGoogleForm = document.querySelector(".rectangle");
+      var tombolTolak = document.getElementById("tolak");
+      var tombolTerima = document.getElementById("acc");
+
+
       judulKegiatan.textContent = formularData[0].title;
       jenisKegiatan.textContent = formularData[0].type;
       tanggalMulai.textContent = "Mulai: " + formularData[0].dateStart;
@@ -80,92 +81,29 @@ function showFormularData(userName, formTitle) {
       deskripsi.innerHTML = formularData[0].description;
       logoKegiatan.src = "data:image/jpeg;base64," + formularData[0].logo;
       linkGoogleForm.textContent = formularData[0].linkGoogleForm;
-  
-      // Cek jika ada data yang kosong
-      
-      window.addEventListener('click', function (event) {
-        if (event.target === popup) {
-          popup.style.display = 'none';
-        }
-      });
-      // Tambahkan event listener pada tombol "Tolak"
+      var popup = document.getElementById('popup');
       tombolTolak.addEventListener("click", function () {
-        const jenisKegiatanValue = document.querySelector(".jawabanjenis").value;
-        const judulKegiatanValue = document.querySelector(".judulkegiatan").value;
-        const tanggalMulaiValue = document.querySelector(".tanggalmulai").value;
-        const tanggalAkhirValue = document.querySelector(".tanggalakhir").value;
-        const deskripsiValue = document.querySelector(".descinfo").innerHTML;
-        const logoKegiatanValue = document.querySelector(".logo1 img").src;
-        const linkGoogleFormValue = document.querySelector(".rectangle").value;
-        
-      
-        if (
-          judulKegiatanValue == "" ||
-          jenisKegiatanValue == "" ||
-          tanggalMulaiValue == "" ||
-          tanggalAkhirValue == "" ||
-          deskripsiValue == "" ||
-          logoKegiatanValue== undefined ||
-          linkGoogleFormValue == "" 
-        )  {
-          // Tampilkan pop-up snackbar
-          var snackbar = document.getElementById("snackbar");
-          snackbar.className = "show";
-          setTimeout(function () {
-            snackbar.className = snackbar.className.replace("show", "");
-          }, 3000);
-          return false;
-        } else {
-          updateFormStatus(formTitle, "Rejected");
-          clearForm();
-          popup.style.display = "flex";
-          formTitle = "";
-          return true;
-        }
+        updateFormStatus(formTitle, "Rejected");
+        popup.style.display = 'flex';
+        window.addEventListener('click', function (event) {
+          if (event.target === popup) {
+            popup.style.display = 'none';
+          }
+        });
+        ClearFormView()
+
       });
       
-      
-  
-      // Tambahkan event listener pada tombol "Terima"
       tombolTerima.addEventListener("click", function () {
-        const jenisKegiatanValue = document.querySelector(".jawabanjenis").value;
-        const judulKegiatanValue = document.querySelector(".judulkegiatan").value;
-        const tanggalMulaiValue = document.querySelector(".tanggalmulai").value;
-        const tanggalAkhirValue = document.querySelector(".tanggalakhir").value;
-        const deskripsiValue = document.querySelector(".descinfo").innerHTML;
-        const logoKegiatanValue = document.querySelector(".logo1 img").src;
-        const linkGoogleFormValue = document.querySelector(".rectangle").value;
-        
-      
-        if (
-          judulKegiatanValue == "" ||
-          jenisKegiatanValue == "" ||
-          tanggalMulaiValue == "" ||
-          tanggalAkhirValue == "" ||
-          deskripsiValue == "" ||
-          logoKegiatanValue== undefined ||
-          linkGoogleFormValue == "" 
-        )  {
-          // Tampilkan pop-up snackbar
-          var snackbar = document.getElementById("snackbar");
-          snackbar.className = "show";
-          setTimeout(function () {
-            snackbar.className = snackbar.className.replace("show", "");
-          }, 3000);
-          return false;
-        }else{
-          updateFormStatus(formTitle, "Accepted");
-          clearForm();
-          popup.style.display = 'flex';
-          formTitle = "";
-        }
+        updateFormStatus(formTitle, "Accepted");
+        popup.style.display = 'flex';
+        ClearFormView()
       });
     },
     error: function (xhr, status, error) {
       console.log(error);
     }
   });
-  
 }
 
 function updateFormStatus(formTitle, status) {
@@ -191,23 +129,13 @@ setInterval(function () {
   getRequestList();
 }, 5000);
 
-  function clearForm() {
-    var judulKegiatan = document.querySelector(".judulkegiatan");
-    var jenisKegiatan = document.querySelector(".jawabanjenis");
-    var tanggalMulai = document.querySelector(".tanggalmulai");
-    var tanggalAkhir = document.querySelector(".tanggalakhir");
-    var deskripsi = document.querySelector(".descinfo");
-    var logoKegiatan = document.querySelector(".logo1 img");
-    var linkGoogleForm = document.querySelector(".rectangle");
-  
-    judulKegiatan.textContent = "";
-    jenisKegiatan.textContent = "";
-    tanggalMulai.textContent = "Mulai: ";
-    tanggalAkhir.textContent = "Akhir: ";
-    deskripsi.innerHTML = "";
-    logoKegiatan.src = "";
-    linkGoogleForm.textContent = "";
-  }
 
-
-
+function ClearFormView() {
+  document.getElementById("judulKegiatan").value = "";
+  document.getElementById("jenisKegiatan").value = "";
+  document.getElementById("tanggalMulai").value = "Mulai : ";
+  document.getElementById("tanggalAkhir").value = "Akhir : ";
+  document.getElementById("deskripsi").value ="";
+  document.getElementById("img").setAttribute("src", "");
+  document.getElementById("linkGoogleForm").value ="";
+}
