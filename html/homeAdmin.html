@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta rset="UTF-8" />
+    <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/css/homeAdmin.css" />
@@ -82,7 +82,6 @@
         </nav>
     </div>
 
-    <!-- BAGIAN LIST -->
     <!-- Pop Up Untuk Logout -->
     <div class="popup2" id="popup2">
         <div class="logocancel">
@@ -104,105 +103,49 @@
 
             <div class="judulpengirim">Pengirim</div>
 
-            <div class="listpengirim">
-
-                <div class="infopengirim">
-                    <div class="name">
-                        <p class="namepengirim">Aulia Zafira Nurul Avisa</p>
-                        <p class="jurusan">472847192432 - IBM</p>
-                    </div>
-
-                    <div class="iconbeside">
-                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
-
-                <div class="infopengirim">
-                    <div class="name">
-                        <p class="namepengirim">Aulia Zafira Nurul Avisa</p>
-                        <p class="jurusan">472847192432 - IBM</p>
-                    </div>
-
-                    <div class="iconbeside">
-                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
-                <div class="infopengirim">
-                    <div class="name">
-                        <p class="namepengirim">Aulia Zafira Nurul Avisa</p>
-                        <p class="jurusan">472847192432 - IBM</p>
-                    </div>
-
-                    <div class="iconbeside">
-                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
-                <div class="infopengirim">
-
-                    <div class="name">
-                        <p class="namepengirim">Aulia Zafira Nurul Avisa</p>
-                        <p class="jurusan">472847192432 - IBM</p>
-                    </div>
-
-                    <div class="iconbeside">
-                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
-                <div class="infopengirim">
-                    <!-- <div class="profile">
-                        <span class="dotprofile"><i class="fa-solid fa-user"></i></span>
-                    </div> -->
-
-                    <div class="name">
-                        <p class="namepengirim">Aulia Zafira Nurul Avisa</p>
-                        <p class="jurusan">472847192432 - IBM</p>
-                    </div>
-
-                    <div class="iconbeside">
-                        <a href="#"><i class="fa-solid fa-chevron-right"></i></a>
-                    </div>
-                </div>
+            <div class="listpengirim" id="list_Pengirim">
 
             </div>
         </div>
 
         <div class="gabungantmbl">
             <div class="tampilaninfo">
-                <div class="judulkegiatan" id="judulKegiatan"></div>
+                <div class="judulkegiatan"></div>
 
                 <div class="infokegiatan">
                     <div class="jeniskegiatan">
-                        <p class="atasjenis" >Jenis Kegiatan :</p>
-                        <p class="jawabanjenis" id="jenisKegiatan"></p>
+                        <p class="atasjenis">Jenis Kegiatan :</p>
+                        <p class="jawabanjenis"></p>
                     </div>
 
                     <div class="tanggal">
                         <p class="atastanggal">Tanggal :</p>
-                        <p class="tanggalmulai" id="tanggalMulai">Mulai : </p>
-                        <p class="tanggalakhir" id="tanggalAkhir">Akhir : </p>
+                        <p class="tanggalmulai">Mulai : </p>
+                        <p class="tanggalakhir">Akhir : </p>
                     </div>
 
                     <div class="deskripsi">
-                        <p class="atasdeskripsi" >Deskripsi :</p>
-                        <div class="descinfo" id="deskripsi">
+                        <p class="atasdeskripsi">Deskripsi :</p>
+                        <div class="descinfo">
                         </div>
                     </div>
 
                     <div class="logo1">
                         <p class="atasjenis">Logo Kegiatan </p>
-                        <img src="" id="logo">
+                        <img src="">
                     </div>
 
                     <div class="form">
                         <p class="atasform">Link Google Form </p>
-                        <div class="rectangle" id="linkGoogleForm">
+                        <div class="rectangle">
                         </div>
                     </div>
+
                 </div>
-            </div>
-            <div class="tombol">
-                <button id="tolak">Tolak</button>
-                <button id="acc">Terima</button>
+                <div class="tombol">
+                    <button class="tolak" id="tolak">Tolak</button>
+                    <button class="acc" id="acc">Terima</button>
+                </div>
             </div>
         </div>
 
@@ -215,11 +158,6 @@
         <p>Telah Dikirim</p>
         <!-- <a href="#" onclick="hide('popup')"></a> -->
     </div>
-
-    <div id="snackbar">
-        <img src="/aset/alertsign.png" style="width: 20px; height: 20px; margin-right: 8px; margin-bottom: -4px; ">
-        Please fill all the fields
-      </div>
 
     <script src="/js/profileJS.js"></script>
     <script src="/js/homeAdmin.js"></script>

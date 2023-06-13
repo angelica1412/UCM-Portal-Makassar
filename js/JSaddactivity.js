@@ -38,7 +38,11 @@ function show() {
     console.log("Link:", link);
     console.log("Logo:", logo);
     
-  
+  window.addEventListener('click', function (event) {
+    if (event.target === popup) {
+      popup.style.display = 'none';
+    }
+  });
     if (
       judul.trim() === "" ||
       (!jenis1 && !jenis2 && !jenis3) ||
@@ -69,6 +73,7 @@ function show() {
       sendFormDataToServer(); // Send form data to the server
       // clearForm();
       clearForm();
+      
     }
   });
   
