@@ -1,12 +1,12 @@
 // Function to show the popup
-function show(elementId) {
-    var popup = document.getElementById(elementId);
+function show() {
+    var popup = document.getElementById("popup");
     popup.style.display = "block";
   }
   
   // Function to hide the popup
-  function hide(elementId) {
-    var popup = document.getElementById(elementId);
+  function hide() {
+    var popup = document.getElementById("popup");
     popup.style.display = "none";
   }
   
@@ -25,6 +25,7 @@ function show(elementId) {
     var tanggalMulai = document.getElementById("tanggal_mulai").value;
     var tanggalSelesai = document.getElementById("tanggal_selesai").value;
     var deskripsi = CKEDITOR.instances.deskripsi.getData();
+    var logo = document.getElementById("input").files[0];
     var link = document.getElementById("link").value;
   
     console.log("Judul:", judul);
@@ -35,6 +36,8 @@ function show(elementId) {
     console.log("Tanggal Selesai:", tanggalSelesai);
     console.log("Deskripsi:", deskripsi);
     console.log("Link:", link);
+    console.log("Logo:", logo);
+    
   
     if (
       judul.trim() === "" ||
@@ -42,7 +45,7 @@ function show(elementId) {
       tanggalMulai.trim() === "" ||
       tanggalSelesai.trim() === "" ||
       deskripsi.trim() === "" ||
-      link.trim() === ""
+      link.trim() === "" || logo === undefined
     ) {
       // Show the snackbar message if any field is empty
       var snackbar = document.getElementById("snackbar");
@@ -64,6 +67,8 @@ function show(elementId) {
       // Show the success popup if the form is valid
       show("popup");
       sendFormDataToServer(); // Send form data to the server
+      // clearForm();
+      clearForm();
     }
   });
   
@@ -125,4 +130,19 @@ function show(elementId) {
     };
     xhr.send(formData);
   }
+
+  function clearForm() {
+    document.getElementById("judul").value = "";
+    document.getElementById("jenis1").checked = false;
+    document.getElementById("jenis2").checked = false;
+    document.getElementById("jenis3").checked = false;
+    document.getElementById("tanggal_mulai").value = "";
+    document.getElementById("tanggal_selesai").value = "";
+    CKEDITOR.instances.deskripsi.setData("");
+    document.getElementById("link").value = "";
+    document.getElementById("input").value = null;
+    document.getElementById("img").setAttribute("src", "/aset/addimage.png");
+
+  }
+  
   

@@ -76,8 +76,8 @@
                   </div>
                   <div class="img">
                   </div>
-                  <span> Person</span>
-                  <p class="job"> Job Title</p>
+                  <span id="name"> Person</span>
+                  <p class="job" id="major"> Job Title</p>
                   <button id="btnlogout" onclick="show('popup')"> Log Out
                   </button>
                 </div>
@@ -149,43 +149,30 @@
 
   <!-- TABEL AKTIVITAS -->
   <table id="tabelaktivitas">
-
     <thead>
-
       <tr id="header">
         <th>Judul</th>
         <th>Jenis Kegiatan</th>
         <th>Status</th>
         <th>Tanggal Pendaftaran</th>
       </tr>
-
-      <tr>
-        <td>Open Recruitment Infinity </td>
-        <td>Organisasi </td>
-        <td class="status"> <span class="dotterima"></span> Diterima</td>
-        <td>16 - 04 - 2023 </td>
-      </tr>
-
-      <tr>
-        <td>Orientation Week 2023 </td>
-        <td>Kepanitiaan </td>
-        <td class="status"> <span class="dotperiksa"></span> Diperiksa</td>
-        <td>03 - 04 - 2023 </td>
-      </tr>
-
       <tr>
         <td>Kepengurusan UKM Bulu Tangkis </td>
         <td>Unit Kegiatan Mahasiswa (UKM) </td>
         <td class="status"> <span class="dottolak"></span> Ditolak</td>
         <td>20 - 10 - 2022 </td>
       </tr>
-
     </thead>
-
+    <tbody id="dataTabel">
+      
+      <!-- Tempat untuk data yang akan ditambahkan -->
+    </tbody>
   </table>
+  
 
   <script src="/js/activity.js"></script>
   <script src="/js/profileJS.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
 </body>
 
 </html>

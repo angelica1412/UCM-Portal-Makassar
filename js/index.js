@@ -24,6 +24,7 @@ $(document).ready(function() {
             // Set sessionStorage
             sessionStorage.setItem("username", response.userSummary.name);
             sessionStorage.setItem("userLevel", response.userSummary.userLevel);
+            sessionStorage.setItem("major", response.userSummary.major);
   
             // Arahkan pengguna ke halaman yang sesuai berdasarkan level pengguna
             if(response.userSummary.userLevel === "user") {

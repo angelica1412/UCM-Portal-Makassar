@@ -68,9 +68,10 @@
                                     </div>
                                     <div class="img">
                                     </div>
-                                    <span> Person</span>
-                                    <p class="job"> Job Title</p>
-                                    <button>Log Out</button>
+                                    <span id="name"> Person</span>
+                                    <p class="job" id="major"> Job Title</p>
+                                    <button id="btnlogout"> Log Out
+                                    </button>
                                 </div>
                             </div>
                         </div>
@@ -82,6 +83,22 @@
     </div>
 
     <!-- BAGIAN LIST -->
+    <!-- Pop Up Untuk Logout -->
+    <div class="popup2" id="popup2">
+        <div class="logocancel">
+            <a href="#" onclick="hide('popup2')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+        </div>
+        <div class="judulLogout">
+            Logout
+        </div>
+        <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?
+        </div>
+        <div class="buttonlog">
+            <a href="index.html"><button id="ya">Keluar</button></a>
+            <button id="tidak">Tidak</button>
+        </div>
+    </div>
+
     <div class="homeadmin">
         <div class="pengirim">
 
@@ -149,46 +166,49 @@
             </div>
         </div>
 
-        <div class="tampilaninfo">
-            <div class="judulkegiatan">Open Recruitment Management Student Union</div>
+        <div class="gabungantmbl">
+            <div class="tampilaninfo">
+                <div class="judulkegiatan" id="judulKegiatan"></div>
 
-            <div class="infokegiatan">
-                <div class="jeniskegiatan">
-                    <p class="atasjenis">Jenis Kegiatan :</p>
-                    <p class="jawabanjenis">Organisasi</p>
-                </div>
-
-                <div class="tanggal">
-                    <p class="atastanggal">Tanggal :</p>
-                    <p class="tanggalmulai">Mulai : 10 Februari 2023</p>
-                    <p class="tanggalakhir">Akhir : 20 Februari 2023</p>
-                </div>
-
-                <div class="deskripsi">
-                    <p class="atasdeskripsi">Deskripsi :</p>
-                    <div class="descinfo">
+                <div class="infokegiatan">
+                    <div class="jeniskegiatan">
+                        <p class="atasjenis" >Jenis Kegiatan :</p>
+                        <p class="jawabanjenis" id="jenisKegiatan"></p>
                     </div>
-                </div>
 
-                <div class="logo1">
-                    <p class="atasjenis">Logo Kegiatan </p>
-                    <img src="/aset/fdu.png">
-                </div>
-
-                <div class="form">
-                    <p class="atasform">Link Google Form </p>
-                    <div class="rectangle">
+                    <div class="tanggal">
+                        <p class="atastanggal">Tanggal :</p>
+                        <p class="tanggalmulai" id="tanggalMulai">Mulai : </p>
+                        <p class="tanggalakhir" id="tanggalAkhir">Akhir : </p>
                     </div>
-                </div>
 
-                <div class="tombol">
-                    <button class="tolak" onclick="show('popup')">Tolak</button>
-                    <button class="acc" onclick="show('popup')">Terima</button>
+                    <div class="deskripsi">
+                        <p class="atasdeskripsi" >Deskripsi :</p>
+                        <div class="descinfo" id="deskripsi">
+                        </div>
+                    </div>
+
+                    <div class="logo1">
+                        <p class="atasjenis">Logo Kegiatan </p>
+                        <img src="" id="logo">
+                    </div>
+
+                    <div class="form">
+                        <p class="atasform">Link Google Form </p>
+                        <div class="rectangle" id="linkGoogleForm">
+                        </div>
+                    </div>
                 </div>
             </div>
+            <div class="tombol">
+                <button id="tolak">Tolak</button>
+                <button id="acc">Terima</button>
+            </div>
         </div>
+
     </div>
 
+    <!-- Pop up Tolak Acc Admin -->
     <div class="popup" id="popup">
         <img src="/aset/benar.png">
         <p class="statuspengajuan">Status Pengajuan</p>
@@ -196,8 +216,15 @@
         <!-- <a href="#" onclick="hide('popup')"></a> -->
     </div>
 
+    <div id="snackbar">
+        <img src="/aset/alertsign.png" style="width: 20px; height: 20px; margin-right: 8px; margin-bottom: -4px; ">
+        Please fill all the fields
+      </div>
+
     <script src="/js/profileJS.js"></script>
     <script src="/js/homeAdmin.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/js/requestlist.js"></script>
 
 </body>
 

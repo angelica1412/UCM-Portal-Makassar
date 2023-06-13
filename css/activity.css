@@ -249,16 +249,16 @@ table {
     transform: translate(-50%, -50%);
     border-collapse: collapse;
     width: 1200px;
-    height: 200px;
+    height: 150px;
     border: 1px solid #bdc3c7;
 }
 
-tr {
+tr, tbody{
     transition: all .2s ease-in;
     cursor: pointer;
 }
 
-th, td {
+th, td, tbody {
     padding: 12px;
     text-align: left;
     border-bottom: 1px solid #ddd;
@@ -327,6 +327,7 @@ tr:hover {
     background: #ed9a09;
     border-radius: 15px;
     box-shadow: 1px 5px 60px 0px #88580a6b;
+    z-index: 10;
   }
   
   .card .card-border-top {

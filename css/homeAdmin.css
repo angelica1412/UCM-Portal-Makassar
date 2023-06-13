@@ -241,9 +241,11 @@ nav #humbuger {
     width: 95%;
     height: 80px;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 5%;
+    /* margin-right: 3%; */
     justify-content: space-around;
     flex-flow: row nowrap;
+    border: none;
 }
 
 .profile {
@@ -279,13 +281,21 @@ nav #humbuger {
 
 .tampilaninfo {
     margin-top: 3%;
-    margin-left: 3%;
+    margin-left: 5%;
     /* margin-right: 10%; */
     border: 2px solid #001c4c;
-    width: 50%;
-    height: 870px;
+    width: 100%;
+    height: auto;
     border-radius: 10px;
     margin-bottom: 20px;
+}
+
+.gabungantmbl{
+    display: flex;
+    flex-flow: column nowrap;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
 }
 
 .judulkegiatan {
@@ -351,22 +361,24 @@ nav #humbuger {
     border: 2px solid #E4E4E4;
     width: 80%;
     margin-top: 2%;
+    margin-bottom: 4%;
     height: 60px;
     border-radius: 5px;
 }
 
 .tombol {
-    margin-top: 5%;
+    width: 100%;
     height: 50px;
     display: flex;
     justify-content: right;
+    /* float: right; */
     align-items: center;
 }
 
-.tolak {
-    width: 15%;
-    height: 35px;
-    font-size: 16px;
+#tolak {
+    width: 13%;
+    height: 40px;
+    font-size: 18px;
     background-color: #E04747;
     border: none;
     border-radius: 10px;
@@ -374,10 +386,10 @@ nav #humbuger {
     margin-right: 1%;
 }
 
-.acc {
-    width: 15%;
-    height: 35px;
-    font-size: 16px;
+#acc {
+    width: 13%;
+    height: 40px;
+    font-size: 18px;
     background-color: #1AD95B;
     border: none;
     border-radius: 10px;
@@ -452,7 +464,7 @@ nav #humbuger {
 .dropdown-content {
     display: none;
     position: absolute;
-    margin-left: -130px;
+    margin-left: -90px;
     margin-top: 14px;
     min-width: 160px;
     z-index: 1;
@@ -522,6 +534,129 @@ nav #humbuger {
     font-size: 16px;
 }
 
+.popup2 {
+    display: none;
+    position: fixed;
+    padding: 10px;
+    width: 20%;
+    left: 50%;
+    margin-left: -90px;
+    height: 180px;
+    top: 50%;
+    margin-top: -100px;
+    background: #FFF;
+    z-index: 20;
+    /* justify-content: center;
+    align-items: center; */
+    flex-flow: column nowrap;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+#cancel {
+    float: right;
+    margin-right: 2%;
+    margin-top: 2%;
+    color: #000000;
+}
+
+#tidak {
+    float: right;
+    margin-right: 2%;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 20%;
+    height: 30px;
+    border: none;
+}
+
+#tidak:hover {
+    font-weight: bold;
+    background-color: #6f7378;
+}
+
+#ya {
+    float: right;
+    margin-right: 2%;
+    background-color: rgb(224, 71, 71, 0.7);
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 20%;
+    height: 30px;
+    color: white;
+
+}
+
+#ya:hover {
+    background-color: rgb(224, 71, 71);
+    font-weight: bold;
+}
+
+#popup2:after {
+    position: fixed;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -2;
+    display: flex;
+    /* border-radius: 10px; */
+    justify-content: center;
+}
+
+#popup2:before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: #FFF;
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.judulLogout {
+    display: flex;
+    font-size: 22px;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.pertanyaankeluar {
+    font-size: 16px;
+    font-weight: normal;
+    margin-top: 2%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.buttonlog {
+    margin-top: 7%;
+}
+
+/* The snackbar - position it at the bottom and in the middle of the screen */
+#snackbar {
+    visibility: hidden; /* Hidden by default. Visible on click */
+    min-width: 250px; /* Set a default minimum width */
+    margin-left: -125px; /* Divide value of min-width by 2 */
+    background-color: #ffa115; /* Black background color */
+    color: #fff; /* White text color */
+    text-align: center; /* Centered text */
+    border-radius: 2px; /* Rounded borders */
+    padding: 16px; /* Padding */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 1; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar */
+    bottom: 30px; /* 30px from the bottom */
+    border-radius: 10px;
+  }
+  
+
 /* MEDIA QUERY */
 @media (max-width: 700px) {
     .search-box {
@@ -533,62 +668,64 @@ nav #humbuger {
     }
 
     .nav-links ul li {
-      display: block;
+        display: flex;
+        align-items: center;
+        flex-flow: column nowrap;
     }
-  
+
     .hometext a,
     .homeicon i {
-      color: black !important;
+        color: black !important;
     }
-  
+
     .nav-links {
-      position: absolute;
-      background-color: #f6f9fe;
-      height: 100vh;
-      width: 200px;
-      top: 0;
-      left: -200px;
-      text-align: left;
-      z-index: 4;
-      transition: 1s;
+        position: absolute;
+        background-color: #f6f9fe;
+        height: 100vh;
+        width: 200px;
+        top: 0;
+        left: -200px;
+        text-align: left;
+        z-index: 4;
+        transition: 1s;
     }
-  
+
     .logoNav {
-      align-items: center;
-      position: relative;
-      width: 50%;
+        align-items: center;
+        position: relative;
+        width: 50%;
     }
-  
+
     .nav-links .hometext {
-      text-align: center;
+        text-align: center;
     }
-  
+
     .nav-links .dropdown img {
-      text-align: center;
+        text-align: center;
     }
-  
+
     .nav-links #close {
-      display: block;
-      color: #ff9800;
-      margin: 10px;
-      font-size: 22px;
-      cursor: pointer;
+        display: block;
+        color: #ff9800;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
     }
-  
+
     nav #humbuger {
-      display: block;
-      color: black;
-      margin: 10px;
-      font-size: 22px;
-      cursor: pointer;
+        display: block;
+        color: black;
+        margin: 10px;
+        font-size: 22px;
+        cursor: pointer;
     }
-  
+
     .nav-links ul {
-      padding: 30px;
+        padding: 30px;
     }
-  
+
     .acara img {
-      width: 100px;
+        width: 100px;
     }
 
     .homeadmin {
@@ -608,10 +745,18 @@ nav #humbuger {
         border-radius: 10px;
     }
 
+    .gabungantmbl{
+        display: flex;
+        flex-flow: column nowrap;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+    }
+
     .tampilaninfo {
         margin-top: 5%;
         border: 2px solid #001c4c;
-        width: 80%;
+        width: 100%;
         height: 780px;
         border-radius: 10px;
         margin-bottom: 20px;
@@ -621,8 +766,8 @@ nav #humbuger {
         display: none;
         position: fixed;
         padding: 10px;
-        width: 53%;
-        /* margin-left: -100px; */
+        width: 57%;
+        margin-left: -115px;
         height: 180px;
         /* top: 50%; */
         /* margin-top: -100px; */
@@ -633,7 +778,6 @@ nav #humbuger {
         flex-flow: column nowrap;
         font-weight: bold;
     }
-    
     #popup:after {
         position: fixed;
         content: "";
@@ -644,7 +788,6 @@ nav #humbuger {
         background: rgba(0, 0, 0, 0.5);
         z-index: -2;
     }
-    
     #popup:before {
         position: absolute;
         content: "";
@@ -656,14 +799,12 @@ nav #humbuger {
         z-index: -1;
         border-radius: 10px;
     }
-    
     .popup img {
         display: flex;
         width: 30%;
         justify-content: center;
         align-items: center;
     }
-    
     .popup p {
         text-align: center;
         font-weight: bold;
@@ -680,26 +821,162 @@ nav #humbuger {
         font-size: 18px;
     }
 
+    .popup2 {
+        display: none;
+        position: fixed;
+        padding: 10px;
+        width: 70%;
+        left: 50%;
+        margin-left: -130px;
+        height: 180px;
+        top: 50%;
+        margin-top: -100px;
+        background: #FFF;
+        z-index: 999;
+        /* justify-content: center;
+        align-items: center; */
+        flex-flow: column nowrap;
+        font-weight: bold;
+        border-radius: 10px;
+    }
+
+    #cancel {
+        float: right;
+        margin-right: 2%;
+        margin-top: 2%;
+        color: #000000;
+    }
+
+    #tidak {
+        float: right;
+        margin-right: 2%;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 20%;
+        height: 30px;
+        border: none;
+    }
+
+    #tidak:hover {
+        font-weight: bold;
+        background-color: #6f7378;
+    }
+
+    #ya {
+        float: right;
+        margin-right: 2%;
+        background-color: rgb(224, 71, 71, 0.7);
+        border: none;
+        border-radius: 5px;
+        font-size: 14px;
+        width: 20%;
+        height: 30px;
+        color: white;
+
+    }
+
+    #ya:hover {
+        background-color: rgb(224, 71, 71);
+        font-weight: bold;
+    }
+
+    #popup2:after {
+        position: fixed;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: -2;
+        display: flex;
+        /* border-radius: 10px; */
+        justify-content: center;
+    }
+
+    #popup2:before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #FFF;
+        z-index: -1;
+        border-radius: 10px;
+    }
+
+    .judulLogout {
+        display: flex;
+        font-size: 22px;
+        font-weight: bold;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .pertanyaankeluar {
+        font-size: 16px;
+        font-weight: normal;
+        margin-top: 2%;
+        margin-right: 2%;
+        margin-left: 2%;
+    }
+
+    .buttonlog {
+        margin-top: 7%;
+    }
+
     .namepengirim {
         font-weight: bold;
         font-size: 16px;
     }
-    
-    .name{
+
+    .name {
         margin-left: 2%;
     }
-    
+
     .jurusan {
         color: white;
         font-weight: 400;
         font-size: 14px;
     }
-    
-    .tombol{
+
+    .tombol {
         margin-top: 15%;
     }
 
-    .tolak, .acc {
+    #tolak,
+    #acc {
         width: 23%;
     }
+}
+
+/* Show the snackbar when clicking on a button (class added with JavaScript) */
+#snackbar.show {
+    visibility: visible; /* Show the snackbar */
+    /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
+    However, delay the fade out process for 2.5 seconds */
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  }
+  
+  /* Animations to fade the snackbar in and out */
+  @-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+  }
+  
+  @-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+  }
+  
+  @keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
   }

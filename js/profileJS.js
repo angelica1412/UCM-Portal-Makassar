@@ -3,6 +3,13 @@
     var dropdownContent = document.getElementById("dropdown-content");
     dropdownContent.classList.toggle("show");
   }
+// Mengambil data dari session storage
+var username = sessionStorage.getItem("username");
+var major = sessionStorage.getItem("major");
+
+// Mengubah isi elemen dengan ID "name" dan "major"
+document.getElementById("name").textContent = username;
+document.getElementById("major").textContent = major;
 
   // Menutup dropdown saat pengguna mengklik di luar dropdown
   window.onclick = function(event) {
@@ -16,3 +23,4 @@
       }
     }
   };
+
