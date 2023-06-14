@@ -133,11 +133,11 @@ input:focus {
 
 .bagianDaftar {
     width: 100%;
+    margin-top: 10%;
 }
 
 .bagianDaftar .daftar {
     font-size: 14px;
-    margin-top: 10%;
     margin-left: 23%;
 }
 
@@ -145,6 +145,5 @@ input:focus {
     font-size: 16px;
     font-weight: bold;
     color: #FF9800;
-    margin-left: 57%;
-    margin-top: -4.3%;
 }
+

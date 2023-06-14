@@ -94,7 +94,7 @@
   <!-- Pop Up Log OUt -->
   <div class="popup" id="popup">
     <div class="logocancel">
-      <a href="#" onclick="hide('popup')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+      <a><i class="fa-solid fa-xmark" id="cancel"></i></a>
     </div>
 
     <div class="judulLogout">
@@ -105,7 +105,7 @@
 
     <div class="buttonlog">
       <a href="index.html"><button id="ya">Keluar</button></a>
-      <button id="tidak" href="#" onclick="hide('popup')">Tidak</button>
+      <button id="tidak">Tidak</button>
     </div>
   </div>
 
@@ -148,27 +148,30 @@
       </div> -->
 
   <!-- TABEL AKTIVITAS -->
-  <table id="tabelaktivitas">
-    <thead>
-      <tr id="header">
-        <th>Judul</th>
-        <th>Jenis Kegiatan</th>
-        <th>Status</th>
-        <th>Tanggal Pendaftaran</th>
-      </tr>
-      <tr>
-        <td>Kepengurusan UKM Bulu Tangkis </td>
-        <td>Unit Kegiatan Mahasiswa (UKM) </td>
-        <td class="status"> <span class="dottolak"></span> Ditolak</td>
-        <td>20 - 10 - 2022 </td>
-      </tr>
-    </thead>
-    <tbody id="dataTabel">
-      
-      <!-- Tempat untuk data yang akan ditambahkan -->
-    </tbody>
-  </table>
-  
+  <div class="tblactivity">
+    <table id="tabelaktivitas">
+      <thead>
+        <tr id="header">
+          <th>Judul</th>
+          <th>Jenis Kegiatan</th>
+          <th>Status</th>
+          <th>Tanggal Pendaftaran</th>
+        </tr>
+        <tr>
+          <td>Kepengurusan UKM Bulu Tangkis </td>
+          <td>Unit Kegiatan Mahasiswa (UKM) </td>
+          <td class="status"> <span class="dottolak"></span> Ditolak</td>
+          <td>20 - 10 - 2022 </td>
+        </tr>
+      </thead>
+      <tbody id="dataTabel">
+
+        <!-- Tempat untuk data yang akan ditambahkan -->
+      </tbody>
+    </table>
+
+  </div>
+
 
   <script src="/js/activity.js"></script>
   <script src="/js/profileJS.js"></script>

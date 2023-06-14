@@ -27,7 +27,7 @@
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
         <form action="" method="get" class="search-box">
-          <input type="text" class="input" name="search" placeholder="Search Here" required id="search-box" />
+          <input type="text" class="inputcari" name="search" placeholder="Search Here" required id="search-box" />
           <button type="submit" class="search">
             <i class="fa fa-search"></i>
           </button>
@@ -38,7 +38,7 @@
         <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
         <ul>
           <li>
-            <div class="homeicon" id="homeLink">
+            <div class="homeicon">
               <a href="home.html"><i class="fa-solid fa-house"></i></a>
             </div>
             <div class="hometext">
@@ -46,7 +46,7 @@
             </div>
           </li>
           <li>
-            <div class="addicon" id="addActivityLink">
+            <div class="addicon">
               <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
             </div>
             <div class="addtext">
@@ -54,7 +54,7 @@
             </div>
           </li>
           <li>
-            <div class="myactivityicon" id="myActivityLink">
+            <div class="myactivityicon">
               <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
             </div>
             <div class="myactivitytext">
@@ -62,13 +62,6 @@
             </div>
           </li>
           <li>
-            <!-- <div class="profileicon">
-                <a href="profile.html"><i class="fa fa-user"></i></a>
-              </div>
-              <div class="profiletext">
-                <a href="profile.html">Profile</a>
-              </div> -->
-
             <!-- PROFILE -->
             <div class="dropdown">
               <!-- Tampilan profile -->
@@ -82,19 +75,19 @@
                   </div>
                   <span id="name"> Person</span>
                   <p class="job" id="major"> Job Title</p>
-                  <button id="btnlogout" onclick="show('popup2')"> Log Out
+                  <button id="btnlogout"> Log Out
                   </button>
                 </div>
               </div>
             </div>
+
+          </li>
+        </ul>
       </div>
-      </li>
-      </ul>
+      <!-- HAMBURGER -->
       <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
     </nav>
-  </div>
-
-  </div>
+  </div> 
 
   <div class="containerSemua">
     <form id="form">
@@ -157,7 +150,7 @@
           <label for="fname" class="fontjudul">Unggah Logo</label>
           <div>
 
-            <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;">
+            <img src="/aset/addimage.png" height="100px" id="img" style="margin-top: 5px;" class="inputlogo">
           </div>
 
           <input type="file" id="input" class="UnggahGambar" value="" required>
@@ -201,7 +194,7 @@
   <!-- Pop up Logout -->
   <div class="popup2" id="popup2">
     <div class="logocancel">
-      <a href="#" onclick="hide('popup2')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+      <a><i class="fa-solid fa-xmark" id="cancel"></i></a>
     </div>
 
     <div class="judulLogout">
@@ -212,7 +205,7 @@
 
     <div class="buttonlog">
       <a href="index.html"><button id="ya">Keluar</button></a>
-      <button id="tidak" href="#" onclick="hide('popup2')">Tidak</button>
+      <button id="tidak">Tidak</button>
     </div>
   </div>
 

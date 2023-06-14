@@ -48,6 +48,7 @@ function processRequestList(requestList) {
     });
   } else {
     getRequestList.innerHTML = "Tidak ada data form terbaru.";
+    
   }
 }
 
@@ -81,23 +82,32 @@ function showFormularData(userName, formTitle) {
       deskripsi.innerHTML = formularData[0].description;
       logoKegiatan.src = "data:image/jpeg;base64," + formularData[0].logo;
       linkGoogleForm.textContent = formularData[0].linkGoogleForm;
+      
       var popup = document.getElementById('popup');
       tombolTolak.addEventListener("click", function () {
         updateFormStatus(formTitle, "Rejected");
+        popup.style.display = 'flex';
+        
+        console.log(document.getElementById("judulKegiatan"))
+        ClearFormView()
+        console.log(document.getElementById("judulKegiatan"))
+        window.addEventListener('click', function (event) {
+          if (event.target === popup) {
+            popup.style.display = 'none';
+          }
+        });
+
+      });
+      
+      tombolTerima.addEventListener("click", function () {
+        updateFormStatus(formTitle, "Accepted");
+        ClearFormView()
         popup.style.display = 'flex';
         window.addEventListener('click', function (event) {
           if (event.target === popup) {
             popup.style.display = 'none';
           }
         });
-        ClearFormView()
-
-      });
-      
-      tombolTerima.addEventListener("click", function () {
-        updateFormStatus(formTitle, "Accepted");
-        popup.style.display = 'flex';
-        ClearFormView()
       });
     },
     error: function (xhr, status, error) {
@@ -131,11 +141,11 @@ setInterval(function () {
 
 
 function ClearFormView() {
-  document.getElementById("judulKegiatan").value = "";
-  document.getElementById("jenisKegiatan").value = "";
-  document.getElementById("tanggalMulai").value = "Mulai : ";
-  document.getElementById("tanggalAkhir").value = "Akhir : ";
-  document.getElementById("deskripsi").value ="";
+  document.getElementById("judulKegiatan").innerHTML = "";
+  document.getElementById("jenisKegiatan").innerHTML  = "";
+  document.getElementById("tanggalMulai").innerHTML  = "Mulai : ";
+  document.getElementById("tanggalAkhir").innerHTML  = "Akhir : ";
+  document.getElementById("deskripsi").innerHTML  ="";
   document.getElementById("img").setAttribute("src", "");
-  document.getElementById("linkGoogleForm").value ="";
+  document.getElementById("linkGoogleForm").innerHTML  ="";
 }

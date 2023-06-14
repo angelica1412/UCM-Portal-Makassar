@@ -9,6 +9,27 @@ function hideMenu() {
   navLinks.style.left = "-200px";
 }
 
+// Pop Up Logout
+var openBtn = document.getElementById('btnlogout');
+var closeBtn = document.getElementById('cancel');
+var closeBtn2 = document.getElementById('tidak');
+var popup2 = document.getElementById('popup2');
+
+openBtn.addEventListener('click', function() {
+  popup2.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', function() {
+  popup2.style.display = 'none';
+});
+
+window.addEventListener('click', function (event) {
+    var popup = document.getElementById('popup2');
+    if (event.target == popup) {
+        hide('popup2');
+    }
+});
+
 // Function to show the popup
 function show() {
     var popup = document.getElementById("popup");

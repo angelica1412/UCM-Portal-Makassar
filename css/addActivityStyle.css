@@ -63,6 +63,7 @@ nav {
 .nav-left {
   display: flex;
   align-items: center;
+  margin-left: 3%;
 }
 
 .inputcari {
@@ -202,6 +203,8 @@ textarea {
   margin-bottom: 16px;
   resize: vertical;
   font-size: 12px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 input[type=submit] {
@@ -247,33 +250,6 @@ input[type=submit]:hover {
   background-color: #c4cddf;
 }
 
-input[type=text],
-select,
-textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical
-}
-
-input[type=submit] {
-  background-color: #d7d7d7;
-  color: #10346B;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-}
-
-input[type=submit]:hover {
-  background-color: #10346B;
-  color: rgb(255, 255, 255);
-  border: 10px #fda917;
-}
 
 .containerSemua {
   border-radius: 20px;
@@ -394,7 +370,7 @@ button {
 }
 
 button.learn-more {
-  width: 10rem;
+  width: 12rem;
   height: auto;
 }
 
@@ -423,7 +399,7 @@ button.learn-more .circle .icon.arrow {
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
-  background: none;
+  background: none; 
 }
 
 button.learn-more .circle .icon.arrow::before {
@@ -446,7 +422,7 @@ button.learn-more .button-text {
   right: 0;
   bottom: 0;
   padding: 0.75rem 0;
-  margin: 0 0 0 1.85rem;
+  margin: 0px 0 0 1.85rem;
   color: #ffa008;
   font-weight: 700;
   line-height: 1.6;
@@ -469,7 +445,7 @@ button:hover .button-text {
 
 .submitform {
   float: right;
-  margin-top: 4.8rem;
+  margin-top: 70px;
   margin-right: -55px;
   margin-bottom: 30px;
 }
@@ -497,8 +473,8 @@ button:hover .button-text {
 }
 
 .radio-circle {
-  width: 25px;
-  height: 25px;
+  width: 20px;
+  height: 20px;
   border-radius: 50%;
   border: 2px solid #aaa;
   position: relative;
@@ -536,7 +512,7 @@ button:hover .button-text {
 }
 
 .radio-label {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .radio-button:hover .radio-circle {
@@ -605,7 +581,7 @@ button:hover .button-text {
   left: 0;
   bottom: 0;
   right: 0;
-  background: rgba(0,0,0,0.5);
+  background: rgba(0, 0, 0, 0.5);
   z-index: -2;
   display: flex;
   justify-content: center;
@@ -624,24 +600,24 @@ button:hover .button-text {
   border-radius: 10px;
 }
 
-.popup img{
+.popup img {
   display: flex;
   width: 30%;
   justify-content: center;
   align-items: center;
 }
 
-.statuspengajuan{
+.statuspengajuan {
   margin-top: 5%
 }
 
-.popup p{
+.popup p {
   font-weight: bold;
   font-size: 16px;
 }
 
 input[type="date"] {
-  width: 200px; 
+  width: 200px;
   height: 30px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -649,7 +625,7 @@ input[type="date"] {
   padding: 10px;
 }
 
-.fontjudul{
+.fontjudul {
   font-weight: bolder;
   font-size: 14px;
 }
@@ -732,30 +708,43 @@ input[type="date"] {
   display: block;
 }
 
-.dropdown img{
+.dropdown img {
   width: 40px;
 }
 
 /* The snackbar - position it at the bottom and in the middle of the screen */
 #snackbar {
-  visibility: hidden; /* Hidden by default. Visible on click */
-  min-width: 250px; /* Set a default minimum width */
-  margin-left: -125px; /* Divide value of min-width by 2 */
-  background-color: #ffa115; /* Black background color */
-  color: #fff; /* White text color */
-  text-align: center; /* Centered text */
-  border-radius: 2px; /* Rounded borders */
-  padding: 16px; /* Padding */
-  position: fixed; /* Sit on top of the screen */
-  z-index: 1; /* Add a z-index if needed */
-  left: 50%; /* Center the snackbar */
-  bottom: 30px; /* 30px from the bottom */
+  visibility: hidden;
+  /* Hidden by default. Visible on click */
+  min-width: 250px;
+  /* Set a default minimum width */
+  margin-left: -125px;
+  /* Divide value of min-width by 2 */
+  background-color: #ffa115;
+  /* Black background color */
+  color: #fff;
+  /* White text color */
+  text-align: center;
+  /* Centered text */
+  border-radius: 2px;
+  /* Rounded borders */
+  padding: 16px;
+  /* Padding */
+  position: fixed;
+  /* Sit on top of the screen */
+  z-index: 1;
+  /* Add a z-index if needed */
+  left: 50%;
+  /* Center the snackbar */
+  bottom: 30px;
+  /* 30px from the bottom */
   border-radius: 10px;
 }
 
 /* Show the snackbar when clicking on a button (class added with JavaScript) */
 #snackbar.show {
-  visibility: visible; /* Show the snackbar */
+  visibility: visible;
+  /* Show the snackbar */
   /* Add animation: Take 0.5 seconds to fade in and out the snackbar. 
   However, delay the fade out process for 2.5 seconds */
   -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
@@ -764,23 +753,51 @@ input[type="date"] {
 
 /* Animations to fade the snackbar in and out */
 @-webkit-keyframes fadein {
-  from {bottom: 0; opacity: 0;} 
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @keyframes fadein {
-  from {bottom: 0; opacity: 0;}
-  to {bottom: 30px; opacity: 1;}
+  from {
+    bottom: 0;
+    opacity: 0;
+  }
+
+  to {
+    bottom: 30px;
+    opacity: 1;
+  }
 }
 
 @-webkit-keyframes fadeout {
-  from {bottom: 30px; opacity: 1;} 
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 @keyframes fadeout {
-  from {bottom: 30px; opacity: 1;}
-  to {bottom: 0; opacity: 0;}
+  from {
+    bottom: 30px;
+    opacity: 1;
+  }
+
+  to {
+    bottom: 0;
+    opacity: 0;
+  }
 }
 
 .popup2 {
@@ -802,14 +819,14 @@ input[type="date"] {
   border-radius: 10px;
 }
 
-#cancel{
+#cancel {
   float: right;
   margin-right: 2%;
   margin-top: 2%;
   color: #000000;
 }
 
-#tidak{
+#tidak {
   float: right;
   margin-right: 2%;
   border-radius: 5px;
@@ -819,26 +836,26 @@ input[type="date"] {
   border: none;
 }
 
-#tidak:hover{
+#tidak:hover {
   font-weight: bold;
   background-color: #6f7378;
 }
 
-#ya{
+#ya {
   float: right;
   margin-right: 2%;
-  background-color: rgb(224,71,71, 0.7);
+  background-color: rgb(224, 71, 71, 0.7);
   border: none;
   border-radius: 5px;
   font-size: 14px;
   width: 20%;
   height: 30px;
   color: white;
-  
+
 }
 
-#ya:hover{
-  background-color: rgb(224,71,71);
+#ya:hover {
+  background-color: rgb(224, 71, 71);
   font-weight: bold;
 }
 
@@ -886,4 +903,109 @@ input[type="date"] {
 
 .buttonlog {
   margin-top: 7%;
+}
+
+@media (max-width: 700px) {
+  .nav-links ul li {
+    display: block;
+  }
+
+  .hometext a,
+  .homeicon i {
+    color: black !important;
+  }
+
+  .nav-links {
+    position: absolute;
+    background-color: #f6f9fe;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    left: -200px;
+    text-align: left;
+    z-index: 4;
+    transition: 1s;
+  }
+
+  .logoNav {
+    align-items: center;
+    position: relative;
+    width: 50%;
+  }
+
+  .nav-links .hometext {
+    text-align: center;
+  }
+
+  .nav-links .addtext {
+    text-align: center;
+  }
+
+  .nav-links .myactivitytext {
+    text-align: center;
+  }
+
+  .nav-links .profiletext {
+    text-align: center;
+  }
+
+  .nav-links .dropdown img {
+    text-align: center;
+  }
+
+  .nav-links #close {
+    display: block;
+    color: #ff9800;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav #humbuger {
+    display: block;
+    color: black;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .acara img {
+    width: 100px;
+  }
+
+  .pengaturantanggal {
+    display: flex;
+    padding-top: 6px;
+    padding-bottom: 12px;
+    flex-flow: column nowrap;
+  }
+
+  .Date-End {
+    margin-left: 0px;
+    margin-top: 2%;
+  }
+
+  .Judul {
+    font-size: 20px;
+  }
+
+  input[type="date"] {
+    width: 170px;
+  }
+
+  .search-box {
+    width: 230px;
+  }
+
+  .inputlogo {
+    width: 70%;
+  }
+
+  .UnggahGambar {
+    width: 100%;
+  }
 }

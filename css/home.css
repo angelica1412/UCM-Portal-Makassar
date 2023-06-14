@@ -176,6 +176,7 @@ nav #humbuger {
 
 .gabung {
   display: flex;
+  flex-flow: row nowrap;
 }
 
 /* BAGIAN PERTAMA HOME */
@@ -233,6 +234,14 @@ nav #humbuger {
   margin-top: 15px;
 }
 
+.cari:hover {
+  color: #ff9800;
+  background: white;
+  border: none;
+  font-weight: bolder;
+  border-radius: 10px;
+}
+
 .home2 {
   background-image: linear-gradient(rgba(28, 49, 94, 0.6),
       rgba(28, 49, 94, 0.6)),
@@ -245,14 +254,6 @@ nav #humbuger {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.cari:hover {
-  color: #ff9800;
-  background: white;
-  border: none;
-  font-weight: bolder;
-  border-radius: 10px;
 }
 
 .home2 button {
@@ -405,7 +406,9 @@ nav #humbuger {
 }
 
 .descdaftar {
+  text-align: center;
   font-size: 16px;
+  width: 53%;
 }
 
 .lanjutandaftar {
@@ -566,80 +569,6 @@ nav #humbuger {
   width: 40px;
 }
 
-
-@media (max-width: 700px) {
-  .nav-links ul li {
-    display: block;
-  }
-
-  .hometext a,
-  .homeicon i {
-    color: black !important;
-  }
-
-  .nav-links {
-    position: absolute;
-    background-color: #f6f9fe;
-    height: 100vh;
-    width: 200px;
-    top: 0;
-    left: -200px;
-    text-align: left;
-    z-index: 4;
-    transition: 1s;
-  }
-
-  .logoNav {
-    align-items: center;
-    position: relative;
-    width: 50%;
-  }
-
-  .nav-links .hometext {
-    text-align: center;
-  }
-
-  .nav-links .addtext {
-    text-align: center;
-  }
-
-  .nav-links .myactivitytext {
-    text-align: center;
-  }
-
-  .nav-links .profiletext {
-    text-align: center;
-  }
-
-  .nav-links .dropdown img {
-    text-align: center;
-  }
-
-  .nav-links #close {
-    display: block;
-    color: #ff9800;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-  }
-
-  nav #humbuger {
-    display: block;
-    color: black;
-    margin: 10px;
-    font-size: 22px;
-    cursor: pointer;
-  }
-
-  .nav-links ul {
-    padding: 30px;
-  }
-
-  .acara img {
-    width: 100px;
-  }
-}
-
 .card2 {
   width: 190px;
   height: 254px;
@@ -741,14 +670,14 @@ nav #humbuger {
   border-radius: 10px;
 }
 
-#cancel{
+#cancel {
   float: right;
   margin-right: 2%;
   margin-top: 2%;
   color: #000000;
 }
 
-#tidak{
+#tidak {
   float: right;
   margin-right: 2%;
   border-radius: 5px;
@@ -758,26 +687,26 @@ nav #humbuger {
   border: none;
 }
 
-#tidak:hover{
+#tidak:hover {
   font-weight: bold;
   background-color: #6f7378;
 }
 
-#ya{
+#ya {
   float: right;
   margin-right: 2%;
-  background-color: rgb(224,71,71, 0.7);
+  background-color: rgb(224, 71, 71, 0.7);
   border: none;
   border-radius: 5px;
   font-size: 14px;
   width: 20%;
   height: 30px;
   color: white;
-  
+
 }
 
-#ya:hover{
-  background-color: rgb(224,71,71);
+#ya:hover {
+  background-color: rgb(224, 71, 71);
   font-weight: bold;
 }
 
@@ -791,7 +720,7 @@ nav #humbuger {
   background: rgba(0, 0, 0, 0.5);
   z-index: -2;
   display: flex;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   justify-content: center;
 }
 
@@ -832,11 +761,13 @@ nav #humbuger {
   background-color: #ff9800;
   margin-top: 50px;
 }
+
 .footer .nama {
   text-align: center;
   padding-bottom: 10px;
   color: #ffffff;
 }
+
 .footer ul {
   margin-top: 0;
   padding: 0;
@@ -873,7 +804,7 @@ nav #humbuger {
   height: 76.137px;
 }
 
-.bungkus{
+.bungkus {
   display: flex;
   justify-content: center;
 }
@@ -918,7 +849,7 @@ nav #humbuger {
   border-radius: 10px;
 }
 
-.judullogo{
+.judullogo {
   width: 100%;
   height: 60px;
   margin-top: 2%;
@@ -929,18 +860,189 @@ nav #humbuger {
   border-bottom: 1px solid #a9a9a9;
 }
 
-.logopop{
+.logopop {
   display: flex;
   align-items: center;
   width: 30%;
 }
 
-.judulpop p{
+.judulpop p {
   font-size: 26px;
   font-weight: bold;
 }
 
-.logokegiatan{
+.logokegiatan {
   width: 130px;
   /* aspect-ratio: 38/8; */
 }
+
+@media(max-width: 858px){
+  .search-box {
+    width: 230px;
+  }
+
+  .nav-links ul li {
+    display: block;
+  }
+
+  .hometext a,
+  .homeicon i {
+    color: black !important;
+  }
+
+  .nav-links {
+    position: absolute;
+    background-color: #f6f9fe;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    left: -200px;
+    text-align: left;
+    z-index: 4;
+    transition: 1s;
+  }
+
+  .logoNav {
+    align-items: center;
+    position: relative;
+    width: 50%;
+  }
+
+  .nav-links .hometext {
+    text-align: center;
+  }
+
+  .nav-links .addtext {
+    text-align: center;
+  }
+
+  .nav-links .myactivitytext {
+    text-align: center;
+  }
+
+  .nav-links .profiletext {
+    text-align: center;
+  }
+
+  .nav-links .dropdown img {
+    text-align: center;
+  }
+
+  .nav-links #close {
+    display: block;
+    color: #ff9800;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav #humbuger {
+    display: block;
+    color: black;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+}
+
+@media (max-width: 874px) {
+  .acara img {
+    width: 100px;
+  }
+
+  .gabung {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+  }
+
+  .home1 {
+    width: 100%;
+    height: 400px;
+  }
+
+  .text1 {
+    font-size: 18px;
+    font-weight: lighter;
+    color: white;
+  }
+
+  .text2 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+  }
+
+  .text3 {
+    font-size: 30px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+  }
+
+  .text4 {
+    font-size: 16px;
+    font-weight: lighter;
+    color: white;
+    text-align: center;
+  }
+
+  .text5 {
+    font-size: 16px;
+    font-weight: lighter;
+    color: white;
+  }
+
+  .home1 button {
+    border: 3px solid white;
+    color: white;
+    font-size: 18px;
+    background: transparent;
+    width: 140px;
+    height: 50px;
+    margin-top: 15px;
+  }
+
+  .home2 {
+    width: 100%;
+    height: 400px;
+  }
+  
+  .home2 button {
+    width: 130px;
+    height: 100%;
+  }
+
+  .caramendaftar{
+    font-size: 30px;
+  }
+
+  .pilihan{
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .unggah2 {
+    width: 115px;
+    height: 90%;
+  }
+
+  .bagian4 img{
+    width: 90%;
+  }
+
+  .descdaftar{
+    text-align: center;
+    font-size: 14px;
+  }
+
+  .lanjutandaftar{
+    font-size: 14px;
+  }
+}
+

@@ -18,69 +18,78 @@
     <div class="navbartop">
         <img src="/aset/logo UC.png" class="logoDiatas" />
     </div>
+    <div>
+        
+    </div>
+
     <div class="fixnav">
         <nav>
-            <div class="nav-left">
-                <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
-                <form action="" method="get" class="search-box">
-                    <input type="text" class="input" name="search" placeholder="Search Here" required />
-                    <button type="submit" class="search">
-                        <i class="fa fa-search"></i>
-                    </button>
-                </form>
-            </div>
-
-            <div class="nav-links" id="navLinks">
-                <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
-                <ul>
-                    <li>
-                        <div class="homeicon">
-                            <a href="homeAdmin.html"><i class="fa-solid fa-house"></i></a>
-                        </div>
-                        <div class="hometext">
-                            <a href="homeAdmin.html">Home</a>
-                        </div>
-                    </li>
-                    <!-- <li>
-                        <div class="addicon">
-                            <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
-                        </div>
-                        <div class="addtext">
-                            <a href="addActivity.html">Add Activity</a>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="myactivityicon">
-                            <a href="myActivity.html"><i class="fa fa-clipboard-list"></i></a>
-                        </div>
-                        <div class="myactivitytext">
-                            <a href="myActivity.html">My Activity</a>
-                        </div>
-                    </li> -->
-                    <li>
-                        <div class="dropdown">
-                            <!-- Tampilan profile -->
-                            <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
-                            <div id="dropdown-content" class="dropdown-content">
-                                <!-- Konten dropdown -->
-                                <div class="card">
-                                    <div class="card-border-top">
-                                    </div>
-                                    <div class="img">
-                                    </div>
-                                    <span id="name"> Person</span>
-                                    <p class="job" id="major"> Job Title</p>
-                                    <button id="btnlogout"> Log Out
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
+          <div class="nav-left">
+            <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
+            <form action="" method="get" class="search-box">
+              <input type="text" class="input" name="search" placeholder="Search Here" required id="search-box" />
+              <button type="submit" class="search">
+                <i class="fa fa-search"></i>
+              </button>
+            </form>
+          </div>
+    
+          <div class="nav-links" id="navLinks">
+            <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
+            <ul>
+              <li>
+                <div class="homeicon">
+                  <a href="home.html"><i class="fa-solid fa-house"></i></a>
+                </div>
+                <div class="hometext">
+                  <a href="home.html">Home</a>
+                </div>
+              </li>
+              <!-- <li>
+                <div class="addicon">
+                  <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
+                </div>
+                <div class="addtext">
+                  <a href="addActivity.html">Add Activity</a>
+                </div>
+              </li>
+              <li>
+                <div class="myactivityicon">
+                  <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
+                </div>
+                <div class="myactivitytext">
+                  <a href="activity.html">My Activity</a>
+                </div>
+              </li> -->
+              <li>
+                <!-- PROFILE -->
+                <div class="dropdown">
+                  <!-- Tampilan profile -->
+                  <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
+                  <div id="dropdown-content" class="dropdown-content">
+                    <!-- Konten dropdown -->
+                    <div class="card">
+                      <div class="card-border-top">
+                      </div>
+                      <div class="img">
+                      </div>
+                      <span id="name"> Person</span>
+                      <p class="job" id="major"> Job Title</p>
+                      <button id="btnlogout" onclick="show('popup')"> Log Out
+                      </button>
+                    </div>
+                  </div>
+                </div>
+    
+              </li>
+            </ul>
+          </div>
+          <!-- HAMBURGER -->
+          <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
         </nav>
-    </div>
+      </div> 
+
+    
 
     <!-- Pop Up Untuk Logout -->
     <div class="popup2" id="popup2">
@@ -110,42 +119,42 @@
 
         <div class="gabungantmbl">
             <div class="tampilaninfo">
-                <div class="judulkegiatan"></div>
+                <div class="judulkegiatan" id="judulKegiatan"></div>
 
                 <div class="infokegiatan">
                     <div class="jeniskegiatan">
                         <p class="atasjenis">Jenis Kegiatan :</p>
-                        <p class="jawabanjenis"></p>
+                        <p class="jawabanjenis" id="jenisKegiatan"></p>
                     </div>
 
                     <div class="tanggal">
                         <p class="atastanggal">Tanggal :</p>
-                        <p class="tanggalmulai">Mulai : </p>
-                        <p class="tanggalakhir">Akhir : </p>
+                        <p class="tanggalmulai" id="tanggalMulai">Mulai : </p>
+                        <p class="tanggalakhir" id="tanggalAkhir">Akhir : </p>
                     </div>
 
                     <div class="deskripsi">
                         <p class="atasdeskripsi">Deskripsi :</p>
-                        <div class="descinfo">
+                        <div class="descinfo" id="deskripsi">
                         </div>
                     </div>
 
                     <div class="logo1">
                         <p class="atasjenis">Logo Kegiatan </p>
-                        <img src="">
+                        <img src="" id="img">
                     </div>
 
                     <div class="form">
                         <p class="atasform">Link Google Form </p>
-                        <div class="rectangle">
+                        <div class="rectangle" id="linkGoogleForm">
                         </div>
                     </div>
 
                 </div>
-                <div class="tombol">
-                    <button class="tolak" id="tolak">Tolak</button>
-                    <button class="acc" id="acc">Terima</button>
-                </div>
+            </div>
+            <div class="tombol">
+                <button id="tolak">Tolak</button>
+                <button id="acc">Terima</button>
             </div>
         </div>
 
