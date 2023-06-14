@@ -1,115 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/activity.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
+    <title>UCM Portal</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/activity.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <link rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
-  <title>UCM Portal</title>
-</head>
+  <body>
+    <div class="navbartop">
+      <img src="/aset/logo UC.png" class="logoDiatas" />
+    </div>
+    <div class="fixnav">
+      <nav>
+        <div class="nav-left">
+          <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
+          <form action="" method="get" class="search-box">
+            <input
+              type="text"
+              class="input"
+              name="search"
+              placeholder="Search Here"
+              required
+              id="search-box"
+            />
+            <button type="submit" class="search">
+              <i class="fa fa-search"></i>
+            </button>
+          </form>
+        </div>
 
-<body>
-  <div class="navbartop">
-    <img src="/aset/logo UC.png" class="logoDiatas" />
-  </div>
-  <div class="fixnav">
-    <nav>
-      <div class="nav-left">
-        <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
-        <form action="" method="get" class="search-box">
-          <input type="text" class="input" name="search" placeholder="Search Here" required id="search-box" />
-          <button type="submit" class="search">
-            <i class="fa fa-search"></i>
-          </button>
-        </form>
-      </div>
-
-      <div class="nav-links" id="navLinks">
-        <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
-        <ul>
-          <li>
-            <div class="homeicon" id="homeLink">
-              <a href="home.html"><i class="fa-solid fa-house"></i></a>
-            </div>
-            <div class="hometext">
-              <a href="home.html">Home</a>
-            </div>
-          </li>
-          <li>
-            <div class="addicon" id="addActivityLink">
-              <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
-            </div>
-            <div class="addtext">
-              <a href="addActivity.html">Add Activity</a>
-            </div>
-          </li>
-          <li>
-            <div class="myactivityicon" id="myActivityLink">
-              <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
-            </div>
-            <div class="myactivitytext">
-              <a href="activity.html">My Activity</a>
-            </div>
-          </li>
-          <li>
-            <!-- <div class="profileicon">
+        <div class="nav-links" id="navLinks">
+          <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
+          <ul>
+            <li>
+              <div class="homeicon" id="homeLink">
+                <a href="home.html"><i class="fa-solid fa-house"></i></a>
+              </div>
+              <div class="hometext">
+                <a href="home.html">Home</a>
+              </div>
+            </li>
+            <li>
+              <div class="addicon" id="addActivityLink">
+                <a href="addActivity.html"><i class="fa fa-circle-plus"></i></a>
+              </div>
+              <div class="addtext">
+                <a href="addActivity.html">Add Activity</a>
+              </div>
+            </li>
+            <li>
+              <div class="myactivityicon" id="myActivityLink">
+                <a href="activity.html"><i class="fa fa-clipboard-list"></i></a>
+              </div>
+              <div class="myactivitytext">
+                <a href="activity.html">My Activity</a>
+              </div>
+            </li>
+            <li>
+              <!-- <div class="profileicon">
                 <a href="profile.html"><i class="fa fa-user"></i></a>
               </div>
               <div class="profiletext">
                 <a href="profile.html">Profile</a>
               </div> -->
 
-            <!-- PROFILE -->
-            <div class="dropdown">
-              <!-- Tampilan profile -->
-              <img src="/aset/userProfile.png" alt="Profile Image" onclick="toggleDropdown()">
-              <div id="dropdown-content" class="dropdown-content">
-                <!-- Konten dropdown -->
-                <div class="card">
-                  <div class="card-border-top">
+              <!-- PROFILE -->
+              <div class="dropdown">
+                <!-- Tampilan profile -->
+                <img
+                  src="/aset/userProfile.png"
+                  alt="Profile Image"
+                  onclick="toggleDropdown()"
+                />
+                <div id="dropdown-content" class="dropdown-content">
+                  <!-- Konten dropdown -->
+                  <div class="card">
+                    <div class="card-border-top"></div>
+                    <div class="img"></div>
+                    <span id="name"> Person</span>
+                    <p class="job" id="major">Job Title</p>
+                    <button id="btnlogout" onclick="show('popup')">
+                      Log Out
+                    </button>
                   </div>
-                  <div class="img">
-                  </div>
-                  <span id="name"> Person</span>
-                  <p class="job" id="major"> Job Title</p>
-                  <button id="btnlogout" onclick="show('popup')"> Log Out
-                  </button>
                 </div>
               </div>
-            </div>
+            </li>
+          </ul>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
+      </nav>
+    </div>
 
-          </li>
-        </ul>
+    <!-- Pop Up Log OUt -->
+    <div class="popup" id="popup">
+      <div class="logocancel">
+        <a><i class="fa-solid fa-xmark" id="cancel"></i></a>
       </div>
-      <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
-    </nav>
-  </div>
 
-  <!-- Pop Up Log OUt -->
-  <div class="popup" id="popup">
-    <div class="logocancel">
-      <a><i class="fa-solid fa-xmark" id="cancel"></i></a>
+      <div class="judulLogout">Logout</div>
+
+      <div class="pertanyaankeluar">
+        Apakah Anda Yakin Untuk Keluar Dari Sistem?
+      </div>
+
+      <div class="buttonlog">
+        <a href="index.html"><button id="ya">Keluar</button></a>
+        <button id="tidak">Tidak</button>
+      </div>
     </div>
 
-    <div class="judulLogout">
-      Logout
-    </div>
-
-    <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
-
-    <div class="buttonlog">
-      <a href="index.html"><button id="ya">Keluar</button></a>
-      <button id="tidak">Tidak</button>
-    </div>
-  </div>
-
-  <!-- <div class="containerSemua">
+    <!-- <div class="containerSemua">
 
     <div class="container2">
       <div class="bagianatas">
@@ -147,35 +163,31 @@
         </table>
       </div> -->
 
-  <!-- TABEL AKTIVITAS -->
-  <div class="tblactivity">
-    <table id="tabelaktivitas">
-      <thead>
-        <tr id="header">
-          <th>Judul</th>
-          <th>Jenis Kegiatan</th>
-          <th>Status</th>
-          <th>Tanggal Pendaftaran</th>
-        </tr>
-        <tr>
-          <td>Kepengurusan UKM Bulu Tangkis </td>
-          <td>Unit Kegiatan Mahasiswa (UKM) </td>
-          <td class="status"> <span class="dottolak"></span> Ditolak</td>
-          <td>20 - 10 - 2022 </td>
-        </tr>
-      </thead>
-      <tbody id="dataTabel">
+    <!-- TABEL AKTIVITAS -->
+    <div class="tblactivity">
+      <table id="tabelaktivitas">
+        <thead>
+          <tr id="header">
+            <th>Judul</th>
+            <th>Jenis Kegiatan</th>
+            <th>Status</th>
+            <th>Tanggal Pendaftaran</th>
+          </tr>
+        </thead>
+        <tbody id="dataTabel">
+          <tr>
+            <td>Kepengurusan UKM Bulu Tangkis</td>
+            <td>Unit Kegiatan Mahasiswa (UKM)</td>
+            <td class="status"><span class="dottolak"></span> Ditolak</td>
+            <td>20 - 10 - 2022</td>
+          </tr>
+          <!-- Tempat untuk data yang akan ditambahkan -->
+        </tbody>
+      </table>
+    </div>
 
-        <!-- Tempat untuk data yang akan ditambahkan -->
-      </tbody>
-    </table>
-
-  </div>
-
-
-  <script src="/js/activity.js"></script>
-  <script src="/js/profileJS.js"></script>
-  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-</body>
-
+    <script src="/js/activity.js"></script>
+    <script src="/js/profileJS.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  </body>
 </html>
