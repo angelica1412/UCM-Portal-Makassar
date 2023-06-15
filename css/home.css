@@ -1039,10 +1039,15 @@ nav #humbuger {
   .descdaftar{
     text-align: center;
     font-size: 14px;
+    width: 80%;
   }
 
   .lanjutandaftar{
     font-size: 14px;
+  }
+
+  .column{
+    width: 90%;
   }
 }
 

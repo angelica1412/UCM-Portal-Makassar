@@ -276,6 +276,7 @@ nav #humbuger {
 }
 
 .iconbeside {
+    z-index: -1;
     width: 5%;
 }
 
