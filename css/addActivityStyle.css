@@ -894,8 +894,8 @@ input[type="date"] {
 }
 
 #tidak:hover {
-  font-weight: bold;
-  background-color: #6f7378;
+  font-weight: 500;
+  background-color: #a0a1a3;
 }
 
 #ya {

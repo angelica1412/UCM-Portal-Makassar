@@ -15,12 +15,13 @@
 
 .gabunghome {
     display: flex;
+    height: 100vh;
 }
 
 .home {
     background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("/aset/bg\ login.png");
     width: 65%;
-    height: 745px;
+    /* height: 745px; */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -31,7 +32,7 @@
 
 .home2 {
     width: 35%;
-    height: 745px;
+    /* height: 745px; */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
 }

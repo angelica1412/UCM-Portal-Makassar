@@ -459,12 +459,13 @@ nav #humbuger {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: #ff9800;
+  background: rgba(28, 49, 94);
   margin-top: 7%;
 }
 
 .pilihan {
   font-size: 18px;
+  color: white;
 }
 
 .unggah2 {
@@ -688,8 +689,8 @@ nav #humbuger {
 }
 
 #tidak:hover {
-  font-weight: bold;
-  background-color: #6f7378;
+  font-weight: 500;
+  background-color: #a0a1a3;
 }
 
 #ya {
