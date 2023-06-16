@@ -24,13 +24,14 @@
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
         <form action="" method="get" class="search-box" id="searchForm">
-            <input type="text" class="input" name="search" placeholder="Search Here" autocomplete="off" required id="search-box" />
-            <button type="submit" class="search">
-                <i class="fa fa-search"></i>
-            </button>
+          <input type="text" class="input" name="search" placeholder="Search Here" autocomplete="off" required
+            id="search-box" />
+          <button type="submit" class="search">
+            <i class="fa fa-search"></i>
+          </button>
         </form>
         <div id="searchResults"></div>
-    </div>
+      </div>
 
       <div class="nav-links" id="navLinks">
         <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
@@ -85,9 +86,9 @@
       <!-- HAMBURGER -->
       <i class="fa fa-bars" onclick="showMenu()" id="humbuger"></i>
     </nav>
-  </div> 
+  </div>
 
-      <!-- <div class="column">
+  <!-- <div class="column">
           <div class="card">
             <img src="/aset/infinity.png" />
             <p class="judul">Infinity Generasi Ke - 3</p>
@@ -292,13 +293,13 @@
           var card = document.createElement("div");
           card.className = "column";
           card.innerHTML = `
-            <div class="card">
-              <img src="data:image/jpeg;base64,${form.logo}" />
-              <p class="judul">${form.title}</p>
-              <p class="tutup">${form.type}</p>
-              <button id="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
-            </div>
-          `;
+  <div class="card" id="${form.title.replace(/\s/g, '')}">
+    <img src="data:image/jpeg;base64,${form.logo}" />
+    <p class="judul">${form.title}</p>
+    <p class="tutup">${form.type}</p>
+    <button class="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
+  </div>
+`;
           // Tambahkan elemen form ke dalam kontainer
           latestContainer.appendChild(card);
 
@@ -312,49 +313,71 @@
     // Panggil fungsi untuk mengambil data form terbaru dari API
     getAcceptedForms();
   </script>
-  
-  <script>
-    function search() {
-      let searchQuery = document.getElementById('search-box').value;
-  
-      // If the input is empty, clear the search results and return
-      if (!searchQuery.trim()) {
-        document.getElementById('searchResults').innerHTML = '';
-        return;
-      }
-  
-      let xhr = new XMLHttpRequest();
-  
-      xhr.open('GET', 'http://localhost:4000/ucmportal/searchform/' + searchQuery, true);
-      xhr.onload = function() {
-        if (this.status == 200) {
-          let results = JSON.parse(this.responseText);
-          let output = '<ul class="search-results">';
-          
-          for(let i in results){
-              output += `<li> <a href ="#bagian2"> ${results[i]} </a> </li>`;
-          }
-          
-          output += '</ul>';
-          document.getElementById('searchResults').innerHTML = output;
-        }
-      }
-      xhr.send();
+
+<script>
+  function search() {
+    let searchQuery = document.getElementById('search-box').value;
+
+    // If the input is empty, clear the search results and return
+    if (!searchQuery.trim()) {
+      document.getElementById('searchResults').innerHTML = '';
+      return;
     }
-  
-    document.getElementById('search-box').addEventListener('input', search);
-  
-    // prevent form submission when the search button is clicked
-    document.getElementById('searchForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      search();
-    });
-  </script>
-  
-  
-  
-  
-  
+
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', 'http://localhost:4000/ucmportal/searchform/' + searchQuery, true);
+
+    xhr.onload = function () {
+      if (this.status == 200) {
+        let results = JSON.parse(this.responseText);
+        let output = '<ul class="search-results">';
+
+        for (let i in results) {
+          output += `<li class="search-result-link" data-target="${results[i].replace(/\s/g, '')}"> <a > ${results[i]} </a> </li>`;
+        }
+
+        output += '</ul>';
+        document.getElementById('searchResults').innerHTML = output;
+
+        // Add event listeners to the new links
+        document.querySelectorAll('.search-result-link').forEach(function(link) {
+          link.addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent the default behaviour
+
+            var targetId = this.dataset.target;
+            var targetElement = document.getElementById(targetId);
+
+            if (targetElement) {
+              var viewportHeight = window.innerHeight;
+              var targetElementRect = targetElement.getBoundingClientRect();
+
+              // Calculate the new scroll position
+              var newScrollPosition = window.pageYOffset + targetElementRect.top - viewportHeight / 2 + targetElementRect.height / 2;
+
+              // Change the scroll position
+              window.scrollTo({ top: newScrollPosition, behavior: 'smooth' });
+            }
+          });
+        });
+      }
+    }
+    xhr.send();
+  }
+
+  document.getElementById('search-box').addEventListener('input', search);
+
+  // prevent form submission when the search button is clicked
+  document.getElementById('searchForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    search();
+  });
+</script>
+
+
+
+
+
+
 </body>
 
 </html>
