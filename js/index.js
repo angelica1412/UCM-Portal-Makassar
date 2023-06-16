@@ -5,19 +5,19 @@ $(document).ready(function() {
     var name = $('#name').val();
     var password = $('#password').val();
 
-    // Validasi karakter di nama, hanya huruf, angka, @, dan _ yang diperbolehkan
-    var nameRegex = /^[a-zA-Z0-9@_]+$/;
-    if (!nameRegex.test(name)) {
-      alert("Nama pengguna hanya boleh terdiri dari huruf, angka, @, dan _.");
-      return;
-    }
+    // // Validasi karakter di nama, hanya huruf, angka, @, dan _ yang diperbolehkan
+    // var nameRegex = /^[a-zA-Z0-9@_]+$/;
+    // if (!nameRegex.test(name)) {
+    //   alert("Nama pengguna hanya boleh terdiri dari huruf, angka, @, dan _.");
+    //   return;
+    // }
 
-    // Validasi password, hanya 8 karakter (huruf, angka, @, dan _)
-    var passwordRegex = /^[a-zA-Z0-9@_]{8,}$/;
-    if (!passwordRegex.test(password)) {
-      alert("Password harus terdiri dari 8 karakter (huruf, angka, @, dan _).");
-      return;
-    }
+    // // Validasi password, hanya 8 karakter (huruf, angka, @, dan _)
+    // var passwordRegex = /^[a-zA-Z0-9@_]{8,}$/;
+    // if (!passwordRegex.test(password)) {
+    //   alert("Password harus terdiri dari 8 karakter (huruf, angka, @, dan _).");
+    //   return;
+    // }
 
     var data = {
       name: name,

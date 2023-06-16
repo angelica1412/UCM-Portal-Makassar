@@ -47,7 +47,31 @@ nav {
   width: 60px;
   margin-top: 10%;
 }
+.search-results {
+  border: 1px solid #ccc;
+  background-color: #fff;
+  width: 295px;
+  max-height: 200px;
+  overflow-y: auto;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  z-index: 100;
+  left: 9.5rem;
+  margin-top: 24px;
+}
 
+.search-results li {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  
+}
+
+.search-results li:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
 .search-box {
   position: relative;
   display: flex;
