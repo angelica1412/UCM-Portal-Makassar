@@ -523,6 +523,7 @@ button:hover .button-text {
   align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
+  flex-shrink:0 ;
 }
 
 .radio-button input[type="radio"] {
@@ -536,6 +537,7 @@ button:hover .button-text {
   border: 2px solid #aaa;
   position: relative;
   margin-right: 10px;
+  flex-shrink: 0;
 }
 
 .radio-circle::before {
@@ -1056,10 +1058,6 @@ input[type="date"] {
 
   .search-box {
     width: 230px;
-  }
-
-  .inputlogo {
-    width: 70%;
   }
 
   .UnggahGambar {

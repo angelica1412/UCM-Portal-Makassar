@@ -34,14 +34,9 @@
     margin-top: 150px;
 }
 
-.home p {
+.judulLogin {
     font-size: 45px;
     font-weight: bold;
-    color: white;
-}
-
-.home pre{
-    font-size: 18px;
     color: white;
 }
 
@@ -52,7 +47,14 @@
     /* background-repeat: no-repeat; */
 }
 
-.atas{
+.descLogin {
+    width: 80%;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+}
+
+.atas {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,6 +68,8 @@
 }
 
 .petunjukCreate {
+    width: 73%;
+    text-align: center;
     font-size: 16px;
     font-weight: 400;
 }
@@ -75,107 +79,120 @@
     font-weight: 400;
 }
 
+.inputNama {
+    padding-left: 73px;
+    padding-bottom: 17px;
+}
+
 .nama {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
-    margin-top: 3%;
 }
 
 .inputNama input {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     margin-top: 1%;
-    width: 375px;
+    width: 83%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
     padding-left: 2%;
     border: 1.5px solid #00000058;
+    overflow-x: auto;
 }
+
+.inputNIM {
+    padding-left: 73px;
+    padding-bottom: 17px;
+}
+
 
 .NIM {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
+    /* margin-left: 10%;
     margin-top: 3%;
+} */
 }
 
 .inputNIM input {
-    margin-left: 10%;
-    margin-top: 1%;
-    width: 375px;
+    width: 83%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
     padding-left: 2%;
     border: 1.5px solid #00000058;
+}
+
+.inputJurusan {
+    padding-left: 73px;
+    padding-bottom: 17px;
 }
 
 .Jurusan {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
-    margin-top: 3%;
 }
 
 .inputJurusan input {
-    margin-left: 10%;
-    margin-top: 1%;
-    width: 375px;
+    width: 83%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
     padding-left: 2%;
     border: 1.5px solid #00000058;
+}
+
+.inputSpesialisasi {
+    padding-left: 73px;
+    padding-bottom: 17px;
 }
 
 .Spesialisasi {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
-    margin-top: 3%;
 }
 
 .inputSpesialisasi input {
-    margin-left: 10%;
-    margin-top: 1%;
-    width: 375px;
+    width: 83%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
     padding-left: 2%;
     border: 1.5px solid #00000058;
+}
+
+.inputFakultas {
+    padding-left: 73px;
+    padding-bottom: 17px;
 }
 
 .fakultas {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
-    margin-top: 3%;
 }
 
 .inputFakultas input {
-    margin-left: 10%;
-    margin-top: 1%;
-    width: 375px;
+    width: 83%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
     padding-left: 2%;
     border: 1.5px solid #00000058;
+}
+
+.inputPassCreateAcc {
+    padding-left: 73px;
+    padding-bottom: 17px;
 }
 
 .PassCreateAcc {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
-    margin-top: 3%;
 }
 
 .inputPassCreateAcc input {
-    margin-left: 10%;
-    margin-top: 1%;
-    width: 375px;
+    width: 83%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -183,26 +200,27 @@
     border: 1.5px solid #00000058;
 }
 
-input:focus{
+input:focus {
     border: 2px solid #FF9800;
 }
 
 .bagianMasuk .masukCreate {
     font-size: 14px;
-    margin-top: 5%;
-    margin-left: 26%;
+    text-align: center;
 }
 
-.bagianMasuk .masukAkun {
-    font-size: 16px;
-    font-weight: bold;
+.bagianMasuk a {
     color: #FF9800;
-    margin-left: 53%;
-    margin-top: -4.3%;
+    font-weight: bold;
+}
+
+.buttonMasuk {
+    padding-left: 73px;
+    padding-bottom: 17px;
 }
 
 .masuk {
-    width: 375px;
+    width: 83%;
     height: 50px;
     border-radius: 8px;
     text-align: center;
@@ -211,11 +229,21 @@ input:focus{
     border: 1.5px solid #FF9800;
     background-color: white;
     margin-top: 4%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
-.masuk:hover{
+.masuk:hover {
     background-color: #FF9800;
     color: white;
     font-weight: bold;
+}
+
+@media(max-width: 850px) {
+    .home {
+        display: none;
+    }
+
+    .home2 {
+        width: 100%;
+    }
 }
