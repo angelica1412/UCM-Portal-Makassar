@@ -40,6 +40,7 @@ function processRequestList(requestList) {
       infopengirimDiv.addEventListener("click", function () {
         var userName = list.userName;
         var formTitle = list.formTitle;
+        ClearFormView();
         showFormularData(userName, formTitle);
       });
 
@@ -52,38 +53,10 @@ function processRequestList(requestList) {
   }
 }
 
-function showFormularData(userName, formTitle) {
-  var apiUrlForm = `http://localhost:4000/ucmportal/form/${formTitle}`;
-  console.log(userName);
-
-  // Lakukan request AJAX ke API menggunakan jQuery
-  $.ajax({
-    url: apiUrlForm,
-    type: "GET",
-    dataType: "json",
-    success: function (formularData) {
-      console.log(formularData);
-      // Memperbarui tampilan HTML dengan data formular
-      var judulKegiatan = document.querySelector(".judulkegiatan");
-      var jenisKegiatan = document.querySelector(".jawabanjenis");
-      var tanggalMulai = document.querySelector(".tanggalmulai");
-      var tanggalAkhir = document.querySelector(".tanggalakhir");
-      var deskripsi = document.querySelector(".descinfo");
-      var logoKegiatan = document.querySelector(".logo1 img");
-      var linkGoogleForm = document.querySelector(".rectangle");
-      var tombolTolak = document.getElementById("tolak");
-      var tombolTerima = document.getElementById("acc");
-
-
-      judulKegiatan.textContent = formularData[0].title;
-      jenisKegiatan.textContent = formularData[0].type;
-      tanggalMulai.textContent = "Mulai: " + formularData[0].dateStart;
-      tanggalAkhir.textContent = "Akhir: " + formularData[0].dateEnd;
-      deskripsi.innerHTML = formularData[0].description;
-      logoKegiatan.src = "data:image/jpeg;base64," + formularData[0].logo;
-      linkGoogleForm.textContent = formularData[0].linkGoogleForm;
-      
-      var popup = document.getElementById('popup');
+var tombolTolak = document.getElementById("tolak");
+var tombolTerima = document.getElementById("acc");
+var formTitle = "";
+var popup = document.getElementById('popup');
       tombolTolak.addEventListener("click", function () {
         updateFormStatus(formTitle, "Rejected");
         popup.style.display = 'flex';
@@ -109,6 +82,36 @@ function showFormularData(userName, formTitle) {
           }
         });
       });
+function showFormularData(userName, formTitleParameter) {
+  var apiUrlForm = `http://localhost:4000/ucmportal/form/${formTitleParameter}`;
+  console.log(userName);
+
+  // Lakukan request AJAX ke API menggunakan jQuery
+  $.ajax({
+    url: apiUrlForm,
+    type: "GET",
+    dataType: "json",
+    success: function (formularData) {
+      console.log(formularData + "ini formular data");
+      // Memperbarui tampilan HTML dengan data formular
+      var judulKegiatan = document.querySelector(".judulkegiatan");
+      var jenisKegiatan = document.querySelector(".jawabanjenis");
+      var tanggalMulai = document.querySelector(".tanggalmulai");
+      var tanggalAkhir = document.querySelector(".tanggalakhir");
+      var deskripsi = document.querySelector(".descinfo");
+      var logoKegiatan = document.querySelector(".logo1 img");
+      var linkGoogleForm = document.querySelector(".rectangle");
+
+
+      judulKegiatan.textContent = formularData[0].title;
+      jenisKegiatan.textContent = formularData[0].type;
+      tanggalMulai.textContent = "Mulai: " + formularData[0].dateStart;
+      tanggalAkhir.textContent = "Akhir: " + formularData[0].dateEnd;
+      deskripsi.innerHTML = formularData[0].description;
+      logoKegiatan.src = "data:image/jpeg;base64," + formularData[0].logo;
+      linkGoogleForm.textContent = formularData[0].linkGoogleForm;
+      
+      formTitle = formTitleParameter; // form title disini adalah variable public supaya bisa dipanggil di luar function
     },
     error: function (xhr, status, error) {
       console.log(error);
@@ -148,4 +151,6 @@ function ClearFormView() {
   document.getElementById("deskripsi").innerHTML  ="";
   document.getElementById("img").setAttribute("src", "");
   document.getElementById("linkGoogleForm").innerHTML  ="";
+  showFormularData
+
 }
