@@ -23,13 +23,14 @@
     <nav>
       <div class="nav-left">
         <a href="index.html"><img src="/aset/logoNav.png" class="logo" /></a>
-        <form action="" method="get" class="search-box">
-          <input type="text" class="input" name="search" placeholder="Search Here" required id="search-box" />
-          <button type="submit" class="search">
-            <i class="fa fa-search"></i>
-          </button>
+        <form action="" method="get" class="search-box" id="searchForm">
+            <input type="text" class="input" name="search" placeholder="Search Here" autocomplete="off" required id="search-box" />
+            <button type="submit" class="search">
+                <i class="fa fa-search"></i>
+            </button>
         </form>
-      </div>
+        <div id="searchResults"></div>
+    </div>
 
       <div class="nav-links" id="navLinks">
         <i class="fa fa-times" onclick="hideMenu()" id="close"></i>
@@ -204,7 +205,7 @@
     </div>
   </div> -->
 
-  <div class="bagian2">
+  <div class="bagian2" id="bagian2">
     <div class="row" id="latest">
       Data form terbaru akan dimasukkan di sini
     </div>
@@ -311,6 +312,49 @@
     // Panggil fungsi untuk mengambil data form terbaru dari API
     getAcceptedForms();
   </script>
+  
+  <script>
+    function search() {
+      let searchQuery = document.getElementById('search-box').value;
+  
+      // If the input is empty, clear the search results and return
+      if (!searchQuery.trim()) {
+        document.getElementById('searchResults').innerHTML = '';
+        return;
+      }
+  
+      let xhr = new XMLHttpRequest();
+  
+      xhr.open('GET', 'http://localhost:4000/ucmportal/searchform/' + searchQuery, true);
+      xhr.onload = function() {
+        if (this.status == 200) {
+          let results = JSON.parse(this.responseText);
+          let output = '<ul class="search-results">';
+          
+          for(let i in results){
+              output += `<li> <a href ="#bagian2"> ${results[i]} </a> </li>`;
+          }
+          
+          output += '</ul>';
+          document.getElementById('searchResults').innerHTML = output;
+        }
+      }
+      xhr.send();
+    }
+  
+    document.getElementById('search-box').addEventListener('input', search);
+  
+    // prevent form submission when the search button is clicked
+    document.getElementById('searchForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      search();
+    });
+  </script>
+  
+  
+  
+  
+  
 </body>
 
 </html>
