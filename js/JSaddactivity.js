@@ -1,7 +1,7 @@
 // HAMBURGER NAVBAR 
 var navLinks = document.getElementById("navLinks");
 
-function showMenu() {
+function showNav() {
   navLinks.style.left = "0";
 }
 
@@ -33,7 +33,7 @@ window.addEventListener('click', function (event) {
 // Function to show the popup
 function show() {
     var popup = document.getElementById("popup");
-    popup.style.display = "block";
+    popup.style.display = "flex";
   }
   
   // Function to hide the popup

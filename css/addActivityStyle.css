@@ -33,7 +33,7 @@
 .fixnav {
   position: sticky;
   top: 0;
-  z-index: 999;
+  z-index: 10;
 }
 
 nav {
@@ -282,13 +282,15 @@ input[type=submit]:hover {
   color: white;
 }
 
-.maxFile{
+.maxFile {
   font-weight: normal;
   font-size: 12px;
+  color: rgb(151, 148, 148);
+  ;
 }
 
-.requiredFile{
-  color: grey;
+.requiredFile {
+  color: rgb(151, 148, 148);
   font-size: 16px;
 }
 
@@ -409,7 +411,7 @@ button.learn-more .circle .icon.arrow {
   left: 0.625rem;
   width: 1.125rem;
   height: 0.125rem;
-  background: none; 
+  background: none;
 }
 
 button {
@@ -523,7 +525,7 @@ button:hover .button-text {
   align-items: center;
   margin-bottom: 10px;
   cursor: pointer;
-  flex-shrink:0 ;
+  flex-shrink: 0;
 }
 
 .radio-button input[type="radio"] {
@@ -538,6 +540,7 @@ button:hover .button-text {
   position: relative;
   margin-right: 10px;
   flex-shrink: 0;
+  z-index: -10;
 }
 
 .radio-circle::before {
@@ -964,9 +967,80 @@ input[type="date"] {
   margin-top: 7%;
 }
 
+@media(max-width:832px) {
+  nav-links ul li {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .addtext a,
+  .addicon i {
+    color: black !important;
+  }
+
+  .nav-links {
+    position: absolute;
+    background-color: #f6f9fe;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    left: -200px;
+    text-align: left;
+    z-index: 4;
+    transition: 1s;
+  }
+
+  .nav-links .hometext {
+    text-align: center;
+  }
+
+  .nav-links .addtext {
+    text-align: center;
+  }
+
+  .nav-links .myactivitytext {
+    text-align: center;
+  }
+
+  .nav-links .profiletext {
+    text-align: center;
+  }
+
+  .nav-links .dropdown img {
+    text-align: center;
+  }
+
+  .nav-links #close {
+    display: block;
+    color: #ff9800;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  nav #humbuger {
+    display: block;
+    color: black;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+
+  .nav-links ul {
+    padding: 30px;
+  }
+
+  .acara img {
+    width: 100px;
+  }
+}
+
 @media (max-width: 700px) {
   .nav-links ul li {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
   }
 
   .hometext a,

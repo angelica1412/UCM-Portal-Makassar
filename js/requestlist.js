@@ -30,7 +30,7 @@ function processRequestList(requestList) {
       infopengirimDiv.innerHTML = `
           <div class="name">
             <p class="namepengirim">${list.userName}</p>
-            <p class="jurusan">${list.nim} - ${list.major}</p>
+            <p class="jurusan">${"0"+list.nim} - ${list.major}</p>
           </div>
           <div class="iconbeside">
             <a href="#"><i class="fa-solid fa-chevron-right"></i></a>

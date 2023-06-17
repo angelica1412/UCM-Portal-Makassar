@@ -41,6 +41,7 @@
 .fixnav {
     position: sticky;
     top: 0;
+    z-index: 999;
 }
 
 nav {
@@ -228,7 +229,6 @@ nav #humbuger {
     position: sticky;
     top: 0;
     background-color: white;
-    z-index: -3;
 }
 
 .listpengirim {
@@ -243,7 +243,7 @@ nav #humbuger {
     display: flex;
     background-color: rgb(255, 152, 0, 0.6);
     border-radius: 10px;
-    width: 95%;
+    width: 90%;
     height: 80px;
     align-items: center;
     margin-top: 5%;
@@ -368,7 +368,7 @@ nav #humbuger {
     width: 80%;
     margin-top: 2%;
     margin-bottom: 4%;
-    min-height: 30px;
+    min-height: 40px;
     height: auto;
     border-radius: 5px;
     word-wrap: break-word;
@@ -555,7 +555,7 @@ nav #humbuger {
     top: 50%;
     margin-top: -100px;
     background: #FFF;
-    z-index: 20;
+    z-index: 9999;
     /* justify-content: center;
     align-items: center; */
     flex-flow: column nowrap;

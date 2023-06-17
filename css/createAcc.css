@@ -81,6 +81,7 @@
 
 .inputNama {
     padding-left: 73px;
+    padding-right: 73px;
     padding-bottom: 17px;
 }
 
@@ -92,7 +93,7 @@
 .inputNama input {
     /* margin-left: 10%; */
     margin-top: 1%;
-    width: 83%;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -103,6 +104,7 @@
 
 .inputNIM {
     padding-left: 73px;
+    padding-right: 73px;
     padding-bottom: 17px;
 }
 
@@ -116,7 +118,7 @@
 }
 
 .inputNIM input {
-    width: 83%;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -238,6 +240,19 @@ input:focus {
     font-weight: bold;
 }
 
+.syaratPass {
+    padding-top: 3px;
+    font-weight: normal;
+    font-size: 12px;
+    color: rgb(151, 148, 148);
+    padding-right: 5px;
+}
+
+.requiredPass {
+    color: rgb(151, 148, 148);
+    font-size: 16px;
+}
+
 @media(max-width: 850px) {
     .home {
         display: none;
@@ -245,5 +260,10 @@ input:focus {
 
     .home2 {
         width: 100%;
+    }
+
+    .inputSpesialisasi,
+    .inputNama {
+        padding-left: 75px;
     }
 }
