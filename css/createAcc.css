@@ -15,18 +15,20 @@
 
 .gabunghome {
     display: flex;
+    min-height: 100vh;
 }
 
 .home {
     background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("/aset/bg\ login.png");
-    width: 65%;
-    height: 950px;
+    /* height: 950px; */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .home img {
@@ -38,11 +40,13 @@
     font-size: 45px;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
 .home2 {
-    width: 35%;
-    height: 745px;
+    width: 500px;
+    flex-shrink: 0;
+    /* height: 745px; */
     /* background-size: cover; */
     /* background-repeat: no-repeat; */
 }
