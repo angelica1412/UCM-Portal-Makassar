@@ -227,10 +227,11 @@ input:focus {
 .buttonMasuk {
     padding-left: 73px;
     padding-bottom: 17px;
+    padding-right: 73px;
 }
 
 .masuk {
-    width: 83%;
+    width: 97%;
     height: 50px;
     border-radius: 8px;
     text-align: center;
@@ -268,10 +269,5 @@ input:focus {
 
     .home2 {
         width: 100%;
-    }
-
-    .inputSpesialisasi,
-    .inputNama {
-        padding-left: 75px;
     }
 }

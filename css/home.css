@@ -943,10 +943,14 @@ nav #humbuger {
   height: 45px;
   font-size: 16px;
   color: white;
-  background-color: #ff9800;
+  background-color: #f7b551;
   border: none;
   border-radius: 10px;
   float: right;
+}
+
+#apply:hover{
+  background-color: #ff9800;
 }
 
 .tanggal,

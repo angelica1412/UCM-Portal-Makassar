@@ -20,24 +20,21 @@
 
 .home {
     background-image: linear-gradient(rgba(255, 152, 0, 0.6), rgba(255, 152, 0, 0.6)), url("/aset/bg\ login.png");
-    width: 65%;
-    /* height: 745px; */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
 }
 
 .home2 {
-    width: 35%;
-    /* height: 745px; */
-    /* background-size: cover; */
-    /* background-repeat: no-repeat; */
+    width: 500px;
+    flex-shrink: 0;
 }
 
-.atas{
+.atas {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,15 +46,18 @@
     margin-top: 150px;
 }
 
-.home p {
+.judulLogin {
     font-size: 45px;
     font-weight: bold;
     color: white;
+    text-align: center;
 }
 
-.home pre{
+.descLogin {
+    width: 80%;
     font-size: 18px;
     color: white;
+    text-align: center;
 }
 
 .judulWelcome {
@@ -69,21 +69,25 @@
 .petunjuk {
     font-size: 16px;
     font-weight: 400;
+    text-align: center;
+}
+
+.inputUsername {
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 .username {
     font-weight: bold;
     font-size: 15px;
-    /* left: 0; */
-    margin-left: 10%;
-    margin-top: 5%;
-    /* float: left; */
 }
 
 .inputUsername input {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     margin-top: 1%;
-    width: 375px;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -91,17 +95,21 @@
     border: 1.5px solid #00000058;
 }
 
+.inputPassword {
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-bottom: 10px;
+}
+
 .password {
     font-weight: bold;
     font-size: 15px;
-    margin-left: 10%;
-    margin-top: 3%;
 }
 
 .inputPassword input {
-    margin-left: 10%;
+    /* margin-left: 10%; */
     margin-top: 1%;
-    width: 375px;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -113,8 +121,14 @@ input:focus {
     border: 2px solid #FF9800;
 }
 
+.buttonMasuk {
+    padding-left: 47px;
+    padding-right: 47px;
+    padding-bottom: 27px;
+}
+
 .masuk {
-    width: 375px;
+    width: 97%;
     height: 50px;
     border-radius: 8px;
     text-align: center;
@@ -123,7 +137,7 @@ input:focus {
     border: 1.5px solid #FF9800;
     background-color: white;
     margin-top: 6%;
-    margin-left: 10%;
+    /* margin-left: 10%; */
 }
 
 .masuk:hover {
@@ -134,7 +148,6 @@ input:focus {
 
 .bagianDaftar {
     width: 100%;
-    margin-top: 10%;
 }
 
 .bagianDaftar .daftar {
@@ -148,3 +161,12 @@ input:focus {
     color: #FF9800;
 }
 
+@media(max-width: 850px) {
+    .home {
+        display: none;
+    }
+
+    .home2 {
+        width: 100%;
+    }
+}

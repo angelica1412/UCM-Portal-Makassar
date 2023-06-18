@@ -15,23 +15,36 @@ function focusToSearchBox() {
   searchBox.focus();
 }
 
-$ = function (id) {
-  return document.getElementById(id);
-}
+// Pop Up Logout
+var openBtn = document.getElementById('btnlogout');
+var closeBtn = document.getElementById('cancel');
+var closeBtn2 = document.getElementById('tidak');
+var popup2 = document.getElementById('popup2');
 
-var show = function (id) {
-  $(id).style.display = 'flex';
-}
-var hide = function (id) {
-  $(id).style.display = 'none';
-}
-
-window.addEventListener('click', function(event) {
-  var popup = document.getElementById('popup2');
-  if (event.target == popup) {
-      hide('popup2');
-  }
+openBtn.addEventListener('click', function () {
+  popup2.style.display = 'flex';
 });
 
+closeBtn.addEventListener('click', function () {
+  popup2.style.display = 'none';
+});
+
+// $ = function (id) {
+//   return document.getElementById(id);
+// }
+
+// var show = function (id) {
+//   $(id).style.display = 'flex';
+// }
+// var hide = function (id) {
+//   $(id).style.display = 'none';
+// }
+
+// window.addEventListener('click', function(event) {
+//   var popup = document.getElementById('popup2');
+//   if (event.target == popup) {
+//       hide('popup2');
+//   }
+// });
 
 
