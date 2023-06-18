@@ -11,7 +11,7 @@
     href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
   <link rel="icon" type="image/x-icon" href="/aset/Logo Warna - Portal.png" />
-  <title>UCM Portal</title>
+  <title>UC Makassar Portal</title>
 </head>
 
 <body>
@@ -149,23 +149,53 @@
   </div>
 
   <!-- Pop Up Selengkapnya -->
-  <!-- <div class="bungkus">
+  <div class="bungkus">
     <div class="popupmore" id="popupmore">
-      <div class="judullogo">
+      <div class="log0Close">
+        <a href="#" onclick="hide('popupmore')"><i class="fa-solid fa-xmark" id="closeMore"></i></a>
+      </div>
+      <div class="judullogo" id="judulLogo">
         <div class="logopop">
-          <img src="/aset/fdu.png" class="logokegiatan">
+          <img src="/aset/fdu.png" id="logokegiatan">
         </div>
   
-        <div class="judulpop">
+        <div class="judulpop" id="judulAcaraPop">
           <p>Open Recruitment Oweek</p>
         </div>
 
-        <div class="deskripsi">
+      </div>
 
+      <div class="infokegiatan">
+        <div class="jeniskegiatan">
+            <p class="atasjenis">Jenis Kegiatan :</p>
+            <p class="jawabanjenis" id="jenisKegiatan"></p>
         </div>
+
+        <div class="tanggal">
+            <p class="atastanggal">Tanggal :</p>
+            <p class="tanggalmulai" id="tanggalMulai">Mulai : </p>
+            <p class="tanggalakhir" id="tanggalAkhir">Akhir : </p>
+        </div>
+
+        <div class="deskripsi">
+            <p class="atasdeskripsi">Deskripsi :</p>
+            <div class="descinfo" id="deskripsi">
+            </div>
+        </div>
+
+        <div class="logo1">
+            <p class="atasjenis">Logo Kegiatan </p>
+            <img src="" id="img">
+        </div>
+
+        <div class="buttonApply">
+          <a href="#"><button id="apply">Apply</button></a>
+        </div>
+
+    </div>
       </div>
     </div>
-  </div> -->
+  </div>
 
   <!-- BAGIAN PERTAMA HOME -->
   <div class="gabung">

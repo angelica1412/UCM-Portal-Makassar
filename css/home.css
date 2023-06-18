@@ -716,11 +716,12 @@ nav #humbuger {
   border-radius: 10px;
 }
 
-#cancel {
+#cancel, #closeMore {
   float: right;
   margin-right: 2%;
   margin-top: 2%;
   color: #000000;
+  transform: scale(1.3);
 }
 
 #tidak {
@@ -858,14 +859,19 @@ nav #humbuger {
 .popupmore {
   position: fixed;
   padding: 10px;
-  width: 35%;
-  height: 180px;
+  width: 50%;
+  height: 450px;
   top: 50%;
   margin-top: -100px;
   background: #FFF;
   z-index: 20;
   font-weight: bold;
-  border-radius: 10px;
+  border-radius: 20px;
+  overflow-y: auto;
+}
+
+.popupmore::-webkit-scrollbar {
+  display: none;
 }
 
 #popupmore:after {
@@ -901,7 +907,7 @@ nav #humbuger {
   margin-top: 2%;
   display: flex;
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
   flex-flow: row nowrap;
   border-bottom: 1px solid #a9a9a9;
 }
@@ -917,18 +923,73 @@ nav #humbuger {
   font-weight: bold;
 }
 
-.logokegiatan {
-  width: 130px;
+#logokegiatan {
+  width: 196px;
   /* aspect-ratio: 38/8; */
 }
 
-@media(max-width: 858px){
+#apply{
+width: px;
+}
+
+.tanggal,
+.deskripsi,
+.logo1,
+.jeniskegiatan,
+.form {
+    margin-top: 4%;
+}
+
+.atastanggal,
+.atasdeskripsi,
+.ataslogo,
+.atasjenis,
+.atasform {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.tanggalmulai,
+.tanggalakhir,
+.jawabanjenis {
+    font-size: 14px;
+}
+
+.descinfo {
+    border: 2px solid #E4E4E4;
+    width: 80%;
+    min-height: 60px;
+    height: auto;
+    margin-top: 1%;
+    border-radius: 5px;
+    word-wrap: break-word;
+}
+
+.descinfo p {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+
+.logo1 img {
+    width: 35%;
+    margin-top: 2%;
+}
+
+
+@media(max-width: 862px){
   .search-box {
     width: 230px;
   }
 
   .nav-links ul li {
-    display: block;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+  }
+
+  .nav-links .dropdown-content{
+    margin-left: -90px;
   }
 
   .hometext a,
