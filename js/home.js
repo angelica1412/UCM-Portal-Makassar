@@ -27,9 +27,9 @@ var hide = function (id) {
 }
 
 window.addEventListener('click', function(event) {
-  var popup = document.getElementById('popup');
+  var popup = document.getElementById('popup2');
   if (event.target == popup) {
-      hide('popup');
+      hide('popup2');
   }
 });
 

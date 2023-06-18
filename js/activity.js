@@ -16,23 +16,23 @@ function showMenu() {
 var openBtn = document.getElementById('btnlogout');
 var closeBtn = document.getElementById('cancel');
 var closeBtn2 = document.getElementById('tidak');
-var popup = document.getElementById('popup');
+var popup = document.getElementById('popup2');
 
 openBtn.addEventListener('click', function () {
-    popup.style.display = 'flex';
+    popup2.style.display = 'flex';
 });
 
 closeBtn.addEventListener('click', function () {
-    popup.style.display = 'none';
+    popup2.style.display = 'none';
 });
 
 closeBtn2.addEventListener('click', function () {
-    popup.style.display = 'none';
+    popup2.style.display = 'none';
 });
 
 window.addEventListener('click', function (event) {
-    if (event.target === popup) {
-      popup.style.display = 'none';
+    if (event.target === popup2) {
+      popup2.style.display = 'none';
     }
   });
 

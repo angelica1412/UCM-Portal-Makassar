@@ -15,7 +15,7 @@ function fetchLatestForms() {
           var judul = $("<p>").addClass("judul").text(form.title);
           var tutup = $("<p>").addClass("tutup").text(form.type);
           var selengkapnya = $("<button>").attr("id", "selengkapnya").text("Selengkapnya").click(function() {
-            show('popupmore');
+            show('popupmore2');
           });
           
           card.append(image, judul, tutup, selengkapnya);

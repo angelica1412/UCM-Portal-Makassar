@@ -74,7 +74,7 @@
                   </div>
                   <span id="name"> Person</span>
                   <p class="job" id="major"> Job Title</p>
-                  <button id="btnlogout" onclick="show('popup')"> Log Out
+                  <button id="btnlogout" onclick="show('popup2')"> Log Out
                   </button>
                 </div>
               </div>
@@ -132,26 +132,30 @@
           </div>
         </div> -->
 
-  <!-- POP UP LOGOUT -->
-  <div class="popup" id="popup">
-    <div class="logocancel">
-      <a href="#" onclick="hide('popup')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+    <!-- Pop up Logout -->
+    <div class="popup2" id="popup2">
+      <div class="popup2_inner">
+        <div class="logocancel">
+          <a href="#" onclick="hide('popup2')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
+        </div>
+    
+        <div class="judulLogout">
+          Logout
+        </div>
+    
+        <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
+    
+        <div class="buttonlog">
+          <a href="index.html"><button id="ya">Keluar</button></a>
+          <button id="tidak">Tidak</button>
+        </div>
+      </div>
     </div>
-    <div class="judulLogout">
-      Logout
-    </div>
-    <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?
-    </div>
-    <div class="buttonlog">
-      <a href="index.html"><button id="ya">Keluar</button></a>
-      <button id="tidak" href="#" onclick="hide('popup')">Tidak</button>
-    </div>
-  </div>
 
   <!-- Pop Up Selengkapnya -->
   <div class="bungkus" id="popupmore">
-    <div class="popupmore">
-      <div class="log0Close">
+    <div class="popupmore" id="popupmore2">
+      <div class="logoClose">
         <a href="#" onclick="hide('popupmore')"><i class="fa-solid fa-xmark" id="closeMore"></i></a>
       </div>
       <div class="judullogo" id="judulLogo">
@@ -191,8 +195,6 @@
         <div class="buttonApply">
           <a href="#"><button id="apply">Apply</button></a>
         </div>
-
- 
       </div>
     </div>
   </div>
