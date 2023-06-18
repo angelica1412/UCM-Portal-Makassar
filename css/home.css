@@ -877,6 +877,9 @@ nav #humbuger {
 .popupmore::-webkit-scrollbar {
   display: none;
 }
+#popupmore {
+  display: none;
+}
 
 /* #popupmore:after {
   display: flex;

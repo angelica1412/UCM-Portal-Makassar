@@ -132,72 +132,76 @@
           </div>
         </div> -->
 
-    <!-- Pop up Logout -->
-    <div class="popup2" id="popup2">
-      <div class="popup2_inner">
-        <div class="logocancel">
-          <a href="#" onclick="hide('popup2')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
-        </div>
-    
-        <div class="judulLogout">
-          Logout
-        </div>
-    
-        <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
-    
-        <div class="buttonlog">
-          <a href="index.html"><button id="ya">Keluar</button></a>
-          <button id="tidak">Tidak</button>
-        </div>
-      </div>
-    </div>
-
-  <!-- Pop Up Selengkapnya -->
-  <div class="bungkus" id="popupmore">
-    <div class="popupmore" id="popupmore2">
-      <div class="logoClose">
-        <a href="#" onclick="hide('popupmore')"><i class="fa-solid fa-xmark" id="closeMore"></i></a>
-      </div>
-      <div class="judullogo" id="judulLogo">
-        <div class="logopop">
-          <img src="/aset/fdu.png" id="logokegiatan">
-        </div>
-  
-        <div class="judulpop" id="judulAcaraPop">
-          <p>Open Recruitment Oweek</p>
-        </div>
-
+  <!-- Pop up Logout -->
+  <div class="popup2" id="popup2">
+    <div class="popup2_inner">
+      <div class="logocancel">
+        <a href="#" onclick="hide('popup2')"><i class="fa-solid fa-xmark" id="cancel"></i></a>
       </div>
 
-      <div class="infokegiatan">
-        <div class="jeniskegiatan">
-            <p class="atasjenis">Jenis Kegiatan :</p>
-            <p class="jawabanjenis" id="jenisKegiatan"></p>
-        </div>
+      <div class="judulLogout">
+        Logout
+      </div>
 
-        <div class="tanggal">
-            <p class="atastanggal">Tanggal :</p>
-            <p class="tanggalmulai" id="tanggalMulai">Mulai : </p>
-            <p class="tanggalakhir" id="tanggalAkhir">Akhir : </p>
-        </div>
+      <div class="pertanyaankeluar">Apakah Anda Yakin Untuk Keluar Dari Sistem?</div>
 
-        <div class="deskripsi">
-            <p class="atasdeskripsi">Deskripsi :</p>
-            <div class="descinfo" id="deskripsi">
-            </div>
-        </div>
-
-        <div class="logo1">
-            <p class="atasjenis">Logo Kegiatan </p>
-            <img src="" id="img">
-        </div>
-
-        <div class="buttonApply">
-          <a href="#"><button id="apply">Apply</button></a>
-        </div>
+      <div class="buttonlog">
+        <a href="index.html"><button id="ya">Keluar</button></a>
+        <button id="tidak">Tidak</button>
       </div>
     </div>
   </div>
+
+  <!-- Pop Up Selengkapnya -->
+<div class="bungkus" id="popupmore">
+  <div class="popupmore" id="popupmore2">
+    <div class="logoClose">
+      <a href="#" onclick="hide('popupmore')">
+        <i class="fa-solid fa-xmark" id="closeMore"></i>
+      </a>      
+    </div>
+    <div class="judullogo" id="judulLogo">
+      <div class="logopop">
+        <img src="" id="logokegiatan">
+      </div>
+
+      <div class="judulpop" id="judulAcaraPop">
+        <p>Open Recruitment Oweek</p>
+      </div>
+    </div>
+
+    <div class="infokegiatan">
+      <div class="jeniskegiatan">
+        <p class="atasjenis">Jenis Kegiatan :</p>
+        <p class="jawabanjenis" id="jenisKegiatan"></p>
+      </div>
+
+      <div class="tanggal">
+        <p class="atastanggal">Tanggal :</p>
+        <p class="tanggalmulai" id="tanggalMulai">Mulai : </p>
+        <p class="tanggalakhir" id="tanggalAkhir">Akhir : </p>
+      </div>
+
+      <div class="deskripsi">
+        <p class="atasdeskripsi">Deskripsi :</p>
+        <div class="descinfo" id="deskripsi">
+        </div>
+      </div>
+
+      <div class="logo1">
+        <p class="atasjenis">Logo Kegiatan </p>
+        <img src="" id="img" class="logoo">
+      </div>
+
+      <div class="buttonApply">
+        <a href="#" target="_blank">
+          <button id="apply">Apply</button>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+  <!-- sampai sini untuk selengkapnya -->
 
   <!-- BAGIAN PERTAMA HOME -->
   <div class="gabung">
@@ -280,60 +284,91 @@
 
   <script src="/js/home.js"></script>
   <script src="/js/profileJS.js"></script>
+
   <script>
     function getAcceptedForms() {
-      var apiUrl = "http://localhost:4000/ucmportal/accepted"; // Ganti dengan URL API yang sesuai
-
-      // Lakukan request AJAX ke API
+      var apiUrl = "http://localhost:4000/ucmportal/accepted";
+  
       var xhr = new XMLHttpRequest();
       xhr.open("GET", apiUrl, true);
       xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
           var acceptedForms = JSON.parse(xhr.responseText);
-
-          // Panggil fungsi untuk memproses dan menampilkan form yang diterima
           processAcceptedForms(acceptedForms);
         }
       };
       xhr.send();
     }
-
+  
     function processAcceptedForms(acceptedForms) {
       var latestContainer = document.getElementById("latest");
-
-      // Kosongkan kontainer
       latestContainer.innerHTML = "";
-
-      var counter = 0; // Counter for limiting the forms to 6
-
-      // Mengecek apakah ada data form terbaru
+  
       if (acceptedForms.length > 0) {
         acceptedForms.forEach(function (form) {
-
-          // Membuat elemen HTML untuk form
           var card = document.createElement("div");
           card.className = "column";
           card.innerHTML = `
-  <div class="card" id="${form.title.replace(/\s/g, '')}">
-    <img src="data:image/jpeg;base64,${form.logo}" />
-    <p class="judul">${form.title}</p>
-    <p class="tutup">${form.type}</p>
-    <button class="selengkapnya" onclick="show('popupmore')">Selengkapnya</button>
-  </div>
-`;
-          // Tambahkan elemen form ke dalam kontainer
+            <div class="card" id="${form.title.replace(/\s/g, '')}">
+              <img src="data:image/jpeg;base64,${form.logo}" />
+              <p class="judul">${form.title}</p>
+              <p class="tutup">${form.type}</p>
+              <button class="selengkapnya" onclick="showPopup('${form.title}', '${form.id}')">Selengkapnya</button>
+            </div>
+          `;
           latestContainer.appendChild(card);
-
-          counter++; // Increment the counter
         });
       } else {
         latestContainer.innerHTML = "Tidak ada data form terbaru.";
       }
     }
-
-    // Panggil fungsi untuk mengambil data form terbaru dari API
+  
     getAcceptedForms();
+    function hide(elementId) {
+  var popup = document.getElementById(elementId);
+  popup.style.display = "none";
+}
+  
+    function showPopup(title, id) {
+  var popup = document.getElementById("popupmore");
+  popup.style.display = "block";
+  var apiUrlForm = `http://localhost:4000/ucmportal/form/${title}/${id}`;
+  $.ajax({
+    url: apiUrlForm,
+    type: "GET",
+    dataType: "json",
+    success: function (formularData) {
+      var judulKegiatan = document.querySelector(".judulpop");
+      var jenisKegiatan = document.querySelector(".jawabanjenis");
+      var tanggalMulai = document.querySelector(".tanggalmulai");
+      var tanggalAkhir = document.querySelector(".tanggalakhir");
+      var deskripsi = document.querySelector(".descinfo");
+      var logoKegiatan = document.querySelector(".logo1 img");
+      var logoKegiatan2 = document.getElementById("logokegiatan");
+
+
+      judulKegiatan.textContent = formularData[0].title;
+      jenisKegiatan.textContent = formularData[0].type;
+      tanggalMulai.textContent = "Mulai: " + formularData[0].dateStart;
+      tanggalAkhir.textContent = "Akhir: " + formularData[0].dateEnd;
+      deskripsi.innerHTML = formularData[0].description;
+      logoKegiatan.src = "data:image/jpeg;base64," + formularData[0].logo;
+      logoKegiatan2.src = "data:image/jpeg;base64," + formularData[0].logo;
+
+
+      // Set href untuk tombol "Apply"
+      var applyButton = document.getElementById("apply");
+      applyButton.parentElement.href = formularData[0].linkGoogleForm;
+    },
+    error: function (xhr, status, error) {
+      console.log(error);
+    },
+  });
+}
+
+
   </script>
+  
 
   <script>
     function search() {
@@ -393,6 +428,8 @@
       search();
     });
   </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
 
 
