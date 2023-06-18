@@ -931,7 +931,6 @@ input[type="date"] {
   background: rgba(0, 0, 0, 0.5);
   z-index: -2;
   display: flex;
-  border-radius: 10px;
   justify-content: center;
 }
 
@@ -968,7 +967,7 @@ input[type="date"] {
 }
 
 @media(max-width:832px) {
-  nav-links ul li {
+  .nav-links ul li {
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
@@ -1009,6 +1008,10 @@ input[type="date"] {
 
   .nav-links .dropdown img {
     text-align: center;
+  }
+
+  .nav-links .dropdown-content{
+    margin-left: -90px;
   }
 
   .nav-links #close {
@@ -1129,9 +1132,6 @@ input[type="date"] {
   input[type="date"] {
     width: 170px;
   }
-  .error {
-    border: 1px solid red;
-}
 
   .search-box {
     width: 230px;

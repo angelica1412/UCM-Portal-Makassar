@@ -549,15 +549,13 @@ nav #humbuger {
     position: fixed;
     padding: 10px;
     width: 20%;
-    left: 50%;
-    margin-left: -90px;
+    /* left: 50%; */
+    /* margin-left: -90px; */
     height: 180px;
     top: 50%;
     margin-top: -100px;
     background: #FFF;
     z-index: 9999;
-    /* justify-content: center;
-    align-items: center; */
     flex-flow: column nowrap;
     font-weight: bold;
     border-radius: 10px;
