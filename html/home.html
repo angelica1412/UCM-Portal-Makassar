@@ -195,16 +195,6 @@
     </div>
   </div>
 
-  <!-- SEDANG BERLANGSUNG -->
-  <!-- <div class="bagian1">
-    <div class="bagian1atas">
-      <p class="text12">Sedang Berlangsung</p>
-      <p class="text22">
-        Temukan organisasi maupun kepanitiaan yang sedang membuka rekrutan
-      </p>
-      <p class="text32">di kampus UC Makassar</p>
-    </div>
-  </div> -->
 
   <div class="bagian2" id="bagian2">
     <div class="row" id="latest">
@@ -220,7 +210,6 @@
         Berikut merupakan langkah-langkah yang dapat anda ikuti dalam
         mendaftar sebuah kepanitiaan ataupun organisasi
       </p>
-      <!-- <p class="lanjutandaftar">sebuah kepanitiaan ataupun organisasi</p> -->
       <img src="/aset/cari.png" />
     </div>
   </div>
@@ -314,64 +303,64 @@
     getAcceptedForms();
   </script>
 
-<script>
-  function search() {
-    let searchQuery = document.getElementById('search-box').value;
+  <script>
+    function search() {
+      let searchQuery = document.getElementById('search-box').value;
 
-    // If the input is empty, clear the search results and return
-    if (!searchQuery.trim()) {
-      document.getElementById('searchResults').innerHTML = '';
-      return;
-    }
-
-    let xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://localhost:4000/ucmportal/searchform/' + searchQuery, true);
-
-    xhr.onload = function () {
-      if (this.status == 200) {
-        let results = JSON.parse(this.responseText);
-        let output = '<ul class="search-results">';
-
-        for (let i in results) {
-          output += `<li class="search-result-link" data-target="${results[i].replace(/\s/g, '')}"> <a > ${results[i]} </a> </li>`;
-        }
-
-        output += '</ul>';
-        document.getElementById('searchResults').innerHTML = output;
-
-        // Add event listeners to the new links
-        document.querySelectorAll('.search-result-link').forEach(function(link) {
-          link.addEventListener('click', function(e) {
-            e.preventDefault(); // Prevent the default behaviour
-
-            var targetId = this.dataset.target;
-            var targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-              var viewportHeight = window.innerHeight;
-              var targetElementRect = targetElement.getBoundingClientRect();
-
-              // Calculate the new scroll position
-              var newScrollPosition = window.pageYOffset + targetElementRect.top - viewportHeight / 2 + targetElementRect.height / 2;
-
-              // Change the scroll position
-              window.scrollTo({ top: newScrollPosition, behavior: 'smooth' });
-            }
-          });
-        });
+      // If the input is empty, clear the search results and return
+      if (!searchQuery.trim()) {
+        document.getElementById('searchResults').innerHTML = '';
+        return;
       }
+
+      let xhr = new XMLHttpRequest();
+      xhr.open('GET', 'http://localhost:4000/ucmportal/searchform/' + searchQuery, true);
+
+      xhr.onload = function () {
+        if (this.status == 200) {
+          let results = JSON.parse(this.responseText);
+          let output = '<ul class="search-results">';
+
+          for (let i in results) {
+            output += `<li class="search-result-link" data-target="${results[i].replace(/\s/g, '')}"> <a > ${results[i]} </a> </li>`;
+          }
+
+          output += '</ul>';
+          document.getElementById('searchResults').innerHTML = output;
+
+          // Add event listeners to the new links
+          document.querySelectorAll('.search-result-link').forEach(function (link) {
+            link.addEventListener('click', function (e) {
+              e.preventDefault(); // Prevent the default behaviour
+
+              var targetId = this.dataset.target;
+              var targetElement = document.getElementById(targetId);
+
+              if (targetElement) {
+                var viewportHeight = window.innerHeight;
+                var targetElementRect = targetElement.getBoundingClientRect();
+
+                // Calculate the new scroll position
+                var newScrollPosition = window.pageYOffset + targetElementRect.top - viewportHeight / 2 + targetElementRect.height / 2;
+
+                // Change the scroll position
+                window.scrollTo({ top: newScrollPosition, behavior: 'smooth' });
+              }
+            });
+          });
+        }
+      }
+      xhr.send();
     }
-    xhr.send();
-  }
 
-  document.getElementById('search-box').addEventListener('input', search);
+    document.getElementById('search-box').addEventListener('input', search);
 
-  // prevent form submission when the search button is clicked
-  document.getElementById('searchForm').addEventListener('submit', function (e) {
-    e.preventDefault();
-    search();
-  });
-</script>
+    // prevent form submission when the search button is clicked
+    document.getElementById('searchForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      search();
+    });
+  </script>
 
 
 
