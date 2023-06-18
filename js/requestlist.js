@@ -40,8 +40,9 @@ function processRequestList(requestList) {
       infopengirimDiv.addEventListener("click", function () {
         var userName = list.userName;
         var formTitle = list.formTitle;
+        var idTitle = list.id;
         ClearFormView();
-        showFormularData(userName, formTitle);
+        showFormularData(userName, formTitle, idTitle);
       });
 
       // Tambahkan elemen form ke dalam kontainer
@@ -56,9 +57,10 @@ function processRequestList(requestList) {
 var tombolTolak = document.getElementById("tolak");
 var tombolTerima = document.getElementById("acc");
 var formTitle = "";
+var idTitle = "";
 var popup = document.getElementById('popup');
       tombolTolak.addEventListener("click", function () {
-        updateFormStatus(formTitle, "Rejected");
+        updateFormStatus(formTitle, "Rejected", idTitle);
         popup.style.display = 'flex';
         
         console.log(document.getElementById("judulKegiatan"))
@@ -73,7 +75,7 @@ var popup = document.getElementById('popup');
       });
       
       tombolTerima.addEventListener("click", function () {
-        updateFormStatus(formTitle, "Accepted");
+        updateFormStatus(formTitle, "Accepted", idTitle);
         ClearFormView()
         popup.style.display = 'flex';
         window.addEventListener('click', function (event) {
@@ -82,8 +84,8 @@ var popup = document.getElementById('popup');
           }
         });
       });
-function showFormularData(userName, formTitleParameter) {
-  var apiUrlForm = `http://localhost:4000/ucmportal/form/${formTitleParameter}`;
+function showFormularData(userName, formTitleParameter, idTitleParameter) {
+  var apiUrlForm = `http://localhost:4000/ucmportal/form/${formTitleParameter}/${idTitleParameter}`;
   console.log(userName);
 
   // Lakukan request AJAX ke API menggunakan jQuery
@@ -112,6 +114,7 @@ function showFormularData(userName, formTitleParameter) {
       linkGoogleForm.textContent = formularData[0].linkGoogleForm;
       
       formTitle = formTitleParameter; // form title disini adalah variable public supaya bisa dipanggil di luar function
+      idTitle = idTitleParameter;
     },
     error: function (xhr, status, error) {
       console.log(error);
@@ -119,8 +122,8 @@ function showFormularData(userName, formTitleParameter) {
   });
 }
 
-function updateFormStatus(formTitle, status) {
-  var apiUrlUpdateForm = `http://localhost:4000/ucmportal/updateform/${formTitle}/${status}`;
+function updateFormStatus(formTitle, status, id) {
+  var apiUrlUpdateForm = `http://localhost:4000/ucmportal/updateform/${formTitle}/${status}/${id}`;
 
   // Lakukan request AJAX ke API menggunakan jQuery
   $.ajax({

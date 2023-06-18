@@ -1129,6 +1129,9 @@ input[type="date"] {
   input[type="date"] {
     width: 170px;
   }
+  .error {
+    border: 1px solid red;
+}
 
   .search-box {
     width: 230px;
