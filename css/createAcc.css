@@ -132,6 +132,7 @@
 
 .inputJurusan {
     padding-left: 73px;
+    padding-right: 73px;
     padding-bottom: 17px;
 }
 
@@ -141,7 +142,7 @@
 }
 
 .inputJurusan input {
-    width: 83%;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -151,6 +152,7 @@
 
 .inputSpesialisasi {
     padding-left: 73px;
+    padding-right: 73px;
     padding-bottom: 17px;
 }
 
@@ -160,7 +162,7 @@
 }
 
 .inputSpesialisasi input {
-    width: 83%;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -170,6 +172,7 @@
 
 .inputFakultas {
     padding-left: 73px;
+    padding-right: 73px;
     padding-bottom: 17px;
 }
 
@@ -179,7 +182,7 @@
 }
 
 .inputFakultas input {
-    width: 83%;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
@@ -189,6 +192,7 @@
 
 .inputPassCreateAcc {
     padding-left: 73px;
+    padding-right: 73px;
     padding-bottom: 17px;
 }
 
@@ -198,7 +202,7 @@
 }
 
 .inputPassCreateAcc input {
-    width: 83%;
+    width: 97%;
     height: 50px;
     font-size: 15px;
     border-radius: 10px;
