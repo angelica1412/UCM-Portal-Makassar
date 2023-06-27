@@ -51,17 +51,16 @@ nav {
   margin-top: 10%;
 }
 
-.search-box {
-  position: relative;
-  display: flex;
-  overflow: hidden;
-  width: 300px;
-  margin-left: 20px;
-}
-
 .nav-left {
   display: flex;
   align-items: center;
+}
+
+.nav-left p{
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
 }
 
 .input {
@@ -443,6 +442,14 @@ tr:hover {
   border-radius: 15px;
   margin: auto;
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .img i{
+transform: scale(1.7);
+color: #ffb03a;
 }
 
 .card button {

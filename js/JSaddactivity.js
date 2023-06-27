@@ -27,13 +27,13 @@ closeBtn.addEventListener('click', function () {
 
 // Function to show the popup
 function show() {
-  var popup = document.getElementById("popup");
+  var popup = document.getElementById("popupSubmit");
   popup.style.display = "flex";
 }
 
 // Function to hide the popup
 function hide() {
-  var popup = document.getElementById("popup");
+  var popup = document.getElementById("popupSubmit");
   popup.style.display = "none";
 }
 
@@ -113,14 +113,14 @@ submitBtn.addEventListener("click", function (event) {
   event.preventDefault(); // Prevent the form from submitting
   if (validateForm()) {
     // Show the success popup if the form is valid
-    show("popup");
+    show("popupSubmit");
     sendFormDataToServer(); // Send form data to the server
     // clearForm();
     clearForm();
     window.addEventListener('click', function (event) {
-      var popup = document.getElementById('popup');
+      var popup = document.getElementById('popupSubmit');
       if (event.target == popup) {
-        hide('popup');
+        hide('popupSubmit');
       }
     });
 

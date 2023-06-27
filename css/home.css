@@ -212,9 +212,9 @@ nav #humbuger {
 
 #closeMore {
   float: right;
-  margin-right: 2%;
   margin-top: 2%;
   color: #000000;
+  padding-right: 15px;
 }
 
 /* BAGIAN PERTAMA HOME */
@@ -666,6 +666,14 @@ nav #humbuger {
   border-radius: 15px;
   margin: auto;
   margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card2 .img i{
+transform: scale(1.7);
+color: #ffb03a;
 }
 
 .card2 button {
@@ -853,6 +861,7 @@ nav #humbuger {
   height: 76.137px;
 }
 
+
 .bungkus {
   position: fixed;
   top: 0;
@@ -871,8 +880,15 @@ nav #humbuger {
   font-weight: bold;
   border-radius: 20px;
   overflow-y: auto;
-  max-width: 90%;
+  max-width: 30%;
+  height: 500px;
 }
+
+.buttonApply{
+  padding-bottom: 7px;
+  height: 50px;
+}
+
 
 .popupmore::-webkit-scrollbar {
   display: none;
@@ -927,20 +943,19 @@ nav #humbuger {
   align-items: center;
 }
 
-.judulpop p {
-  font-size: 26px;
-  font-weight: bold;
+.judulpop{
+  text-align: center;
 }
 
 #logokegiatan {
   max-width: 196px;
-  /* aspect-ratio: 38/8; */
+  padding-bottom: 10px;
 }
 
 #apply {
   margin-bottom: 20px;
-  width: 100px;
-  height: 45px;
+  width: 80px;
+  height: 40px;
   font-size: 16px;
   color: white;
   background-color: #f7b551;
@@ -951,6 +966,7 @@ nav #humbuger {
 
 #apply:hover{
   background-color: #ff9800;
+  font-weight: bold;
 }
 
 .tanggal,
@@ -959,6 +975,10 @@ nav #humbuger {
 .jeniskegiatan,
 .form {
   margin-top: 4%;
+}
+
+.deskripsi{
+  padding-bottom: 10px;
 }
 
 .atastanggal,
@@ -974,11 +994,12 @@ nav #humbuger {
 .tanggalakhir,
 .jawabanjenis {
   font-size: 14px;
+  font-weight: normal;
 }
 
 .descinfo {
   border: 2px solid #E4E4E4;
-  width: 80%;
+  width: 95%;
   min-height: 60px;
   height: auto;
   margin-top: 1%;
@@ -990,11 +1011,7 @@ nav #humbuger {
   margin-left: 2%;
   margin-right: 2%;
   margin-bottom: 2%;
-}
-
-.logo1 img {
-  width: 35%;
-  margin-top: 2%;
+  font-weight: normal;
 }
 
 
@@ -1176,5 +1193,32 @@ nav #humbuger {
 
   .column {
     width: 90%;
+  }
+
+  .bungkus {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .popupmore {
+    background: white;
+    z-index: 20;
+    font-weight: bold;
+    border-radius: 20px;
+    overflow-y: auto;
+    max-width: 90%;
+    height: 500px;
+  }
+
+  #logokegiatan {
+    max-width: 150px;
+    padding-bottom: 10px;
   }
 }

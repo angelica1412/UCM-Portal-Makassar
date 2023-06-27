@@ -58,7 +58,7 @@ var tombolTolak = document.getElementById("tolak");
 var tombolTerima = document.getElementById("acc");
 var formTitle = "";
 var idTitle = "";
-var popup = document.getElementById('popup');
+var popup = document.getElementById('popupAcc');
       tombolTolak.addEventListener("click", function () {
         updateFormStatus(formTitle, "Rejected", idTitle);
         popup.style.display = 'flex';

@@ -39,6 +39,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    padding-top: 45px;
 }
 
 .home img {
@@ -63,7 +64,7 @@
 .judulWelcome {
     font-size: 30px;
     color: #FF9800;
-    margin-top: 10%;
+    text-align: center;
 }
 
 .petunjuk {

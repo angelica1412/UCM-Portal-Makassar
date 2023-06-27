@@ -71,6 +71,7 @@
                   <div class="card-border-top">
                   </div>
                   <div class="img">
+                    <i class="fa-solid fa-user"></i>
                   </div>
                   <span id="name"> Person</span>
                   <p class="job" id="major"> Job Title</p>
@@ -186,11 +187,6 @@
         <p class="atasdeskripsi">Deskripsi :</p>
         <div class="descinfo" id="deskripsi">
         </div>
-      </div>
-
-      <div class="logo1">
-        <p class="atasjenis">Logo Kegiatan </p>
-        <img src="" id="img" class="logoo">
       </div>
 
       <div class="buttonApply">
@@ -331,7 +327,8 @@
   
     function showPopup(title, id) {
   var popup = document.getElementById("popupmore");
-  popup.style.display = "block";
+  console.log(title, id);
+  popup.style.display = "flex";
   var apiUrlForm = `http://localhost:4000/ucmportal/form/${title}/${id}`;
   $.ajax({
     url: apiUrlForm,
@@ -343,7 +340,7 @@
       var tanggalMulai = document.querySelector(".tanggalmulai");
       var tanggalAkhir = document.querySelector(".tanggalakhir");
       var deskripsi = document.querySelector(".descinfo");
-      var logoKegiatan = document.querySelector(".logo1 img");
+      var logoKegiatan = document.querySelector(".logopop");
       var logoKegiatan2 = document.getElementById("logokegiatan");
 
 
